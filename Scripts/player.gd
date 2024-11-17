@@ -56,7 +56,7 @@ func attack():
 	
 	for area in overlapping_objects:
 		var parent = area.get_parent()
-		print(parent.name.queue_free())
+		parent.queue_free()
 	
 	attacking = true
 	if Input.is_action_pressed("up") and Input.is_action_pressed("active"):

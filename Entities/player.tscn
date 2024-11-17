@@ -208,8 +208,8 @@ _data = {
 }
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_fvwac"]
-radius = 9.34301
-height = 34.9833
+radius = 15.0296
+height = 32.0275
 
 [node name="Player" type="CharacterBody2D"]
 script = ExtResource("1_w5yk8")
@@ -240,6 +240,6 @@ drag_vertical_offset = 1.0
 monitorable = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="AttackArea"]
-position = Vector2(-23, -20.5)
-rotation = -0.958186
+position = Vector2(34, -5)
+rotation = -4.7281
 shape = SubResource("CapsuleShape2D_fvwac")
