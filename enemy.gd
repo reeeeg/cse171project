@@ -1,7 +1,7 @@
 extends CharacterBody2D
 
 
-var speed = 60.0
+var speed = 20.0
 
 var facing_right = true
 

@@ -2082,7 +2082,8 @@ texture_region_size = Vector2i(128, 128)
 [sub_resource type="TileSet" id="TileSet_5d01a"]
 tile_size = Vector2i(128, 128)
 physics_layer_0/collision_layer = 1
-sources/0 = SubResource("TileSetAtlasSource_ghepu")
+physics_layer_0/collision_mask = 0
+sources/0 = SubResource("TileSetAtlasSource_wsv1r")
 
 [node name="Level 0" type="Node2D"]
 
@@ -2095,3 +2096,9 @@ position = Vector2(268, 479)
 
 [node name="enemy" parent="." instance=ExtResource("3_hy736")]
 position = Vector2(-87, 123)
+
+[node name="enemy2" parent="." instance=ExtResource("3_hy736")]
+position = Vector2(172, -19)
+
+[node name="enemy3" parent="." instance=ExtResource("3_hy736")]
+position = Vector2(-330, -117)

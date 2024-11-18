@@ -52,18 +52,29 @@ func updateAnimation():
 	
 	
 func attack():
-	var overlapping_objects = $AttackArea.get_overlapping_areas()
-	
-	for area in overlapping_objects:
-		var parent = area.get_parent()
-		print(parent.name.queue_free())
 	
 	attacking = true
 	if Input.is_action_pressed("up") and Input.is_action_pressed("active"):
 		animation.play("JAtk")
+		#attackHit($JAtkArea.get_overlapping_areas())
 	elif Input.is_action_pressed("active") and !is_on_floor() and Input.is_action_pressed("down"):
 		animation.play("DAtk")
-	elif Input.is_action_pressed("active") and Input.is_action_pressed("down"):
-		animation.play("TAtk")
+		#attackHit($DAtkArea.get_overlapping_areas())
+		
+	#elif Input.is_action_pressed("active") and Input.is_action_pressed("down"):
+		#animation.play("TAtk")
 	else:
 		animation.play("NAtk")
+		#attackHit($NAtkArea.get_overlapping_areas())
+		
+#func attackHit(overlapping_objects):
+	#for area in overlapping_objects:
+		#if area:
+			#var parent = area.get_parent()	
+			#parent.queue_free()
+
+
+func NAtkArea(area: Area2D) -> void:
+	if(attacking):
+		if area.get_parent().is_in_group("Enemies"):
+			area.get_parent().queue_free() # Replace with function body.

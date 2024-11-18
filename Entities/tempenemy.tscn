@@ -4,16 +4,17 @@
 [ext_resource type="Texture2D" uid="uid://dlbm4outkpi5x" path="res://old/tennisbirb.jpg" id="2_obks7"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_mw47p"]
-size = Vector2(46, 39)
+size = Vector2(64, 55)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_an6ej"]
-size = Vector2(40.5, 38.5)
+size = Vector2(41, 37)
 
-[node name="enemy" type="CharacterBody2D"]
+[node name="enemy" type="CharacterBody2D" groups=["Enemies"]]
+position = Vector2(-3, 0)
 script = ExtResource("1_eoyup")
 
 [node name="RayCast2D" type="RayCast2D" parent="."]
-position = Vector2(616, 442)
+position = Vector2(612.61, 442)
 target_position = Vector2(1, 55)
 
 [node name="RayCast2D2" type="RayCast2D" parent="."]
@@ -29,11 +30,11 @@ texture = ExtResource("2_obks7")
 [node name="hitbox" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="hitbox"]
-position = Vector2(597, 428.5)
+position = Vector2(593, 427.5)
 shape = SubResource("RectangleShape2D_mw47p")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(596.75, 429.25)
+position = Vector2(596.5, 428.5)
 shape = SubResource("RectangleShape2D_an6ej")
 
 [connection signal="area_entered" from="hitbox" to="." method="_on_hitbox_area_entered"]
