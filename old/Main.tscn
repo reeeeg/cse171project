@@ -1,6 +1,6 @@
 [gd_scene load_steps=15 format=4 uid="uid://chosv5d1tbrmm"]
 
-[ext_resource type="Texture2D" uid="uid://cmkooxwvs4dv1" path="res://tempback.png" id="1_uku11"]
+[ext_resource type="Texture2D" uid="uid://cmkooxwvs4dv1" path="res://old/tempback.png" id="1_uku11"]
 [ext_resource type="Texture2D" uid="uid://bd30uaksyy0rd" path="res://gifs/Alien idle/f0cf236d720e4600b6d61b306c716aed4ITNuDhCexfa6iKg-0.png" id="2_wo0f1"]
 [ext_resource type="Texture2D" uid="uid://bjr4st8t7egq3" path="res://gifs/Alien idle/f0cf236d720e4600b6d61b306c716aed4ITNuDhCexfa6iKg-1.png" id="3_feuug"]
 [ext_resource type="Script" path="res://player.gd" id="3_pso6f"]

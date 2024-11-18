@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://cxggej47cg5nh"]
 
 [ext_resource type="Script" path="res://enemy.gd" id="1_eoyup"]
-[ext_resource type="Texture2D" uid="uid://dlbm4outkpi5x" path="res://tennisbirb.jpg" id="2_obks7"]
+[ext_resource type="Texture2D" uid="uid://dlbm4outkpi5x" path="res://old/tennisbirb.jpg" id="2_obks7"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_mw47p"]
 size = Vector2(46, 39)

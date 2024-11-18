@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cmkooxwvs4dv1"
-path="res://.godot/imported/tempback.png-0d976a40e9055392a0b6c7c6dee7c104.ctex"
+uid="uid://dlbm4outkpi5x"
+path="res://.godot/imported/tennisbirb.jpg-ef53e04363d481ce3bb3e5319d2e94d6.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://tempback.png"
-dest_files=["res://.godot/imported/tempback.png-0d976a40e9055392a0b6c7c6dee7c104.ctex"]
+source_file="res://old/tennisbirb.jpg"
+dest_files=["res://.godot/imported/tennisbirb.jpg-ef53e04363d481ce3bb3e5319d2e94d6.ctex"]
 
 [params]
 
