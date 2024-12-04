@@ -2090,7 +2090,7 @@ sources/0 = SubResource("TileSetAtlasSource_ghepu")
 [node name="Level 0" type="Node2D"]
 
 [node name="background" type="Sprite2D" parent="."]
-position = Vector2(1224, 400)
+position = Vector2(1357, 403)
 scale = Vector2(5.08333, 4.11111)
 texture = ExtResource("1_kcumh")
 
