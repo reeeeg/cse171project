@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://rgye0iwcc55d"]
 
 [ext_resource type="Texture2D" uid="uid://bcc8cqryh061k" path="res://gifs/tempboss/tb1.png" id="1_214gt"]
-[ext_resource type="Script" path="res://Entities/boss_temp.gd" id="1_lq8f8"]
+[ext_resource type="Script" path="res://Scripts/boss_temp.gd" id="1_lq8f8"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_fpmcc"]
 radius = 55.0

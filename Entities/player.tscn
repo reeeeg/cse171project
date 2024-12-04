@@ -23,10 +23,11 @@
 [ext_resource type="Texture2D" uid="uid://cqnxo7yj2gv0o" path="res://gifs/Alien mini enemy jump down atk/758286dd-4abb-4242-bdd1-78822df60c9b-3.png" id="21_trlbo"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_gcw7j"]
-size = Vector2(48, 29)
+size = Vector2(52, 29)
 
 [sub_resource type="Animation" id="Animation_g602i"]
 resource_name = "DAtk"
+length = 0.5
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -215,11 +216,12 @@ height = 41.9994
 height = 64.0
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_5vp0v"]
-radius = 12.0
+radius = 18.0
 height = 58.0
 
 [node name="Player" type="CharacterBody2D"]
 script = ExtResource("1_w5yk8")
+SPEED = 900.0
 JUMP_VELOCITY = -500.0
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
@@ -247,7 +249,7 @@ drag_vertical_offset = 1.0
 monitorable = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="NAtkArea"]
-position = Vector2(36, -3)
+position = Vector2(38, -3)
 rotation = 0.00523599
 shape = SubResource("CapsuleShape2D_fvwac")
 
@@ -262,8 +264,10 @@ shape = SubResource("CapsuleShape2D_ywuvm")
 [node name="DAtkArea" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="DAtkArea"]
-position = Vector2(-1, 23)
+position = Vector2(-1, 29)
 rotation = 1.5708
 shape = SubResource("CapsuleShape2D_5vp0v")
 
 [connection signal="area_entered" from="NAtkArea" to="." method="NAtkArea"]
+[connection signal="area_entered" from="JAtkArea" to="." method="JAtkArea"]
+[connection signal="area_entered" from="DAtkArea" to="." method="DAtkArea"]
