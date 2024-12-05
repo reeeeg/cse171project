@@ -1,0 +1,278 @@
+[gd_scene load_steps=35 format=3 uid="uid://dkmn2ql201tnl"]
+
+[ext_resource type="Script" path="res://Scripts/player.gd" id="1_w5yk8"]
+[ext_resource type="Texture2D" uid="uid://bjr4st8t7egq3" path="res://gifs/Alien idle/f0cf236d720e4600b6d61b306c716aed4ITNuDhCexfa6iKg-1.png" id="2_tq5w8"]
+[ext_resource type="Texture2D" uid="uid://bd30uaksyy0rd" path="res://gifs/Alien idle/f0cf236d720e4600b6d61b306c716aed4ITNuDhCexfa6iKg-0.png" id="3_1jhaq"]
+[ext_resource type="Texture2D" uid="uid://bgr0btxyuv11p" path="res://gifs/Alien idle/f0cf236d720e4600b6d61b306c716aed4ITNuDhCexfa6iKg-2.png" id="4_3o5w1"]
+[ext_resource type="Texture2D" uid="uid://bggj65hu2p1mq" path="res://gifs/Alien idle/f0cf236d720e4600b6d61b306c716aed4ITNuDhCexfa6iKg-3.png" id="5_465hf"]
+[ext_resource type="Texture2D" uid="uid://bl3gf7oonpo5s" path="res://gifs/Alien mini enemy atk/66d16c2b-06f9-4f91-b014-53fb7a1aed99-0.png" id="6_d3yl8"]
+[ext_resource type="Texture2D" uid="uid://d4fvvwqhs8b10" path="res://gifs/Alien mini enemy atk/66d16c2b-06f9-4f91-b014-53fb7a1aed99-1.png" id="7_ovoim"]
+[ext_resource type="Texture2D" uid="uid://dwu2pdxjk35ng" path="res://gifs/Alien mini enemy atk/66d16c2b-06f9-4f91-b014-53fb7a1aed99-2.png" id="8_p5i4m"]
+[ext_resource type="Texture2D" uid="uid://c6mjse6l4ako" path="res://gifs/Alien mini enemy atk/66d16c2b-06f9-4f91-b014-53fb7a1aed99-3.png" id="9_q0ove"]
+[ext_resource type="Texture2D" uid="uid://bqegydsfdkhvk" path="res://gifs/Alien mini enemy down tilt/ccd797ee-9692-489c-bb16-7f34a1d0117e-0.png" id="10_ne7hg"]
+[ext_resource type="Texture2D" uid="uid://b1l244bnfc0st" path="res://gifs/Alien mini enemy down tilt/ccd797ee-9692-489c-bb16-7f34a1d0117e-1.png" id="11_4v1hu"]
+[ext_resource type="Texture2D" uid="uid://bibj0802pldcc" path="res://gifs/Alien mini enemy down tilt/ccd797ee-9692-489c-bb16-7f34a1d0117e-2.png" id="12_8iq2v"]
+[ext_resource type="Texture2D" uid="uid://dfx1j8ah24mkw" path="res://gifs/Alien mini enemy down tilt/ccd797ee-9692-489c-bb16-7f34a1d0117e-3.png" id="13_1u7ta"]
+[ext_resource type="Texture2D" uid="uid://bmcox6usc4y6d" path="res://gifs/Alien mini enemy up atk/9f98758a-b35c-412b-8cb6-adddd57592d1-0.png" id="14_nd08v"]
+[ext_resource type="Texture2D" uid="uid://c0h8qaqji0ex3" path="res://gifs/Alien mini enemy up atk/9f98758a-b35c-412b-8cb6-adddd57592d1-1.png" id="15_hae3g"]
+[ext_resource type="Texture2D" uid="uid://chp2scfgqcewf" path="res://gifs/Alien mini enemy up atk/9f98758a-b35c-412b-8cb6-adddd57592d1-2.png" id="16_crftl"]
+[ext_resource type="Texture2D" uid="uid://bbotpbb1quk1o" path="res://gifs/Alien mini enemy up atk/9f98758a-b35c-412b-8cb6-adddd57592d1-3.png" id="17_j83ok"]
+[ext_resource type="Texture2D" uid="uid://cj13ktcgc0kwb" path="res://gifs/Alien mini enemy jump down atk/758286dd-4abb-4242-bdd1-78822df60c9b-0.png" id="18_kf2rp"]
+[ext_resource type="Texture2D" uid="uid://qabhdr26xtcl" path="res://gifs/Alien mini enemy jump down atk/758286dd-4abb-4242-bdd1-78822df60c9b-1.png" id="19_001ui"]
+[ext_resource type="Texture2D" uid="uid://d04ow841k7d22" path="res://gifs/Alien mini enemy jump down atk/758286dd-4abb-4242-bdd1-78822df60c9b-2.png" id="20_xmys6"]
+[ext_resource type="Texture2D" uid="uid://cqnxo7yj2gv0o" path="res://gifs/Alien mini enemy jump down atk/758286dd-4abb-4242-bdd1-78822df60c9b-3.png" id="21_trlbo"]
+[ext_resource type="Script" path="res://Scripts/HitBox.gd" id="22_be67r"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gcw7j"]
+size = Vector2(52, 29)
+
+[sub_resource type="Animation" id="Animation_g602i"]
+resource_name = "DAtk"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.133333, 0.266667, 0.4),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [ExtResource("18_kf2rp"), ExtResource("19_001ui"), ExtResource("20_xmys6"), ExtResource("21_trlbo")]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:attacking")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.433333),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="Animation" id="Animation_rnc8i"]
+resource_name = "Idle"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.133333, 0.266667, 0.4),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [ExtResource("3_1jhaq"), ExtResource("2_tq5w8"), ExtResource("4_3o5w1"), ExtResource("5_465hf")]
+}
+
+[sub_resource type="Animation" id="Animation_uy8cf"]
+resource_name = "JAtk"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.133333, 0.266667, 0.4),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [ExtResource("14_nd08v"), ExtResource("15_hae3g"), ExtResource("16_crftl"), ExtResource("17_j83ok")]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:attacking")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.4),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="Animation" id="Animation_e341l"]
+resource_name = "NAtk"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.133333, 0.266667, 0.4),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [ExtResource("6_d3yl8"), ExtResource("7_ovoim"), ExtResource("8_p5i4m"), ExtResource("9_q0ove")]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:attacking")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.433333),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="Animation" id="Animation_stq6t"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("3_1jhaq")]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:attacking")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="Animation" id="Animation_fxuos"]
+resource_name = "TAtk"
+length = 0.25
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.0666667, 0.133333, 0.2),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [ExtResource("10_ne7hg"), ExtResource("11_4v1hu"), ExtResource("12_8iq2v"), ExtResource("13_1u7ta")]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:attacking")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.433333),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="Animation" id="Animation_45x2h"]
+resource_name = "idle"
+length = 0.5
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.0333333, 0.166667, 0.3, 0.466667),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [ExtResource("3_1jhaq"), ExtResource("2_tq5w8"), ExtResource("4_3o5w1"), ExtResource("5_465hf")]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_vculi"]
+_data = {
+"DAtk": SubResource("Animation_g602i"),
+"Idle": SubResource("Animation_rnc8i"),
+"JAtk": SubResource("Animation_uy8cf"),
+"NAtk": SubResource("Animation_e341l"),
+"RESET": SubResource("Animation_stq6t"),
+"TAtk": SubResource("Animation_fxuos"),
+"idle": SubResource("Animation_45x2h")
+}
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_fvwac"]
+radius = 9.99986
+height = 41.9994
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ywuvm"]
+height = 64.0
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_5vp0v"]
+radius = 18.0
+height = 58.0
+
+[node name="Player" type="CharacterBody2D"]
+script = ExtResource("1_w5yk8")
+JUMP_VELOCITY = -500.0
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-1.19209e-07, 0)
+scale = Vector2(0.330078, 0.304688)
+texture = ExtResource("3_1jhaq")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite2D"]
+position = Vector2(3.02959, -18.0513)
+scale = Vector2(3.02959, 3.28205)
+shape = SubResource("RectangleShape2D_gcw7j")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_vculi")
+}
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position_smoothing_speed = 2.0
+drag_horizontal_enabled = true
+drag_vertical_enabled = true
+drag_horizontal_offset = 1.0
+drag_vertical_offset = 1.0
+
+[node name="NAtkArea" type="Area2D" parent="."]
+monitorable = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="NAtkArea"]
+position = Vector2(38, -3)
+rotation = 0.00523599
+shape = SubResource("CapsuleShape2D_fvwac")
+
+[node name="JAtkArea" type="Area2D" parent="."]
+monitorable = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="JAtkArea"]
+position = Vector2(-2, -32)
+rotation = -1.5708
+shape = SubResource("CapsuleShape2D_ywuvm")
+
+[node name="DAtkArea" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DAtkArea"]
+position = Vector2(-1, 29)
+rotation = 1.5708
+shape = SubResource("CapsuleShape2D_5vp0v")
+
+[node name="HitBox" type="Area2D" parent="."]
+collision_mask = 0
+script = ExtResource("22_be67r")
+
+[connection signal="area_entered" from="NAtkArea" to="." method="NAtkArea"]
+[connection signal="area_entered" from="JAtkArea" to="." method="JAtkArea"]
+[connection signal="area_entered" from="DAtkArea" to="." method="DAtkArea"]

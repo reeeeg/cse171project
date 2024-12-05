@@ -1,10 +1,10 @@
 [gd_scene load_steps=5 format=3 uid="uid://cxggej47cg5nh"]
 
-[ext_resource type="Script" path="res://enemy.gd" id="1_eoyup"]
+[ext_resource type="Script" path="res://Scripts/enemy.gd" id="1_eoyup"]
 [ext_resource type="Texture2D" uid="uid://dlbm4outkpi5x" path="res://old/tennisbirb.jpg" id="2_obks7"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_mw47p"]
-size = Vector2(64, 55)
+size = Vector2(51, 46)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_an6ej"]
 size = Vector2(41, 37)
@@ -30,7 +30,7 @@ texture = ExtResource("2_obks7")
 [node name="hitbox" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="hitbox"]
-position = Vector2(593, 427.5)
+position = Vector2(595.5, 428)
 shape = SubResource("RectangleShape2D_mw47p")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]

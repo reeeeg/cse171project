@@ -1,0 +1,134 @@
+[gd_scene load_steps=24 format=3 uid="uid://d35xby0d4pn6b"]
+
+[ext_resource type="Script" path="res://Entities/boss_enemy_1.gd" id="1_bcii1"]
+[ext_resource type="Texture2D" uid="uid://f1cba8b8fdyn" path="res://gifs/samurai/idle/tile001.png" id="1_siid5"]
+[ext_resource type="Texture2D" uid="uid://dy6q6ecwgq0fs" path="res://gifs/samurai/idle/tile000.png" id="2_4cdr7"]
+[ext_resource type="Texture2D" uid="uid://crhm6tq68moja" path="res://gifs/samurai/idle/tile002.png" id="3_7q0yu"]
+[ext_resource type="Texture2D" uid="uid://581sgck221i1" path="res://gifs/samurai/idle/tile003.png" id="4_bwgtk"]
+[ext_resource type="Texture2D" uid="uid://da28jegv4w7j5" path="res://gifs/samurai/idle/tile004.png" id="5_pfbqi"]
+[ext_resource type="Texture2D" uid="uid://cuqh0q6kdag61" path="res://gifs/samurai/death/tile000.png" id="6_4lba5"]
+[ext_resource type="Texture2D" uid="uid://blubhojuigq1x" path="res://gifs/samurai/death/tile001.png" id="7_qr06j"]
+[ext_resource type="Texture2D" uid="uid://cxinfrqa820w4" path="res://gifs/samurai/death/tile002.png" id="8_u2lx5"]
+[ext_resource type="Texture2D" uid="uid://rrlvfl6msvrx" path="res://gifs/samurai/death/tile003.png" id="9_qli2h"]
+[ext_resource type="Texture2D" uid="uid://b6v5cfab7tgwj" path="res://gifs/samurai/death/tile004.png" id="10_i5env"]
+[ext_resource type="Texture2D" uid="uid://b8tqv3ckeo54e" path="res://gifs/samurai/death/tile005.png" id="11_4cdjw"]
+[ext_resource type="Texture2D" uid="uid://b7p177nwpj35i" path="res://gifs/samurai/atk1/tile000.png" id="13_48t53"]
+[ext_resource type="Texture2D" uid="uid://bwbkgcby5denj" path="res://gifs/samurai/atk1/tile001.png" id="14_qer5c"]
+[ext_resource type="Texture2D" uid="uid://dodorwtciewkl" path="res://gifs/samurai/atk1/tile002.png" id="15_xb6sj"]
+[ext_resource type="Texture2D" uid="uid://bgkbetafkrgqt" path="res://gifs/samurai/atk1/tile003.png" id="16_bb66u"]
+
+[sub_resource type="Animation" id="Animation_k86b1"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("1_siid5")]
+}
+
+[sub_resource type="Animation" id="Animation_f0jwy"]
+resource_name = "atk1"
+length = 5.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.933333, 2.2, 3.33333, 4.13333, 4.96667),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [ExtResource("13_48t53"), ExtResource("14_qer5c"), ExtResource("15_xb6sj"), ExtResource("16_bb66u"), ExtResource("14_qer5c"), ExtResource("13_48t53")]
+}
+
+[sub_resource type="Animation" id="Animation_76afl"]
+resource_name = "death"
+length = 3.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.0666667, 0.5, 1, 1.56667, 2.2, 3),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [ExtResource("6_4lba5"), ExtResource("7_qr06j"), ExtResource("8_u2lx5"), ExtResource("9_qli2h"), ExtResource("10_i5env"), ExtResource("11_4cdjw")]
+}
+
+[sub_resource type="Animation" id="Animation_ogbd8"]
+resource_name = "idle"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 1,
+"values": [ExtResource("2_4cdr7"), ExtResource("1_siid5"), ExtResource("3_7q0yu"), ExtResource("4_bwgtk"), ExtResource("5_pfbqi")]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_tgkqx"]
+_data = {
+"RESET": SubResource("Animation_k86b1"),
+"atk1": SubResource("Animation_f0jwy"),
+"death": SubResource("Animation_76afl"),
+"idle": SubResource("Animation_ogbd8")
+}
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xcmhw"]
+size = Vector2(56, 83)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mcaqc"]
+size = Vector2(27, 71)
+
+[node name="BossEnemy1" type="CharacterBody2D"]
+position = Vector2(-1, -1)
+script = ExtResource("1_bcii1")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(0, -1)
+texture = ExtResource("1_siid5")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_tgkqx")
+}
+
+[node name="hitbox" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="hitbox"]
+position = Vector2(-30, 27.5)
+shape = SubResource("RectangleShape2D_xcmhw")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-29.5, 28.5)
+shape = SubResource("RectangleShape2D_mcaqc")
+
+[node name="closecast" type="RayCast2D" parent="."]
+position = Vector2(1, 26)
+target_position = Vector2(84, -1)
+
+[node name="farcast" type="RayCast2D" parent="."]
+position = Vector2(2, 63)
+target_position = Vector2(365, 0)
+
+[node name="backcast" type="RayCast2D" parent="."]
+position = Vector2(-61, 39)
+target_position = Vector2(-267, -1)
+
+[node name="upcast" type="RayCast2D" parent="."]
+position = Vector2(-31, -19)
+target_position = Vector2(-1, -136)
