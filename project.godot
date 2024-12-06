@@ -22,9 +22,15 @@ Dialogic="*res://addons/dialogic/Core/DialogicGameHandler.gd"
 [dialogic]
 
 directories/dch_directory={
-"maincharacter": "res://maincharacter.dch"
+"chara2": "res://chara2.dch",
+"chara3": "res://chara3.dch",
+"mainAntagonist": "res://mainAntagonist.dch",
+"maincharacter": "res://maincharacter.dch",
+"shopkeeper": "res://shopkeeper.dch"
 }
-directories/dtl_directory={}
+directories/dtl_directory={
+"mainStory": "res://mainStory.dtl"
+}
 layout/style_list=[]
 layout/default_style="Default"
 glossary/default_case_sensitive=true

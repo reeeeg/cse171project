@@ -10,19 +10,19 @@
 },
 "default_portrait": "New portrait",
 "description": "",
-"display_name": "maincharacter",
+"display_name": "chara2",
 "mirror": false,
 "nicknames": [""],
 "offset": Vector2(0, 0),
 "portraits": {
 "New portrait": {
 "export_overrides": {
-"image": "\"res://gifs/baseprotag/1 Pink_Monster/Pink_Monster.png\""
+"image": "\"res://Scenes/Start/steel-aether-placeholder.png\""
 },
 "mirror": false,
 "offset": Vector2(0, 0),
 "scale": 1,
-"scene": "res://addons/dialogic/Modules/Character/default_portrait.tscn"
+"scene": ""
 }
 },
 "scale": 1.0

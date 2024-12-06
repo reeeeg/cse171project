@@ -2,9 +2,9 @@
 
 [ext_resource type="Texture2D" uid="uid://dsf15sy2iiitl" path="res://gifs/industrial tileset/2 Background/Background.png" id="1_0m0bq"]
 [ext_resource type="Texture2D" uid="uid://cegans3586f67" path="res://gifs/zone tileset/1 Tiles/Tileset.png" id="2_47wdi"]
-[ext_resource type="PackedScene" uid="uid://cr3581g5ivd5s" path="res://Entities/player_1.tscn" id="3_r6d10"]
-[ext_resource type="PackedScene" uid="uid://6vtsrvk00qjc" path="res://Entities/boss_1.tscn" id="4_sns61"]
-[ext_resource type="PackedScene" uid="uid://ct7a646iqieef" path="res://Scripts/health_bar.tscn" id="5_d0nov"]
+[ext_resource type="PackedScene" path="res://Entities/player_1.tscn" id="3_r6d10"]
+[ext_resource type="PackedScene" path="res://Entities/boss_1.tscn" id="4_sns61"]
+[ext_resource type="PackedScene" path="res://Scripts/health_bar.tscn" id="5_d0nov"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_h5yjy"]
 texture = ExtResource("2_47wdi")
