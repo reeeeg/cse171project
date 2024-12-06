@@ -1,4 +1,3 @@
 join maincharacter left
-[sound path="res://sfx/Your Phone Linging (Yo Phone Lingin) - Funny Asian Ringtones.mp3" volume="0.0"]
 maincharacter: e
 afadlfalf

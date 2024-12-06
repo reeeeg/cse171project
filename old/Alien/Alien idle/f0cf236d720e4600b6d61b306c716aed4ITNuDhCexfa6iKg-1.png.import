@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c6mjse6l4ako"
-path="res://.godot/imported/66d16c2b-06f9-4f91-b014-53fb7a1aed99-3.png-46520f1025528b902f0e49eee20b066f.ctex"
+uid="uid://bjr4st8t7egq3"
+path="res://.godot/imported/f0cf236d720e4600b6d61b306c716aed4ITNuDhCexfa6iKg-1.png-c4597ddfdd42713fcd084ac2906c10d6.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://gifs/Alien mini enemy atk/66d16c2b-06f9-4f91-b014-53fb7a1aed99-3.png"
-dest_files=["res://.godot/imported/66d16c2b-06f9-4f91-b014-53fb7a1aed99-3.png-46520f1025528b902f0e49eee20b066f.ctex"]
+source_file="res://old/Alien/Alien idle/f0cf236d720e4600b6d61b306c716aed4ITNuDhCexfa6iKg-1.png"
+dest_files=["res://.godot/imported/f0cf236d720e4600b6d61b306c716aed4ITNuDhCexfa6iKg-1.png-c4597ddfdd42713fcd084ac2906c10d6.ctex"]
 
 [params]
 

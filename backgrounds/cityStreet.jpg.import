@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c0h8qaqji0ex3"
-path="res://.godot/imported/9f98758a-b35c-412b-8cb6-adddd57592d1-1.png-49672c66ae469ff6bc1ff0d6fdd53a75.ctex"
+uid="uid://wa1pwxjnyonv"
+path="res://.godot/imported/cityStreet.jpg-2c656f1c32d49dfcfe7b2752b7b81654.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://gifs/Alien mini enemy up atk/9f98758a-b35c-412b-8cb6-adddd57592d1-1.png"
-dest_files=["res://.godot/imported/9f98758a-b35c-412b-8cb6-adddd57592d1-1.png-49672c66ae469ff6bc1ff0d6fdd53a75.ctex"]
+source_file="res://backgrounds/cityStreet.jpg"
+dest_files=["res://.godot/imported/cityStreet.jpg-2c656f1c32d49dfcfe7b2752b7b81654.ctex"]
 
 [params]
 

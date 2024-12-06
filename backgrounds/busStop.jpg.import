@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bggj65hu2p1mq"
-path="res://.godot/imported/f0cf236d720e4600b6d61b306c716aed4ITNuDhCexfa6iKg-3.png-60b0f2caa7ab6d61bef59c88ad28af35.ctex"
+uid="uid://d4eklah6jmfkq"
+path="res://.godot/imported/busStop.jpg-cc07e402ed17d575ed7677733a67b5cc.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://gifs/Alien idle/f0cf236d720e4600b6d61b306c716aed4ITNuDhCexfa6iKg-3.png"
-dest_files=["res://.godot/imported/f0cf236d720e4600b6d61b306c716aed4ITNuDhCexfa6iKg-3.png-60b0f2caa7ab6d61bef59c88ad28af35.ctex"]
+source_file="res://backgrounds/busStop.jpg"
+dest_files=["res://.godot/imported/busStop.jpg-cc07e402ed17d575ed7677733a67b5cc.ctex"]
 
 [params]
 
