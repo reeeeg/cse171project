@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://wva0sm80tl3s"]
 
 [ext_resource type="Script" path="res://Scenes/Start/start_screen.gd" id="1_3mat6"]
-[ext_resource type="Texture2D" uid="uid://cmltou42ikb07" path="res://Scenes/Start/spire.png" id="2_vhvk6"]
+[ext_resource type="Texture2D" uid="uid://b34klgytx6pay" path="res://Scenes/Start/portal.jpg" id="2_xhg5s"]
 [ext_resource type="Texture2D" uid="uid://cy80l3n628utq" path="res://Scenes/Start/gameLogo.png" id="3_sjerw"]
 
 [node name="startScreen" type="Control"]
@@ -13,29 +13,29 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_3mat6")
 
-[node name="Spire" type="Sprite2D" parent="."]
-position = Vector2(639.312, 366.75)
-scale = Vector2(1.17409, 1.17409)
-texture = ExtResource("2_vhvk6")
+[node name="Portal" type="Sprite2D" parent="."]
+position = Vector2(816, 352)
+scale = Vector2(0.279262, 0.279262)
+texture = ExtResource("2_xhg5s")
 
 [node name="quitButton" type="Button" parent="."]
 layout_mode = 0
-offset_left = 784.0
-offset_top = 352.0
-offset_right = 912.0
-offset_bottom = 392.0
+offset_left = 344.0
+offset_top = 460.0
+offset_right = 472.0
+offset_bottom = 500.0
 text = "Quit"
 
 [node name="startButton" type="Button" parent="."]
 layout_mode = 0
-offset_left = 752.0
-offset_top = 256.0
-offset_right = 944.0
-offset_bottom = 328.0
+offset_left = 312.0
+offset_top = 364.0
+offset_right = 504.0
+offset_bottom = 436.0
 text = "Start"
 
 [node name="GameLogo" type="Sprite2D" parent="."]
-position = Vector2(848, 168)
+position = Vector2(416, 216)
 scale = Vector2(0.572581, 0.572581)
 texture = ExtResource("3_sjerw")
 
