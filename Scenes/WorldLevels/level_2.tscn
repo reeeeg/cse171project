@@ -338,9 +338,20 @@ position = Vector2(603, 368)
 scale = Vector2(2.01, 2.01)
 transform = Transform2D(2.01, 0, 0, 2.01, 0, 0)
 
-[node name="HealthBar" parent="CanvasLayer" node_paths=PackedStringArray("character") instance=ExtResource("5_d0nov")]
-offset_left = 3.9801
-offset_top = 5.47264
-offset_right = 104.98
-offset_bottom = 45.4726
+[node name="PlayerHealthBar" parent="CanvasLayer" node_paths=PackedStringArray("character") instance=ExtResource("5_d0nov")]
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 101.0
+offset_bottom = 40.0
 character = NodePath("../../Player1")
+
+[node name="EnemyHealthBar" parent="CanvasLayer" node_paths=PackedStringArray("character") instance=ExtResource("5_d0nov")]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -130.6
+offset_top = 0.0
+offset_right = -29.5995
+offset_bottom = 40.0
+grow_horizontal = 2
+character = NodePath("../../Boss1")

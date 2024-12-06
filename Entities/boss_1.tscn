@@ -146,8 +146,6 @@ script = ExtResource("1_xqoif")
 
 [node name="Health" type="Node" parent="."]
 script = ExtResource("2_gj6no")
-max_health = 5
-immortality = true
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("9_4tkss")
@@ -163,7 +161,7 @@ shape = SubResource("CapsuleShape2D_0jqy3")
 
 [node name="HurtBox" type="Area2D" parent="." node_paths=PackedStringArray("health")]
 collision_layer = 0
-collision_mask = 6
+collision_mask = 4
 script = ExtResource("12_q5qjd")
 health = NodePath("../Health")
 
@@ -172,12 +170,12 @@ position = Vector2(-30.5, 28)
 shape = SubResource("RectangleShape2D_v4iww")
 
 [node name="HitBox" type="Area2D" parent="."]
-collision_layer = 6
+collision_layer = 2
 collision_mask = 0
 script = ExtResource("1_7wv5w")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="HitBox"]
-position = Vector2(-104, 31)
+position = Vector2(35, 32)
 shape = SubResource("RectangleShape2D_sfiji")
 
 [connection signal="health_depleted" from="Health" to="." method="_on_health_health_depleted"]
