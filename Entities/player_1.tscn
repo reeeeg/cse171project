@@ -10,8 +10,39 @@
 [ext_resource type="Texture2D" uid="uid://cccwj1exxta2e" path="res://gifs/pinkprot/atk/tile000.png" id="8_lhwkj"]
 [ext_resource type="Texture2D" uid="uid://hxjgcddyax13" path="res://gifs/pinkprot/atk/tile001.png" id="9_xh3bp"]
 [ext_resource type="Texture2D" uid="uid://qm5atxcnasxr" path="res://gifs/pinkprot/atk/tile002.png" id="10_1y13h"]
-[ext_resource type="Script" path="res://Scripts/HurtBox.gd" id="11_cekff"]
-[ext_resource type="Script" path="res://Scripts/HitBox.gd" id="12_plo1m"]
+[ext_resource type="Script" path="res://Scripts/HurtBox.gd" id="11_l6rhh"]
+[ext_resource type="Script" path="res://Scripts/HitBox.gd" id="12_acrq1"]
+
+[sub_resource type="Animation" id="Animation_qdumy"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("3_5box0")]
+}
+
+[sub_resource type="Animation" id="Animation_nksev"]
+resource_name = "atk"
+length = 0.3
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [ExtResource("8_lhwkj"), ExtResource("9_xh3bp"), ExtResource("10_1y13h")]
+}
 
 [sub_resource type="Animation" id="Animation_2leay"]
 resource_name = "idle"
@@ -29,64 +60,6 @@ tracks/0/keys = {
 "values": [ExtResource("4_bhxb2"), ExtResource("5_f3bgh"), ExtResource("6_qk147"), ExtResource("7_nc5kb")]
 }
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_uyp2t"]
-size = Vector2(13, 15)
-
-[sub_resource type="Animation" id="Animation_qdumy"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Sprite2D:texture")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [ExtResource("3_5box0")]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("HurtBox/CollisionShape2D:shape")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [SubResource("RectangleShape2D_uyp2t")]
-}
-
-[sub_resource type="Animation" id="Animation_nksev"]
-resource_name = "atk"
-length = 0.3
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("HurtBox/CollisionShape2D:shape")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0.0333333, 0.2),
-"transitions": PackedFloat32Array(1, 1),
-"update": 1,
-"values": [SubResource("RectangleShape2D_uyp2t"), SubResource("RectangleShape2D_uyp2t")]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("Sprite2D:texture")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0, 0.1, 0.2),
-"transitions": PackedFloat32Array(1, 1, 1),
-"update": 1,
-"values": [ExtResource("8_lhwkj"), ExtResource("9_xh3bp"), ExtResource("10_1y13h")]
-}
-
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_68oex"]
 _data = {
 "RESET": SubResource("Animation_qdumy"),
@@ -96,9 +69,10 @@ _data = {
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_0nehi"]
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_bu2uq"]
-radius = 13.0
-height = 34.0
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ivde3"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qhogy"]
+size = Vector2(79, 37)
 
 [node name="Player1" type="CharacterBody2D"]
 script = ExtResource("1_jvh4p")
@@ -106,6 +80,7 @@ JUMP_VELOCITY = -800.0
 
 [node name="Health" type="Node" parent="."]
 script = ExtResource("2_1ntvs")
+max_health = 1
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(1, 0)
@@ -125,16 +100,23 @@ limit_smoothed = true
 drag_horizontal_enabled = true
 drag_vertical_enabled = true
 
-[node name="HurtBox" type="Area2D" parent="."]
-script = ExtResource("11_cekff")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="HurtBox"]
-position = Vector2(17.5, 5.5)
-shape = SubResource("RectangleShape2D_uyp2t")
-
 [node name="HitBox" type="Area2D" parent="."]
-script = ExtResource("12_plo1m")
+collision_layer = 6
+collision_mask = 0
+script = ExtResource("12_acrq1")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="HitBox"]
-position = Vector2(0, 1)
-shape = SubResource("CapsuleShape2D_bu2uq")
+position = Vector2(22, 3)
+shape = SubResource("RectangleShape2D_ivde3")
+
+[node name="HurtBox" type="Area2D" parent="." node_paths=PackedStringArray("health")]
+collision_layer = 0
+collision_mask = 6
+script = ExtResource("11_l6rhh")
+health = NodePath("../Health")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HurtBox"]
+position = Vector2(80.5, -0.5)
+shape = SubResource("RectangleShape2D_qhogy")
+
+[connection signal="health_depleted" from="Health" to="." method="_on_health_health_depleted"]

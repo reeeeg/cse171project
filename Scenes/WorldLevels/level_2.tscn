@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://cegans3586f67" path="res://gifs/zone tileset/1 Tiles/Tileset.png" id="2_47wdi"]
 [ext_resource type="PackedScene" uid="uid://cr3581g5ivd5s" path="res://Entities/player_1.tscn" id="3_r6d10"]
 [ext_resource type="PackedScene" uid="uid://6vtsrvk00qjc" path="res://Entities/boss_1.tscn" id="4_sns61"]
-[ext_resource type="PackedScene" uid="uid://ct7a646iqieef" path="res://Entities/health_bar.tscn" id="5_d0nov"]
+[ext_resource type="PackedScene" uid="uid://ct7a646iqieef" path="res://Scripts/health_bar.tscn" id="5_d0nov"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_h5yjy"]
 texture = ExtResource("2_47wdi")
@@ -319,26 +319,28 @@ sources/0 = SubResource("TileSetAtlasSource_h5yjy")
 [node name="Level2" type="Node2D"]
 
 [node name="Background" type="Sprite2D" parent="."]
-position = Vector2(214, 23)
+position = Vector2(368.5, 235.5)
+scale = Vector2(1.26215, 1.44753)
 texture = ExtResource("1_0m0bq")
 
 [node name="TileMapLayer" type="TileMapLayer" parent="."]
-tile_map_data = PackedByteArray("AAD4/wsAAAAEAAEAAAD6/wsAAAAGAAEAAAD5/wsAAAAFAAEAAAD7/wsAAAAHAAEAAAD8/wsAAAAFAAEAAAD9/wsAAAAGAAEAAAD+/wsAAAAFAAEAAAD//wsAAAAGAAEAAAADAAsAAAAFAAEAAAAEAAsAAAAGAAEAAAAAAAsAAAAFAAEAAAABAAsAAAAGAAEAAAAIAAsAAAAFAAEAAAAJAAsAAAAGAAEAAAAFAAsAAAAFAAEAAAAGAAsAAAAGAAEAAAAMAAsAAAAFAAEAAAANAAsAAAAGAAEAAAAQAAsAAAAFAAEAAAARAAsAAAAGAAEAAAAKAAsAAAAFAAEAAAALAAsAAAAGAAEAAAAOAAsAAAAFAAEAAAAPAAsAAAAGAAEAAAAWAAsAAAAFAAEAAAAXAAsAAAAGAAEAAAASAAsAAAAFAAEAAAATAAsAAAAFAAEAAAAUAAsAAAAGAAEAAAAaAAsAAAAFAAEAAAAbAAsAAAAGAAEAAAAYAAsAAAAFAAEAAAAZAAsAAAAGAAEAAAAcAAsAAAAFAAEAAAAdAAsAAAAGAAEAAAAeAAsAAAAFAAEAAAAfAAsAAAAGAAEAAAAiAAsAAAAFAAEAAAAjAAsAAAAGAAEAAAAgAAsAAAAFAAEAAAAhAAsAAAAGAAEAAAAkAAsAAAAFAAEAAAAlAAsAAAAGAAEAAAAoAAsAAAAFAAEAAAApAAsAAAAGAAEAAAAqAAsAAAAFAAEAAAArAAsAAAAGAAEAAAA=")
+tile_map_data = PackedByteArray("AAABABwAAAAFAAEAAAACABwAAAAFAAEAAAADABwAAAAFAAEAAAAEABwAAAAFAAEAAAAFABwAAAAFAAEAAAAGABwAAAAFAAEAAAAHABwAAAAFAAEAAAAIABwAAAAFAAEAAAAJABwAAAAFAAEAAAAKABwAAAAFAAEAAAALABwAAAAFAAEAAAAMABwAAAAFAAEAAAANABwAAAAFAAEAAAAOABwAAAAFAAEAAAAPABwAAAAFAAEAAAAQABwAAAAFAAEAAAARABwAAAAFAAEAAAASABwAAAAFAAEAAAATABwAAAAFAAEAAAAUABwAAAAFAAEAAAAVABwAAAAFAAEAAAAWABwAAAAFAAEAAAAXABwAAAAFAAEAAAAYABwAAAAFAAEAAAAZABwAAAAFAAEAAAAaABwAAAAFAAEAAAAbABwAAAAFAAEAAAAcABwAAAAFAAEAAAAdABwAAAAFAAEAAAAeABwAAAAFAAEAAAAfABwAAAAFAAEAAAAgABwAAAAFAAEAAAAhABwAAAAFAAEAAAAiABwAAAAFAAEAAAAjABwAAAAFAAEAAAAkABwAAAAFAAEAAAAlABwAAAAFAAEAAAAmABwAAAAFAAEAAAAnABwAAAAFAAEAAAAoABwAAAAFAAEAAAApABwAAAAFAAEAAAAqABwAAAAFAAEAAAArABwAAAAFAAEAAAAsABwAAAAFAAEAAAAtABwAAAAFAAEAAAAuABwAAAAFAAEAAAAvABwAAAAFAAEAAAAwABwAAAAFAAEAAAAxABwAAAAFAAEAAAAyABwAAAAFAAEAAAAzABwAAAAFAAEAAAA0ABwAAAAFAAEAAAA1ABwAAAAFAAEAAAAAABwAAAAGAAEAAAA=")
 tile_set = SubResource("TileSet_ypfll")
 rendering_quadrant_size = 32
 
 [node name="Player1" parent="." instance=ExtResource("3_r6d10")]
-position = Vector2(90, 111)
+position = Vector2(155, 422)
 
 [node name="Boss1" parent="." instance=ExtResource("4_sns61")]
-position = Vector2(387, 101)
+position = Vector2(603, 368)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 scale = Vector2(2.01, 2.01)
 transform = Transform2D(2.01, 0, 0, 2.01, 0, 0)
 
-[node name="HealthBar" parent="CanvasLayer" instance=ExtResource("5_d0nov")]
-offset_left = 38.0
-offset_top = 8.0
-offset_right = 78.0
-offset_bottom = 48.0
+[node name="HealthBar" parent="CanvasLayer" node_paths=PackedStringArray("character") instance=ExtResource("5_d0nov")]
+offset_left = 3.9801
+offset_top = 5.47264
+offset_right = 104.98
+offset_bottom = 45.4726
+character = NodePath("../../Player1")
