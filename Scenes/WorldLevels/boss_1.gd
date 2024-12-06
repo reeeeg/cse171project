@@ -1,5 +1,7 @@
 extends CharacterBody2D
 
+@onready var immortality = false
+
 #var speed = 20.0
 #
 #var facing_right = true

@@ -4,6 +4,7 @@ class_name Player
 
 @onready var animation = $AnimationPlayer
 @onready var sprite = $Sprite2D
+@onready var atkfield = $HitBox/CollisionShape2D
 
 
 
@@ -17,7 +18,7 @@ var attackType = 0
 func _physics_process(delta: float) -> void:
 	
 	if Input.is_action_pressed("left"):
-		sprite.scale.x = abs(sprite.scale.x) * -1
+		sprite.scale.x = abs(sprite.scale.x) * -1	
 		
 	if Input.is_action_pressed("right"):
 		sprite.scale.x = abs(sprite.scale.x)

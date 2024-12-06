@@ -12,8 +12,10 @@ atlas = ExtResource("1_4xv6a")
 region = Rect2(60.5143, 164.905, 99.2493, 19.621)
 
 [node name="HealthBar" type="TextureProgressBar"]
-offset_right = 40.0
-offset_bottom = 40.0
+offset_left = -116.0
+offset_top = 1.0
+offset_right = -15.0
+offset_bottom = 41.0
 value = 20.0
 texture_under = SubResource("AtlasTexture_tqo8x")
 texture_progress = SubResource("AtlasTexture_dnmj6")
