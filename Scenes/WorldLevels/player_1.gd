@@ -25,3 +25,7 @@ func _physics_process(delta: float) -> void:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
 
 	move_and_slide()
+	
+	
+func _on_health_health_depleted() -> void:
+	queue_free()
