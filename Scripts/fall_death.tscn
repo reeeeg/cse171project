@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://cwk4a68ngduin"]
+
+[ext_resource type="Script" path="res://Scripts/fall_death.gd" id="1_nyovq"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_uwjq4"]
+
+[node name="FallDeath" type="Area2D"]
+collision_layer = 6
+collision_mask = 6
+script = ExtResource("1_nyovq")
+damage = 999999
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("WorldBoundaryShape2D_uwjq4")

@@ -11,7 +11,7 @@ extends Control
 	#pass
 
 func _on_start_button_pressed() -> void:
-	get_tree().change_scene_to_file("res://Scenes/WorldLevels/level_0.tscn")
+	get_tree().change_scene_to_file("res://Scenes/WorldLevels/level_2.tscn")
 	pass # Replace with function body.
 
 func _on_quit_button_pressed() -> void:
