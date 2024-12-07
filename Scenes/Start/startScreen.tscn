@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://Scenes/Start/start_screen.gd" id="1_3mat6"]
 [ext_resource type="Texture2D" uid="uid://b34klgytx6pay" path="res://Scenes/Start/portal.jpg" id="2_xhg5s"]
-[ext_resource type="Texture2D" uid="uid://cy80l3n628utq" path="res://Scenes/Start/gameLogo.png" id="3_sjerw"]
+[ext_resource type="Texture2D" uid="uid://c88yuemvn01qw" path="res://Scenes/Start/steel-aether-placeholder.png" id="3_niy7f"]
 
 [node name="startScreen" type="Control"]
 layout_mode = 3
@@ -21,23 +21,23 @@ texture = ExtResource("2_xhg5s")
 [node name="quitButton" type="Button" parent="."]
 layout_mode = 0
 offset_left = 344.0
-offset_top = 460.0
+offset_top = 532.0
 offset_right = 472.0
-offset_bottom = 500.0
-text = "Quit"
+offset_bottom = 572.0
+text = "exit"
 
 [node name="startButton" type="Button" parent="."]
 layout_mode = 0
 offset_left = 312.0
-offset_top = 364.0
+offset_top = 436.0
 offset_right = 504.0
-offset_bottom = 436.0
-text = "Start"
+offset_bottom = 508.0
+text = "GAME START"
 
 [node name="GameLogo" type="Sprite2D" parent="."]
-position = Vector2(416, 216)
-scale = Vector2(0.572581, 0.572581)
-texture = ExtResource("3_sjerw")
+position = Vector2(401.762, 231.393)
+scale = Vector2(0.544772, 0.544772)
+texture = ExtResource("3_niy7f")
 
 [connection signal="pressed" from="quitButton" to="." method="_on_quit_button_pressed"]
 [connection signal="pressed" from="startButton" to="." method="_on_start_button_pressed"]
