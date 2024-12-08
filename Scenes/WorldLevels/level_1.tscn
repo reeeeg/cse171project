@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=4 uid="uid://bj4oyu5vkghcr"]
 
-[ext_resource type="Texture2D" uid="uid://y4887lna5ug2" path="res://base_soil-dirt-grass.png" id="1_eob4h"]
+[ext_resource type="Texture2D" uid="uid://y4887lna5ug2" path="res://tiles/base_soil-dirt-grass.png" id="1_eob4h"]
 [ext_resource type="PackedScene" uid="uid://dkmn2ql201tnl" path="res://Entities/player.tscn" id="2_ahj7t"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_0hjfb"]

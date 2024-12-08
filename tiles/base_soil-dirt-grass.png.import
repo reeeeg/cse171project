@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://y4887lna5ug2"
-path="res://.godot/imported/base_soil-dirt-grass.png-c256946c3ed6dfbb5bf68b092b564839.ctex"
+path="res://.godot/imported/base_soil-dirt-grass.png-3cee3aa863ee739e00ada0917b7a2b78.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://base_soil-dirt-grass.png"
-dest_files=["res://.godot/imported/base_soil-dirt-grass.png-c256946c3ed6dfbb5bf68b092b564839.ctex"]
+source_file="res://tiles/base_soil-dirt-grass.png"
+dest_files=["res://.godot/imported/base_soil-dirt-grass.png-3cee3aa863ee739e00ada0917b7a2b78.ctex"]
 
 [params]
 

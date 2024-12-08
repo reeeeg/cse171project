@@ -107,6 +107,22 @@ tracks/2/keys = {
 "values": [false]
 }
 
+[sub_resource type="Animation" id="Animation_n5ug5"]
+resource_name = "fall"
+length = 0.2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [ExtResource("22_7m5u6"), ExtResource("23_lislv"), ExtResource("24_qlgl3")]
+}
+
 [sub_resource type="Animation" id="Animation_2leay"]
 resource_name = "idle"
 length = 0.65
@@ -121,22 +137,6 @@ tracks/0/keys = {
 "transitions": PackedFloat32Array(1, 1, 1, 1),
 "update": 1,
 "values": [ExtResource("4_bhxb2"), ExtResource("5_f3bgh"), ExtResource("6_qk147"), ExtResource("7_nc5kb")]
-}
-
-[sub_resource type="Animation" id="Animation_agqs5"]
-resource_name = "run"
-length = 0.5
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Sprite2D:texture")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
-"update": 1,
-"values": [ExtResource("11_df8g2"), ExtResource("12_3sr7b"), ExtResource("13_w4c4b"), ExtResource("14_yc0wp"), ExtResource("15_8etyf"), ExtResource("16_bvk5q")]
 }
 
 [sub_resource type="Animation" id="Animation_ppj6g"]
@@ -155,9 +155,9 @@ tracks/0/keys = {
 "values": [ExtResource("17_ayahl"), ExtResource("18_5lp3c"), ExtResource("19_k5gti"), ExtResource("20_51kur"), ExtResource("21_jshb1"), ExtResource("22_7m5u6"), ExtResource("23_lislv"), ExtResource("24_qlgl3")]
 }
 
-[sub_resource type="Animation" id="Animation_n5ug5"]
-resource_name = "fall"
-length = 0.2
+[sub_resource type="Animation" id="Animation_agqs5"]
+resource_name = "run"
+length = 0.5
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -165,10 +165,10 @@ tracks/0/path = NodePath("Sprite2D:texture")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.1, 0.2),
-"transitions": PackedFloat32Array(1, 1, 1),
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
 "update": 1,
-"values": [ExtResource("22_7m5u6"), ExtResource("23_lislv"), ExtResource("24_qlgl3")]
+"values": [ExtResource("11_df8g2"), ExtResource("12_3sr7b"), ExtResource("13_w4c4b"), ExtResource("14_yc0wp"), ExtResource("15_8etyf"), ExtResource("16_bvk5q")]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_68oex"]
@@ -218,7 +218,6 @@ drag_vertical_enabled = true
 collision_layer = 4
 collision_mask = 0
 script = ExtResource("12_acrq1")
-active = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="HitBox"]
 position = Vector2(17, 6)

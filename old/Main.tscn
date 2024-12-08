@@ -6,7 +6,7 @@
 [ext_resource type="Script" path="res://player.gd" id="3_pso6f"]
 [ext_resource type="Texture2D" uid="uid://bgr0btxyuv11p" path="res://old/Alien/Alien idle/f0cf236d720e4600b6d61b306c716aed4ITNuDhCexfa6iKg-2.png" id="4_cpy4n"]
 [ext_resource type="Texture2D" uid="uid://bggj65hu2p1mq" path="res://old/Alien/Alien idle/f0cf236d720e4600b6d61b306c716aed4ITNuDhCexfa6iKg-3.png" id="5_a2g0m"]
-[ext_resource type="Texture2D" uid="uid://y4887lna5ug2" path="res://base_soil-dirt-grass.png" id="6_lvvub"]
+[ext_resource type="Texture2D" uid="uid://y4887lna5ug2" path="res://tiles/base_soil-dirt-grass.png" id="6_lvvub"]
 [ext_resource type="PackedScene" uid="uid://cxggej47cg5nh" path="res://Entities/tempenemy.tscn" id="8_38qaw"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_yij48"]

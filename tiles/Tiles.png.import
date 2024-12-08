@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://lglqwmhemum8"
-path="res://.godot/imported/gameOver.jpg-c2afa1bf299c206a27dccbdad64d401b.ctex"
+uid="uid://d4jb1wragrn16"
+path="res://.godot/imported/Tiles.png-dbc3100e86bc226d12971a648c69c9e2.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://backgrounds/gameOver.jpg"
-dest_files=["res://.godot/imported/gameOver.jpg-c2afa1bf299c206a27dccbdad64d401b.ctex"]
+source_file="res://tiles/Tiles.png"
+dest_files=["res://.godot/imported/Tiles.png-dbc3100e86bc226d12971a648c69c9e2.ctex"]
 
 [params]
 
