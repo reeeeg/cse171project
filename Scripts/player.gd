@@ -4,7 +4,7 @@ class_name Player
 
 @onready var animation = $AnimationPlayer
 @onready var sprite = $Sprite2D
-@onready var atkfield = $HitBox/CollisionShape2D
+
 
 
 

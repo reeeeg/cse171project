@@ -1,6 +1,31 @@
 extends CharacterBody2D
 
 @onready var immortality = false
+@onready var sprite = $Sprite2D
+@onready var enve = $EnvironmentCollision
+@onready var hitbox = $HitBox
+@onready var hurtbox = $HurtBox
+
+
+
+func _physics_process(delta):
+	move_and_slide()
+	
+	if velocity.length() > 0:
+		$AnimationPlayer.play('walk')
+	
+	
+	if velocity.x > 0:
+		sprite.flip_h = false
+		enve.scale.x = abs(enve.scale.x)
+		hitbox.scale.x = abs(hitbox.scale.x)
+		hurtbox.scale.x = abs(hurtbox.scale.x)
+		
+	else:
+		sprite.flip_h = true
+		enve.scale.x = abs(enve.scale.x) * -1
+		hitbox.scale.x = abs(hitbox.scale.x) * -1
+		hurtbox.scale.x = abs(hurtbox.scale.x) * -1
 
 #var speed = 20.0
 #

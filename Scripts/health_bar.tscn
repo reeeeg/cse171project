@@ -11,7 +11,7 @@ region = Rect2(59.3058, 122.914, 101.538, 19.1001)
 atlas = ExtResource("1_4xv6a")
 region = Rect2(60.5143, 164.905, 99.2493, 19.621)
 
-[node name="HealthBar" type="TextureProgressBar"]
+[node name="PlayerHealthBar" type="TextureProgressBar"]
 offset_left = -116.0
 offset_top = 1.0
 offset_right = -15.0
