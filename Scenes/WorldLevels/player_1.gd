@@ -4,16 +4,22 @@ extends CharacterBody2D
 @export var SPEED = 300.0
 @export var JUMP_VELOCITY = -400.0
 @export var attacking = false
+@export var dashing = false
 
 @onready var sprite = $Sprite2D
 @onready var animation = $AnimationPlayer
 @onready var atkspace = $HitBox
 
 var can_control : bool = true
+var double_jump : bool = false
 
 func _physics_process(delta: float) -> void:
-	if !can_control:
+	if !can_control or dashing:
 		return
+		
+	if is_on_floor():
+		double_jump = true
+		
 	if Input.is_action_pressed("left"):
 		sprite.scale.x = abs(sprite.scale.x) * -1
 		atkspace.scale.x = abs(atkspace.scale.x) * -1
@@ -28,6 +34,21 @@ func _physics_process(delta: float) -> void:
 	# Handle jump.
 	if Input.is_action_just_pressed("jump") and is_on_floor():
 		velocity.y = JUMP_VELOCITY
+		double_jump = true
+		
+	if Input.is_action_just_pressed("jump") and !is_on_floor() and double_jump:
+		velocity.y = JUMP_VELOCITY
+		double_jump = false
+	
+	if Input.is_action_just_pressed("dash"):
+		velocity.x = 0
+		velocity.y = 0
+		animation.play("dash")
+		if sprite.scale.x > 0:
+			velocity.x = 2000.0
+		else:
+			velocity.x = -2000.0
+			
 
 	# Get the input direction and handle the movement/deceleration.
 	# As good practice, you should replace UI actions with custom gameplay actions.
@@ -45,7 +66,7 @@ func _physics_process(delta: float) -> void:
 	
 	
 func update_animation():
-	if !attacking:
+	if !attacking and !dashing:
 		if velocity.x != 0:
 			animation.play("run")
 		else:

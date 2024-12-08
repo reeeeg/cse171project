@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=3 uid="uid://6vtsrvk00qjc"]
+[gd_scene load_steps=32 format=3 uid="uid://6vtsrvk00qjc"]
 
 [ext_resource type="Script" path="res://Scripts/HitBox.gd" id="1_7wv5w"]
 [ext_resource type="Script" path="res://Scenes/WorldLevels/boss_1.gd" id="1_xqoif"]
@@ -11,7 +11,18 @@
 [ext_resource type="Texture2D" uid="uid://cuqh0q6kdag61" path="res://gifs/samurai/death/tile000.png" id="8_btmcl"]
 [ext_resource type="Texture2D" uid="uid://dy6q6ecwgq0fs" path="res://gifs/samurai/idle/tile000.png" id="9_4tkss"]
 [ext_resource type="Texture2D" uid="uid://bw1dwwg28uxx7" path="res://gifs/basesamuria/Samurai/Attack_1.png" id="10_qvohh"]
+[ext_resource type="Texture2D" uid="uid://0i1jw4bu8wbf" path="res://gifs/samurai/walk/tile000.png" id="11_fjp26"]
+[ext_resource type="Texture2D" uid="uid://0s35ma5pd0qy" path="res://gifs/samurai/walk/tile001.png" id="12_ot886"]
 [ext_resource type="Script" path="res://Scripts/HurtBox.gd" id="12_q5qjd"]
+[ext_resource type="Texture2D" uid="uid://dlk7q3p71y32t" path="res://gifs/samurai/walk/tile002.png" id="13_7jpdp"]
+[ext_resource type="Script" path="res://Scripts/state_machine.gd" id="13_po6km"]
+[ext_resource type="Texture2D" uid="uid://ctdkau7njjf3c" path="res://gifs/samurai/walk/tile003.png" id="14_iqtjk"]
+[ext_resource type="Script" path="res://Scripts/EnemyStates/enemy_idle.gd" id="14_ykrvo"]
+[ext_resource type="Texture2D" uid="uid://dfxymcgpk105n" path="res://gifs/samurai/walk/tile004.png" id="15_13vso"]
+[ext_resource type="Texture2D" uid="uid://3iemr0ft33m1" path="res://gifs/samurai/walk/tile005.png" id="16_2hgm2"]
+[ext_resource type="Texture2D" uid="uid://caepn8r4w3vka" path="res://gifs/samurai/walk/tile006.png" id="17_tni7n"]
+[ext_resource type="Texture2D" uid="uid://bvw4ji1rtli5f" path="res://gifs/samurai/walk/tile007.png" id="18_qmo8k"]
+[ext_resource type="Texture2D" uid="uid://dhhiy6tpr5pms" path="res://gifs/samurai/walk/tile008.png" id="19_wwe5m"]
 
 [sub_resource type="Animation" id="Animation_flty1"]
 resource_name = "Activate"
@@ -27,6 +38,18 @@ tracks/0/keys = {
 "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
 "update": 1,
 "values": [ExtResource("3_waviu"), ExtResource("4_wotoo"), ExtResource("5_j1ld0"), ExtResource("6_di2q1"), ExtResource("7_exiry"), ExtResource("8_btmcl")]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Health:immortality")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
 }
 
 [sub_resource type="Animation" id="Animation_8aaac"]
@@ -66,6 +89,54 @@ tracks/2/keys = {
 "transitions": PackedFloat32Array(1),
 "update": 1,
 "values": [0]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("EnvironmentCollision:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-29, 32)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("HurtBox/CollisionShape2D:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-30.5, 28)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("HitBox:active")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Health:immortality")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
 }
 
 [sub_resource type="Animation" id="Animation_l1l4d"]
@@ -110,6 +181,8 @@ tracks/2/keys = {
 
 [sub_resource type="Animation" id="Animation_70xfp"]
 resource_name = "walk"
+length = 1.6
+loop_mode = 1
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -117,10 +190,46 @@ tracks/0/path = NodePath("Sprite2D:texture")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(),
-"transitions": PackedFloat32Array(),
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.6, 0.8, 1, 1.2, 1.4, 1.6),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1),
 "update": 1,
-"values": []
+"values": [ExtResource("11_fjp26"), ExtResource("12_ot886"), ExtResource("13_7jpdp"), ExtResource("14_iqtjk"), ExtResource("15_13vso"), ExtResource("16_2hgm2"), ExtResource("17_tni7n"), ExtResource("18_qmo8k"), ExtResource("19_wwe5m")]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("EnvironmentCollision:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-5.115, 32)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("HurtBox/CollisionShape2D:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-5.03, 28)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("HitBox:active")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_hhb4l"]
@@ -155,7 +264,7 @@ libraries = {
 "": SubResource("AnimationLibrary_hhb4l")
 }
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+[node name="EnvironmentCollision" type="CollisionShape2D" parent="."]
 position = Vector2(-29, 32)
 shape = SubResource("CapsuleShape2D_0jqy3")
 
@@ -173,9 +282,18 @@ shape = SubResource("RectangleShape2D_v4iww")
 collision_layer = 2
 collision_mask = 0
 script = ExtResource("1_7wv5w")
+active = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="HitBox"]
 position = Vector2(35, 32)
 shape = SubResource("RectangleShape2D_sfiji")
+
+[node name="State Machine" type="Node" parent="." node_paths=PackedStringArray("initial_state")]
+script = ExtResource("13_po6km")
+initial_state = NodePath("EnemyIdle")
+
+[node name="EnemyIdle" type="Node" parent="State Machine" node_paths=PackedStringArray("enemy")]
+script = ExtResource("14_ykrvo")
+enemy = NodePath("../..")
 
 [connection signal="health_depleted" from="Health" to="." method="_on_health_health_depleted"]

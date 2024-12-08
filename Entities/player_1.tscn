@@ -1,4 +1,4 @@
-[gd_scene load_steps=47 format=3 uid="uid://cr3581g5ivd5s"]
+[gd_scene load_steps=48 format=3 uid="uid://cr3581g5ivd5s"]
 
 [ext_resource type="Script" path="res://Scenes/WorldLevels/player_1.gd" id="1_jvh4p"]
 [ext_resource type="Script" path="res://Scripts/Health.gd" id="2_1ntvs"]
@@ -74,6 +74,30 @@ tracks/2/keys = {
 "update": 1,
 "values": [false]
 }
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Health:immortality")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath(".:dashing")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
 
 [sub_resource type="Animation" id="Animation_nksev"]
 resource_name = "atk"
@@ -113,6 +137,61 @@ tracks/2/keys = {
 "transitions": PackedFloat32Array(1),
 "update": 1,
 "values": [false]
+}
+
+[sub_resource type="Animation" id="Animation_er61s"]
+resource_name = "dash"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("11_df8g2")]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Health:immortality")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".:dashing")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+
+[sub_resource type="Animation" id="Animation_waikc"]
+resource_name = "death"
+length = 2.4
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.3, 0.6, 0.9, 1.2, 1.5, 1.8, 2.1, 2.4),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [ExtResource("26_lab7b"), ExtResource("27_4kjrp"), ExtResource("28_fljet"), ExtResource("29_j7yig"), ExtResource("30_h4gu8"), ExtResource("31_fvs10"), ExtResource("32_wod1x"), ExtResource("33_rkhd1"), null]
 }
 
 [sub_resource type="Animation" id="Animation_n5ug5"]
@@ -179,26 +258,11 @@ tracks/0/keys = {
 "values": [ExtResource("11_df8g2"), ExtResource("12_3sr7b"), ExtResource("13_w4c4b"), ExtResource("14_yc0wp"), ExtResource("15_8etyf"), ExtResource("16_bvk5q")]
 }
 
-[sub_resource type="Animation" id="Animation_waikc"]
-resource_name = "death"
-length = 2.4
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Sprite2D:texture")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.3, 0.6, 0.9, 1.2, 1.5, 1.8, 2.1, 2.4),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1),
-"update": 1,
-"values": [ExtResource("26_lab7b"), ExtResource("27_4kjrp"), ExtResource("28_fljet"), ExtResource("29_j7yig"), ExtResource("30_h4gu8"), ExtResource("31_fvs10"), ExtResource("32_wod1x"), ExtResource("33_rkhd1"), null]
-}
-
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_68oex"]
 _data = {
 "RESET": SubResource("Animation_qdumy"),
 "atk1": SubResource("Animation_nksev"),
+"dash": SubResource("Animation_er61s"),
 "death": SubResource("Animation_waikc"),
 "fall": SubResource("Animation_n5ug5"),
 "idle": SubResource("Animation_2leay"),
@@ -238,7 +302,7 @@ shape = SubResource("CapsuleShape2D_0nehi")
 limit_smoothed = true
 drag_horizontal_enabled = true
 drag_vertical_enabled = true
-drag_bottom_margin = 1.0
+drag_bottom_margin = 0.25
 
 [node name="HitBox" type="Area2D" parent="."]
 collision_layer = 4
