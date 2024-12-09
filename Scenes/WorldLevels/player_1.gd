@@ -26,6 +26,9 @@ func _on_dialogic_signal(argument:String):
 		can_control = false
 
 func _physics_process(delta: float) -> void:
+	if !can_control and PlayerStatus.alive:
+		update_animation()
+		can_control = false
 	if !can_control or dashing:
 		return
 		
@@ -52,14 +55,14 @@ func _physics_process(delta: float) -> void:
 		velocity.y = JUMP_VELOCITY
 		double_jump = false
 	
-	#if Input.is_action_just_pressed("dash"):
-		#velocity.x = 0
-		#velocity.y = 0
-		#animation.play("dash")
-		#if sprite.scale.x > 0:
-			#velocity.x = 2000.0
-		#else:
-			#velocity.x = -2000.0
+	if Input.is_action_just_pressed("dash"):
+		velocity.x = 0
+		velocity.y = 0
+		animation.play("dash")
+		if sprite.scale.x > 0:
+			velocity.x = 2000.0
+		else:
+			velocity.x = -2000.0
 			
 
 	# Get the input direction and handle the movement/deceleration.
@@ -93,6 +96,7 @@ func attack():
 	animation.play("atk1")
 
 func _on_health_health_depleted() -> void:
+	PlayerStatus.alive = false
 	can_control = false
 	velocity.x = 0
 	velocity.y = 0

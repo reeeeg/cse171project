@@ -72,7 +72,6 @@ enabled=PackedStringArray("res://addons/dialogic/plugin.cfg")
 
 Enemies=""
 Player=""
-enemy=""
 
 [input]
 
