@@ -8,22 +8,13 @@ extends CharacterBody2D
 
 @onready var sprite = $Sprite2D
 @onready var animation = $AnimationPlayer
-@onready var atkspace = $HitBox
+@onready var projectile = $Projectile
+@onready var main = get_tree().get_root().get_node("Player2")
+
+var bulletpath = preload("res://Entities/Projectile.tscn")
 
 var can_control : bool = true
 var double_jump : bool = false
-
-func _ready() -> void:
-	Dialogic.signal_event.connect(_on_dialogic_signal)
-
-func _on_dialogic_signal(argument:String):
-	if argument == "introNoMovement":
-		can_control = false
-	if argument == "canPlay":
-		can_control = true
-		print("Player movement now enabled")
-	if argument == "stopMovement":
-		can_control = false
 
 func _physics_process(delta: float) -> void:
 	if !can_control or dashing:
@@ -34,11 +25,11 @@ func _physics_process(delta: float) -> void:
 		
 	if Input.is_action_pressed("left"):
 		sprite.scale.x = abs(sprite.scale.x) * -1
-		atkspace.scale.x = abs(atkspace.scale.x) * -1
+
 		
 	if Input.is_action_pressed("right"):
 		sprite.scale.x = abs(sprite.scale.x)
-		atkspace.scale.x = abs(atkspace.scale.x)
+
 	# Add the gravity.
 	if not is_on_floor():
 		velocity += get_gravity() * delta
@@ -51,7 +42,6 @@ func _physics_process(delta: float) -> void:
 	if Input.is_action_just_pressed("jump") and !is_on_floor() and double_jump:
 		velocity.y = JUMP_VELOCITY
 		double_jump = false
-	
 	#if Input.is_action_just_pressed("dash"):
 		#velocity.x = 0
 		#velocity.y = 0
@@ -90,6 +80,11 @@ func update_animation():
 
 func attack():
 	attacking = true
+	var instance = projectile.instantiate()
+	instance.dir = rotation
+	instance.spawnPos = global_position
+	instance.spawnRot = rotation
+	main.add_child.call_deferred(instance)
 	animation.play("atk1")
 
 func _on_health_health_depleted() -> void:

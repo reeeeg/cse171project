@@ -19,6 +19,10 @@ func Enter():
 	randomize_wander()
 	
 func Update(delta: float):
+	var nowstate = get_parent().get_current_state()
+	print(nowstate.State_Name)
+	if nowstate.State_Name == 'death':
+		return
 	if wander_time == 4:
 		Transitioned.emit(self, "follow")
 	if wander_time > 0:

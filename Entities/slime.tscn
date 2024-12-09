@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://c4gadhxgcjnar"]
+[gd_scene load_steps=12 format=3 uid="uid://cdirof4xwqi1d"]
 
 [ext_resource type="Script" path="res://Entities/slime.gd" id="1_ted8b"]
 [ext_resource type="Script" path="res://Scripts/Health.gd" id="2_iomwd"]
