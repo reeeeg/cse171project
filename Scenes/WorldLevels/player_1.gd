@@ -22,6 +22,8 @@ func _on_dialogic_signal(argument:String):
 	if argument == "canPlay":
 		can_control = true
 		print("Player movement now enabled")
+	if argument == "stopMovement":
+		can_control = false
 
 func _physics_process(delta: float) -> void:
 	if !can_control and PlayerStatus.alive:

@@ -1,3 +1,4 @@
+[signal arg="stopMovement"]
 [background arg="res://backgrounds/busStop.jpg" fade="0.0"]
 [music fade="0.0" volume="0.0"]
 Meep plops unceremoniously onto the empty bench and fishes his phone out of his pocket. He had about nine minutes

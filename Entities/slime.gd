@@ -81,6 +81,6 @@ func flip():
 
 func _on_health_health_depleted() -> void:
 	queue_free()
-	if get_tree().current_scene.name == "intro":
+	if get_tree().current_scene.name == "Level 0":
 		PlayerStatus.introSlimeAlive = false
 		#signal 
