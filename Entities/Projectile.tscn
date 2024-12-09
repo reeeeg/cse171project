@@ -1,0 +1,27 @@
+[gd_scene load_steps=5 format=3 uid="uid://oberabkrnfhs"]
+
+[ext_resource type="Script" path="res://Entities/projectile.gd" id="1_5lnhi"]
+[ext_resource type="Texture2D" uid="uid://k160jvwma5nn" path="res://gifs/archer/Arrow.png" id="2_amwni"]
+[ext_resource type="Script" path="res://Scripts/HitBox.gd" id="3_5mibn"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_5y5sr"]
+radius = 5.0
+height = 56.0
+
+[node name="Projectile" type="CharacterBody2D"]
+collision_layer = 6
+collision_mask = 0
+script = ExtResource("1_5lnhi")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_amwni")
+
+[node name="HitBox" type="Area2D" parent="."]
+collision_layer = 6
+collision_mask = 0
+script = ExtResource("3_5mibn")
+damage = 5
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HitBox"]
+rotation = 1.5708
+shape = SubResource("CapsuleShape2D_5y5sr")

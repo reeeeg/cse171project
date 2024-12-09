@@ -1,5 +1,4 @@
-extends State
-
+extends 
 @export var enemy: CharacterBody2D
 @export var move_speed := 10.0
 

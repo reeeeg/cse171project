@@ -1,11 +1,11 @@
-[gd_scene load_steps=11 format=4 uid="uid://bhch3tje8e1y0"]
+[gd_scene load_steps=11 format=4 uid="uid://dskuh61froorw"]
 
 [ext_resource type="Texture2D" uid="uid://dsf15sy2iiitl" path="res://gifs/industrial tileset/2 Background/Background.png" id="1_0m0bq"]
 [ext_resource type="Texture2D" uid="uid://cegans3586f67" path="res://gifs/zone tileset/1 Tiles/Tileset.png" id="2_47wdi"]
 [ext_resource type="PackedScene" uid="uid://cr3581g5ivd5s" path="res://Entities/player_1.tscn" id="3_r6d10"]
 [ext_resource type="PackedScene" uid="uid://6vtsrvk00qjc" path="res://Entities/boss_1.tscn" id="4_sns61"]
 [ext_resource type="PackedScene" uid="uid://ct7a646iqieef" path="res://Scripts/health_bar.tscn" id="5_d0nov"]
-[ext_resource type="PackedScene" path="res://Scripts/enemyhealthbar.tscn" id="6_8yju3"]
+[ext_resource type="PackedScene" uid="uid://bbn6ib3w7vxny" path="res://Scripts/enemyhealthbar.tscn" id="6_8yju3"]
 [ext_resource type="Script" path="res://Scripts/HitBox.gd" id="6_g0m2h"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_h5yjy"]
@@ -315,7 +315,8 @@ texture_region_size = Vector2i(32, 32)
 4:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16.379, -16.064, 16.379, -16.379, 16.379, 16.064, -16.5, 16)
 
 [sub_resource type="TileSet" id="TileSet_ypfll"]
-physics_layer_0/collision_layer = 1
+physics_layer_0/collision_layer = 17
+physics_layer_0/collision_mask = 17
 sources/0 = SubResource("TileSetAtlasSource_h5yjy")
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_s7qce"]
