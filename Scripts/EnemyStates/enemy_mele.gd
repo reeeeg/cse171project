@@ -24,3 +24,16 @@ func _on_boss_1_attackedfin() -> void:
 	if nowstate.State_Name == 'death':
 		return
 	Transitioned.emit(self, 'enemyidle') # Replace with function body.
+
+
+func _on_boss_2_attackedfin() -> void:
+	var nowstate = get_parent().get_current_state()
+	print(nowstate.State_Name)
+	if nowstate.State_Name == 'death':
+		return
+	Transitioned.emit(self, 'enemyidle') # Replace with function body.
+
+
+func _on_boss_2_death() -> void:
+	print("mele death signal")
+	Transitioned.emit(self, 'death')  # Replace with function body.

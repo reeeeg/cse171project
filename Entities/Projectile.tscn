@@ -20,7 +20,7 @@ texture = ExtResource("2_amwni")
 collision_layer = 6
 collision_mask = 0
 script = ExtResource("3_5mibn")
-damage = 3
+damage = 5
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="HitBox"]
 rotation = 1.5708

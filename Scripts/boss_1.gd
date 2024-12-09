@@ -11,6 +11,8 @@ extends CharacterBody2D
 signal death
 signal attackedfin
 
+@export var dashing:= false
+
 var dead = false
 
 func _physics_process(delta):
@@ -19,16 +21,14 @@ func _physics_process(delta):
 	move_and_slide()
 	
 	if attacked == true:
+		print("attackfinished")
 		attacked = false
 		attackedfin.emit()
+	
 	
 	if not is_on_floor():
 		velocity += get_gravity() * delta
 		
-	if velocity.length() > 0:
-		$AnimationPlayer.play('walk')
-		print("walk animation started")
-	
 	
 	if velocity.x > 0:
 		sprite.flip_h = false
@@ -42,6 +42,11 @@ func _physics_process(delta):
 			enve.scale.x = abs(enve.scale.x) * -1
 			hitbox.scale.x = abs(hitbox.scale.x) * -1
 			hurtbox.scale.x = abs(hurtbox.scale.x) * -1
+			
+	
+	if velocity.length() > 0 and !dashing:
+		$AnimationPlayer.play('walk')
+		print("walk animation started")
 
 
 
@@ -50,3 +55,8 @@ func _on_health_health_depleted() -> void:
 	animation.play('death')
 	print("death signal emitted")
 	death.emit()
+
+
+func _on_dash_dasher() -> void:
+	print("dashing finished")
+	dashing = true # Replace with function body.

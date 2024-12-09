@@ -1,4 +1,4 @@
-[gd_scene load_steps=42 format=3 uid="uid://6vtsrvk00qjc"]
+[gd_scene load_steps=48 format=3 uid="uid://6vtsrvk00qjc"]
 
 [ext_resource type="Script" path="res://Scripts/HitBox.gd" id="1_7wv5w"]
 [ext_resource type="Script" path="res://Scripts/boss_1.gd" id="1_xqoif"]
@@ -28,9 +28,14 @@
 [ext_resource type="Texture2D" uid="uid://bvw4ji1rtli5f" path="res://gifs/samurai/walk/tile007.png" id="18_qmo8k"]
 [ext_resource type="Texture2D" uid="uid://dhhiy6tpr5pms" path="res://gifs/samurai/walk/tile008.png" id="19_wwe5m"]
 [ext_resource type="Script" path="res://Scripts/EnemyStates/enemy_activation.gd" id="23_v2nfa"]
+[ext_resource type="Texture2D" uid="uid://dlh2gkupseon4" path="res://gifs/samurai/atk3/tile000.png" id="24_ntmra"]
 [ext_resource type="Script" path="res://Scripts/state.gd" id="25_m2vkt"]
+[ext_resource type="Texture2D" uid="uid://cnmpxdhulxhvm" path="res://gifs/samurai/atk3/tile001.png" id="25_v0wf5"]
+[ext_resource type="Texture2D" uid="uid://bus6r8410a5uj" path="res://gifs/samurai/atk3/tile002.png" id="26_y4khh"]
+[ext_resource type="Texture2D" uid="uid://cxx45cq25x8hy" path="res://gifs/samurai/atk3/tile003.png" id="27_rilhg"]
 [ext_resource type="Script" path="res://Scripts/EnemyStates/enemy_mele.gd" id="30_fi4g3"]
 [ext_resource type="Script" path="res://Scripts/EnemyStates/enemy_follow.gd" id="31_7to0s"]
+[ext_resource type="Script" path="res://Scripts/EnemyStates/enemy_dash.gd" id="35_jtw58"]
 
 [sub_resource type="Animation" id="Animation_flty1"]
 resource_name = "Activate"
@@ -281,6 +286,18 @@ tracks/14/keys = {
 "update": 0,
 "values": [0.0]
 }
+tracks/15/type = "value"
+tracks/15/imported = false
+tracks/15/enabled = true
+tracks/15/path = NodePath(".:dashing")
+tracks/15/interp = 1
+tracks/15/loop_wrap = true
+tracks/15/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_52eqx"]
 
@@ -514,11 +531,89 @@ tracks/3/keys = {
 "values": [true]
 }
 
+[sub_resource type="Animation" id="Animation_n420b"]
+resource_name = "dash"
+length = 2.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.133333, 0.266667, 2),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [ExtResource("24_ntmra"), ExtResource("25_v0wf5"), ExtResource("26_y4khh"), ExtResource("27_rilhg")]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("EnvironmentCollision:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-4.565, 32)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("HurtBox/CollisionShape2D:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-6.055, 28)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("HitBox/CollisionShape2D:disabled")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0.0333333, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath(".:attacked")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(1),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath(".:dashing")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_hhb4l"]
 _data = {
 "Activate": SubResource("Animation_flty1"),
 "RESET": SubResource("Animation_8aaac"),
 "atk2": SubResource("Animation_x8h5t"),
+"dash": SubResource("Animation_n420b"),
 "death": SubResource("Animation_mv7gc"),
 "walk": SubResource("Animation_70xfp")
 }
@@ -531,10 +626,13 @@ height = 66.0
 size = Vector2(61, 76)
 
 [node name="Boss1" type="CharacterBody2D" groups=["Enemies"]]
+collision_layer = 16
+collision_mask = 16
 script = ExtResource("1_xqoif")
 
 [node name="Health" type="Node" parent="."]
 script = ExtResource("2_gj6no")
+max_health = 30
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(0.825, 0)
@@ -587,17 +685,18 @@ script = ExtResource("25_m2vkt")
 script = ExtResource("30_fi4g3")
 enemy = NodePath("../..")
 
-[node name="dash" type="Node" parent="State Machine"]
-script = ExtResource("25_m2vkt")
+[node name="dash" type="Node" parent="State Machine" node_paths=PackedStringArray("enemy")]
+script = ExtResource("35_jtw58")
+enemy = NodePath("../..")
 
 [node name="follow" type="Node" parent="State Machine" node_paths=PackedStringArray("enemy")]
 script = ExtResource("31_7to0s")
 enemy = NodePath("../..")
 
 [connection signal="attackedfin" from="." to="State Machine/mele" method="_on_boss_1_attackedfin"]
-[connection signal="attackedfin" from="." to="State Machine/dash" method="_on_boss_1_attackedfin"]
 [connection signal="death" from="." to="State Machine/EnemyIdle" method="_on_boss_1_death"]
 [connection signal="death" from="." to="State Machine/mele" method="_on_boss_1_death"]
 [connection signal="death" from="." to="State Machine/dash" method="_on_boss_1_death"]
 [connection signal="death" from="." to="State Machine/follow" method="_on_boss_1_death"]
 [connection signal="health_depleted" from="Health" to="." method="_on_health_health_depleted"]
+[connection signal="dasher" from="State Machine/dash" to="." method="_on_dash_dasher"]

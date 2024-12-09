@@ -1,10 +1,10 @@
 extends State
-class_name EnemyActivation
+class_name EnemyActivation2
 
 @export var enemy: CharacterBody2D
 @export var move_speed := 0
 
-@export var completed := false
+@export var completed2 := false
 
 @onready var animation = $"../../AnimationPlayer"
 
@@ -16,14 +16,11 @@ func Enter():
 	print("entered activation")
 	animation.play("Activate")
 	
-func Update(delta: float):
-	pass
-		
 
 
 
 func Physics_Update(delta: float):
 	print("completed")
-	print(completed)
-	if completed == true:
+	print(completed2)
+	if completed2 == true:
 		Transitioned.emit(self, "enemyidle")
