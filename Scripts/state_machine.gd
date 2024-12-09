@@ -2,18 +2,24 @@ extends Node
 
 @export var initial_state : State
 
-var current_state : State
+@export var current_state : State :get = get_current_state
+@export var current_state_name : String
 var states : Dictionary = {}
 
+var tempname : String
 func _ready():
 	for child in get_children():
 		if child is State:
-			states[child.name] = child
+			tempname = child.name.to_lower()
+			states[tempname] = child
+			states[tempname].State_Name = tempname
 			child.Transitioned.connect(on_child_transition)
 			
 	if initial_state:
 		initial_state.Enter()
 		current_state = initial_state
+		
+		
 		
 	
 func _process(delta):
@@ -33,7 +39,9 @@ func on_child_transition(state, new_state_name):
 		return
 		
 	if current_state:
-		current_state.exit()
+		current_state.Exit()
 	
-	new_state.enter()
+	new_state.Enter()
 	current_state = new_state
+func get_current_state():
+	return current_state
