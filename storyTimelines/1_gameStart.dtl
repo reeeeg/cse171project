@@ -1,17 +1,26 @@
 [signal arg="introNoMovement"]
+[sound path="city_1.mp3" volume="-3.0"]
 [background arg="res://backgrounds/cityFar.jpg" fade="1.0"]
-[sound path="res://sfx/city_1.mp3" volume="-1.0"]
-[wait time="3.0"]
+[wait time="2.5"]
 [sound path="res://sfx/running.mp3" volume="-1.0"]
-A lone figure dashes across the rooftops of .
-[background arg="res://backgrounds/highwayBirdsEye.jpg" fade="0.0"]
-Even though it's the 
-<Empty Text Event>
+A lone figure clad in pink dashes across the rooftops of Apheres.
+ The world, at this moment, is a blur.
+Behind the figure trails two large silhouettes that look like... hands.
+[background arg="res://backgrounds/highwayBirdsEye.jpg" fade="2.0"]
+[wait time="1.0"]
+The sounds of the city are all around. Apheres often sleeps nary a wink, and tonight is no different, as various hovers and groundcars blare. Maglevs criss-cross in the darkness like comets streaking by.
+She's got places to be, but still goes out of her way to leap over the night markets in hopes of finding new bites after she's off work.
+d
+[background arg="res://backgrounds/longExposureStreet.jpg" fade="0.0"]
+And despite the chaos, she's perfectly calm. She's used to it. The music blasting in her ears might also have something to do with her calmness.
+join phone right
+[music path="res://sfx/loading_chillpeach.mp3" fade="0.0" volume="-2.0"]
+phone: Your target's on the ground, why are you on the roof?
+join meep left
+meep: It's more fun this way!
 [background arg="res://backgrounds/longExposureStreet.jpg" fade="0.0"]
 [background fade="0.0"]
-join phone right
 phone: Don't forget your mission instructions!
-join meep left
 meep: Hmm, I'd never.
 [signal arg="canPlay"]
 leave --All--
