@@ -26,12 +26,14 @@ directories/dch_directory={
 "mainAntagonist": "res://mainAntagonist.dch",
 "meep": "res://meep.dch",
 "oscar": "res://oscar.dch",
+"phone": "res://characterArt/phone.dch",
 "shopkeeper": "res://shopkeeper.dch",
 "soup": "res://soup.dch"
 }
 directories/dtl_directory={
 "1_gameStart": "res://storyTimelines/1_gameStart.dtl",
 "3_busStop": "res://storyTimelines/3_busStop.dtl",
+"charSelect_OverUnder2": "res://Scenes/CharacterSelect/charSelect_OverUnder2.dtl",
 "introDeath": "res://Scenes/GameOver/introDeath.dtl"
 }
 layout/style_list=[]
@@ -58,6 +60,7 @@ save/autosave_delay=60.0
 save/encryption_on_exports_only=true
 text/autopauses={}
 text/autoadvance_enabled=false
+variables={}
 
 [display]
 

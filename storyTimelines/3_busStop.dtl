@@ -2,14 +2,16 @@
 [background arg="res://backgrounds/busStop.jpg" fade="0.0"]
 [music fade="0.0" volume="0.0"]
 Meep plops unceremoniously onto the empty bench and fishes his phone out of his pocket. He had about nine minutes
-Two notifications. One from AirNews—another unsuccessful attempt at reaching the Spire. A second from his idle game—it's time to collect rewards from the latest expedition! One missed caller who left voicemail—"Looking for an upgrade? Low-cost neural implants, latest InterLink models a—"
+Two notifications. One from AirNews—another unsuccessful attempt at reaching the Spire. A second from his idle game—it's time to collect rewards from the latest expedition!
+One missed caller who left voicemail—"Looking for an upgrade? Low-cost neural implants, latest InterLink models a—"
 Meep deletes the voicemail and clears the second notification.
-meep: (Eh. I'll collect it later.
+meep: (Eh. I'll collect it later. What's this about the Spire...?)
 The sides of the shelter were plastered with colorful posters old and new. No one ever really bothered to take off old flyers, so the new ones were slapped right on top. It was beautiful, almost, like some art installation. Meep's gaze drifts from one to the next.
 <Empty Text Event>
 <Empty Text Event>
 join oscar left
 oscar: e
 afadlfalf
+<Empty Text Event>
 [signal arg="new scene"]
 [end_timeline]

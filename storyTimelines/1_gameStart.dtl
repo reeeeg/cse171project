@@ -1,10 +1,23 @@
 [signal arg="introNoMovement"]
+[background arg="res://backgrounds/cityFar.jpg" fade="1.0"]
+[sound path="res://sfx/city_1.mp3" volume="-1.0"]
+[wait time="3.0"]
+[sound path="res://sfx/running.mp3" volume="-1.0"]
+A lone figure dashes across the rooftops of .
+[background arg="res://backgrounds/highwayBirdsEye.jpg" fade="0.0"]
+Even though it's the 
+<Empty Text Event>
+[background arg="res://backgrounds/longExposureStreet.jpg" fade="0.0"]
 [background fade="0.0"]
-A lone figure
-aafdas
-[background arg="res://backgrounds/cityStreet.jpg" fade="0.0"]
-[background fade="0.0"]
+join phone right
+phone: Don't forget your mission instructions!
+join meep left
+meep: Hmm, I'd never.
 [signal arg="canPlay"]
-Press S and D to move left and right!\
-Press W to jump, and press it twice to double jump.
+leave --All--
+phone: Just in case, here are your mission instructions one more time!\
+Press S and D to move left and right.\
+Press W to jump, and press twice to double jump.
+phone: Press Space to attack.\
+Your target's just up ahead!
 [end_timeline]
