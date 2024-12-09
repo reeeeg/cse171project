@@ -22,14 +22,15 @@ Dialogic="*res://addons/dialogic/Core/DialogicGameHandler.gd"
 [dialogic]
 
 directories/dch_directory={
-"chara2": "res://chara2.dch",
-"chara3": "res://chara3.dch",
 "mainAntagonist": "res://mainAntagonist.dch",
-"maincharacter": "res://maincharacter.dch",
-"shopkeeper": "res://shopkeeper.dch"
+"meep": "res://meep.dch",
+"oscar": "res://oscar.dch",
+"shopkeeper": "res://shopkeeper.dch",
+"soup": "res://soup.dch"
 }
 directories/dtl_directory={
-"mainStory": "res://mainStory.dtl"
+"1_gameStart": "res://storyTimelines/1_gameStart.dtl",
+"3_busStop": "res://storyTimelines/3_busStop.dtl"
 }
 layout/style_list=[]
 layout/default_style="Default"
@@ -54,6 +55,7 @@ choices/reveal_by_input=false
 save/autosave_delay=60.0
 save/encryption_on_exports_only=true
 text/autopauses={}
+text/autoadvance_enabled=false
 
 [display]
 

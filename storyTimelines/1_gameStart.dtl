@@ -1,0 +1,9 @@
+[background fade="0.0"]
+A lone figure
+aafdas
+[background arg="res://backgrounds/cityStreet.jpg" fade="0.0"]
+[background fade="0.0"]
+[signal arg="ready"]
+Press S and D to move left and right!\
+Press W to jump, and press it twice to double jump.
+[end_timeline]
