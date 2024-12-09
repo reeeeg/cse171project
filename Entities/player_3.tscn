@@ -1,40 +1,42 @@
-[gd_scene load_steps=48 format=3 uid="uid://cr3581g5ivd5s"]
+[gd_scene load_steps=50 format=3 uid="uid://bv5ryhms6r531"]
 
-[ext_resource type="Script" path="res://Scenes/WorldLevels/player_1.gd" id="1_jvh4p"]
-[ext_resource type="Script" path="res://Scripts/Health.gd" id="2_1ntvs"]
-[ext_resource type="Texture2D" uid="uid://d4dm5esctyp7m" path="res://gifs/baseprotag/1 Pink_Monster/Pink_Monster.png" id="3_5box0"]
-[ext_resource type="Texture2D" uid="uid://d2jlyfvq8ipob" path="res://gifs/pinkprot/idle/tile000.png" id="4_bhxb2"]
-[ext_resource type="Texture2D" uid="uid://bl0c6dt0415mn" path="res://gifs/pinkprot/idle/tile001.png" id="5_f3bgh"]
-[ext_resource type="Texture2D" uid="uid://2lkwbvwwsm1d" path="res://gifs/pinkprot/idle/tile002.png" id="6_qk147"]
-[ext_resource type="Texture2D" uid="uid://d0xejjdurnidf" path="res://gifs/pinkprot/idle/tile003.png" id="7_nc5kb"]
-[ext_resource type="Texture2D" uid="uid://j1ylst3hw2bi" path="res://gifs/pinkprot/atk/tile003.png" id="7_w7vak"]
-[ext_resource type="Texture2D" uid="uid://cccwj1exxta2e" path="res://gifs/pinkprot/atk/tile000.png" id="8_lhwkj"]
-[ext_resource type="Texture2D" uid="uid://hxjgcddyax13" path="res://gifs/pinkprot/atk/tile001.png" id="9_xh3bp"]
-[ext_resource type="Texture2D" uid="uid://qm5atxcnasxr" path="res://gifs/pinkprot/atk/tile002.png" id="10_1y13h"]
-[ext_resource type="Texture2D" uid="uid://bh0eeqdhpho2p" path="res://gifs/pinkprot/run/tile000.png" id="11_df8g2"]
-[ext_resource type="Script" path="res://Scripts/HurtBox.gd" id="11_l6rhh"]
-[ext_resource type="Texture2D" uid="uid://d2tw8krrb82sc" path="res://gifs/pinkprot/run/tile001.png" id="12_3sr7b"]
-[ext_resource type="Script" path="res://Scripts/HitBox.gd" id="12_acrq1"]
-[ext_resource type="Texture2D" uid="uid://rsrpon8psua5" path="res://gifs/pinkprot/run/tile002.png" id="13_w4c4b"]
-[ext_resource type="Texture2D" uid="uid://b1to375uff0n0" path="res://gifs/pinkprot/run/tile003.png" id="14_yc0wp"]
-[ext_resource type="Texture2D" uid="uid://h3r2gs68cmjl" path="res://gifs/pinkprot/run/tile004.png" id="15_8etyf"]
-[ext_resource type="Texture2D" uid="uid://b0523vhtw0lxo" path="res://gifs/pinkprot/run/tile005.png" id="16_bvk5q"]
-[ext_resource type="Texture2D" uid="uid://dn2ksaf7dkt64" path="res://gifs/pinkprot/jump/tile000.png" id="17_ayahl"]
-[ext_resource type="Texture2D" uid="uid://eqiy3ntjedv8" path="res://gifs/pinkprot/jump/tile001.png" id="18_5lp3c"]
-[ext_resource type="Texture2D" uid="uid://bh4ear21wj6js" path="res://gifs/pinkprot/jump/tile002.png" id="19_k5gti"]
-[ext_resource type="Texture2D" uid="uid://ca3egugpn54fq" path="res://gifs/pinkprot/jump/tile003.png" id="20_51kur"]
-[ext_resource type="Texture2D" uid="uid://uxvatycilb15" path="res://gifs/pinkprot/jump/tile004.png" id="21_jshb1"]
-[ext_resource type="Texture2D" uid="uid://cbvub3y87b4ej" path="res://gifs/pinkprot/jump/tile005.png" id="22_7m5u6"]
-[ext_resource type="Texture2D" uid="uid://dht0y4xkurnq7" path="res://gifs/pinkprot/jump/tile006.png" id="23_lislv"]
-[ext_resource type="Texture2D" uid="uid://bm7sdj5j6brai" path="res://gifs/pinkprot/jump/tile007.png" id="24_qlgl3"]
-[ext_resource type="Texture2D" uid="uid://plwb21oaw4y7" path="res://gifs/pinkprot/death/tile000.png" id="26_lab7b"]
-[ext_resource type="Texture2D" uid="uid://2mqus2wlxook" path="res://gifs/pinkprot/death/tile001.png" id="27_4kjrp"]
-[ext_resource type="Texture2D" uid="uid://bxnpkiqgkcarn" path="res://gifs/pinkprot/death/tile002.png" id="28_fljet"]
-[ext_resource type="Texture2D" uid="uid://il3r2ccesh0r" path="res://gifs/pinkprot/death/tile003.png" id="29_j7yig"]
-[ext_resource type="Texture2D" uid="uid://1ngamjsc62lk" path="res://gifs/pinkprot/death/tile004.png" id="30_h4gu8"]
-[ext_resource type="Texture2D" uid="uid://b3rdwree38p6j" path="res://gifs/pinkprot/death/tile005.png" id="31_fvs10"]
-[ext_resource type="Texture2D" uid="uid://cbsu5d0f56q7x" path="res://gifs/pinkprot/death/tile006.png" id="32_wod1x"]
-[ext_resource type="Texture2D" uid="uid://5rmi8m3260sa" path="res://gifs/pinkprot/death/tile007.png" id="33_rkhd1"]
+[ext_resource type="Script" path="res://Scenes/WorldLevels/player_1.gd" id="1_bko68"]
+[ext_resource type="Script" path="res://Scripts/Health.gd" id="2_ojkoc"]
+[ext_resource type="Texture2D" uid="uid://cdpftkh5ky3md" path="res://gifs/blueprot/idle/tile000.png" id="3_h6y7s"]
+[ext_resource type="Texture2D" uid="uid://kig5oy6jc8vf" path="res://gifs/blueprot/atk2/tile000.png" id="4_4pv2j"]
+[ext_resource type="Texture2D" uid="uid://vwoy1l42peoc" path="res://gifs/blueprot/atk2/tile001.png" id="5_eiq7q"]
+[ext_resource type="Texture2D" uid="uid://btok34may4fyp" path="res://gifs/blueprot/atk2/tile002.png" id="6_vwhgj"]
+[ext_resource type="Texture2D" uid="uid://dvccgo2ihsd2y" path="res://gifs/blueprot/atk2/tile003.png" id="7_ts3bf"]
+[ext_resource type="Texture2D" uid="uid://cyxldjyletr35" path="res://gifs/blueprot/atk2/tile004.png" id="8_s35j5"]
+[ext_resource type="Texture2D" uid="uid://bh0eeqdhpho2p" path="res://gifs/pinkprot/run/tile000.png" id="8_wbyj6"]
+[ext_resource type="Texture2D" uid="uid://d1lha3f0gs7no" path="res://gifs/blueprot/atk2/tile005.png" id="9_2bfbs"]
+[ext_resource type="Texture2D" uid="uid://ctm0ju40gs2vf" path="res://gifs/blueprot/death/tile000.png" id="11_kuegn"]
+[ext_resource type="Texture2D" uid="uid://bjunukiuyqpf0" path="res://gifs/blueprot/death/tile001.png" id="12_pr48a"]
+[ext_resource type="Texture2D" uid="uid://d1k6c7ksl8d83" path="res://gifs/blueprot/death/tile002.png" id="13_22fl8"]
+[ext_resource type="Texture2D" uid="uid://bpc3iqmf4tjrw" path="res://gifs/blueprot/death/tile003.png" id="14_bpr1o"]
+[ext_resource type="Texture2D" uid="uid://cml0ufqwha3p3" path="res://gifs/blueprot/death/tile004.png" id="15_05u0f"]
+[ext_resource type="Texture2D" uid="uid://cod55yv8ysimi" path="res://gifs/blueprot/death/tile005.png" id="16_spd7g"]
+[ext_resource type="Texture2D" uid="uid://cgagjhqbd7hhb" path="res://gifs/blueprot/death/tile006.png" id="17_k6mmi"]
+[ext_resource type="Texture2D" uid="uid://cbvub3y87b4ej" path="res://gifs/pinkprot/jump/tile005.png" id="17_m4nee"]
+[ext_resource type="Texture2D" uid="uid://dr7nr30vjhm81" path="res://gifs/blueprot/death/tile007.png" id="18_6qxwr"]
+[ext_resource type="Texture2D" uid="uid://dht0y4xkurnq7" path="res://gifs/pinkprot/jump/tile006.png" id="18_y3gjc"]
+[ext_resource type="Texture2D" uid="uid://bm7sdj5j6brai" path="res://gifs/pinkprot/jump/tile007.png" id="19_0pps6"]
+[ext_resource type="Texture2D" uid="uid://cttp1muwflht7" path="res://gifs/blueprot/idle/tile001.png" id="22_v1nvs"]
+[ext_resource type="Texture2D" uid="uid://bvv6be5xnch81" path="res://gifs/blueprot/idle/tile002.png" id="23_cmfpn"]
+[ext_resource type="Texture2D" uid="uid://dn2ksaf7dkt64" path="res://gifs/pinkprot/jump/tile000.png" id="24_dpor4"]
+[ext_resource type="Texture2D" uid="uid://gfiykrcni8l2" path="res://gifs/blueprot/idle/tile003.png" id="24_x5qwp"]
+[ext_resource type="Texture2D" uid="uid://eqiy3ntjedv8" path="res://gifs/pinkprot/jump/tile001.png" id="25_8x2bn"]
+[ext_resource type="Texture2D" uid="uid://bh4ear21wj6js" path="res://gifs/pinkprot/jump/tile002.png" id="26_kqkw5"]
+[ext_resource type="Texture2D" uid="uid://ca3egugpn54fq" path="res://gifs/pinkprot/jump/tile003.png" id="27_m2xla"]
+[ext_resource type="Texture2D" uid="uid://uxvatycilb15" path="res://gifs/pinkprot/jump/tile004.png" id="28_21j8i"]
+[ext_resource type="Texture2D" uid="uid://biug2k186xy1g" path="res://gifs/blueprot/run/tile000.png" id="31_wawbb"]
+[ext_resource type="Texture2D" uid="uid://b4djg86x28iny" path="res://gifs/blueprot/run/tile001.png" id="32_gaen1"]
+[ext_resource type="Texture2D" uid="uid://tpu1guybda4x" path="res://gifs/blueprot/run/tile002.png" id="33_at4gy"]
+[ext_resource type="Script" path="res://Scripts/HitBox.gd" id="34_i0s7q"]
+[ext_resource type="Texture2D" uid="uid://cac204k8ctvbq" path="res://gifs/blueprot/run/tile003.png" id="34_urfd7"]
+[ext_resource type="Script" path="res://Scripts/HurtBox.gd" id="35_7v7d6"]
+[ext_resource type="Texture2D" uid="uid://b36gew58hw7ff" path="res://gifs/blueprot/run/tile004.png" id="35_rv50o"]
+[ext_resource type="Texture2D" uid="uid://b1uj2bnr1ldg6" path="res://gifs/blueprot/run/tile005.png" id="36_a6qq1"]
 
 [sub_resource type="Animation" id="Animation_qdumy"]
 length = 0.001
@@ -48,7 +50,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [ExtResource("3_5box0")]
+"values": [ExtResource("3_h6y7s")]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -101,7 +103,7 @@ tracks/4/keys = {
 
 [sub_resource type="Animation" id="Animation_nksev"]
 resource_name = "atk"
-length = 0.3
+length = 0.6
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -109,10 +111,10 @@ tracks/0/path = NodePath("Sprite2D:texture")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.1, 0.2, 0.3),
-"transitions": PackedFloat32Array(1, 1, 1, 1),
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
 "update": 1,
-"values": [ExtResource("8_lhwkj"), ExtResource("9_xh3bp"), ExtResource("10_1y13h"), ExtResource("7_w7vak")]
+"values": [ExtResource("4_4pv2j"), ExtResource("5_eiq7q"), ExtResource("6_vwhgj"), ExtResource("7_ts3bf"), ExtResource("8_s35j5"), ExtResource("9_2bfbs")]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -121,7 +123,7 @@ tracks/1/path = NodePath("HitBox/CollisionShape2D:disabled")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PackedFloat32Array(0.1, 0.3),
+"times": PackedFloat32Array(0, 0.6),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [false, true]
@@ -133,7 +135,7 @@ tracks/2/path = NodePath(".:attacking")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
-"times": PackedFloat32Array(0.3),
+"times": PackedFloat32Array(0.6),
 "transitions": PackedFloat32Array(1),
 "update": 1,
 "values": [false]
@@ -151,7 +153,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [ExtResource("11_df8g2")]
+"values": [ExtResource("8_wbyj6")]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -191,7 +193,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0, 0.3, 0.6, 0.9, 1.2, 1.5, 1.8, 2.1, 2.4),
 "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1),
 "update": 1,
-"values": [ExtResource("26_lab7b"), ExtResource("27_4kjrp"), ExtResource("28_fljet"), ExtResource("29_j7yig"), ExtResource("30_h4gu8"), ExtResource("31_fvs10"), ExtResource("32_wod1x"), ExtResource("33_rkhd1"), null]
+"values": [ExtResource("11_kuegn"), ExtResource("12_pr48a"), ExtResource("13_22fl8"), ExtResource("14_bpr1o"), ExtResource("15_05u0f"), ExtResource("16_spd7g"), ExtResource("17_k6mmi"), ExtResource("18_6qxwr"), null]
 }
 
 [sub_resource type="Animation" id="Animation_n5ug5"]
@@ -207,7 +209,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0, 0.1, 0.2),
 "transitions": PackedFloat32Array(1, 1, 1),
 "update": 1,
-"values": [ExtResource("22_7m5u6"), ExtResource("23_lislv"), ExtResource("24_qlgl3")]
+"values": [ExtResource("17_m4nee"), ExtResource("18_y3gjc"), ExtResource("19_0pps6")]
 }
 
 [sub_resource type="Animation" id="Animation_2leay"]
@@ -223,7 +225,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0, 0.2, 0.4, 0.6),
 "transitions": PackedFloat32Array(1, 1, 1, 1),
 "update": 1,
-"values": [ExtResource("4_bhxb2"), ExtResource("5_f3bgh"), ExtResource("6_qk147"), ExtResource("7_nc5kb")]
+"values": [ExtResource("3_h6y7s"), ExtResource("22_v1nvs"), ExtResource("23_cmfpn"), ExtResource("24_x5qwp")]
 }
 
 [sub_resource type="Animation" id="Animation_ppj6g"]
@@ -239,7 +241,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7),
 "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
 "update": 0,
-"values": [ExtResource("17_ayahl"), ExtResource("18_5lp3c"), ExtResource("19_k5gti"), ExtResource("20_51kur"), ExtResource("21_jshb1"), ExtResource("22_7m5u6"), ExtResource("23_lislv"), ExtResource("24_qlgl3")]
+"values": [ExtResource("24_dpor4"), ExtResource("25_8x2bn"), ExtResource("26_kqkw5"), ExtResource("27_m2xla"), ExtResource("28_21j8i"), ExtResource("17_m4nee"), ExtResource("18_y3gjc"), ExtResource("19_0pps6")]
 }
 
 [sub_resource type="Animation" id="Animation_agqs5"]
@@ -255,7 +257,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5),
 "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
 "update": 1,
-"values": [ExtResource("11_df8g2"), ExtResource("12_3sr7b"), ExtResource("13_w4c4b"), ExtResource("14_yc0wp"), ExtResource("15_8etyf"), ExtResource("16_bvk5q")]
+"values": [ExtResource("31_wawbb"), ExtResource("32_gaen1"), ExtResource("33_at4gy"), ExtResource("34_urfd7"), ExtResource("35_rv50o"), ExtResource("36_a6qq1")]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_68oex"]
@@ -273,22 +275,23 @@ _data = {
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_0nehi"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_inhmx"]
+size = Vector2(25, 31)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qhogy"]
 size = Vector2(27, 31.5)
 
-[node name="Player1" type="CharacterBody2D" groups=["Player"]]
-script = ExtResource("1_jvh4p")
+[node name="Player3" type="CharacterBody2D" groups=["Player"]]
+script = ExtResource("1_bko68")
 SPEED = 500.0
 JUMP_VELOCITY = -1300.0
 
 [node name="Health" type="Node" parent="."]
-script = ExtResource("2_1ntvs")
+script = ExtResource("2_ojkoc")
 max_health = 10
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(1, 0)
-texture = ExtResource("3_5box0")
+texture = ExtResource("3_h6y7s")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
@@ -296,7 +299,7 @@ libraries = {
 }
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, 2)
+position = Vector2(-4, 9)
 shape = SubResource("CapsuleShape2D_0nehi")
 
 [node name="Camera2D" type="Camera2D" parent="."]
@@ -308,21 +311,21 @@ drag_bottom_margin = 0.25
 [node name="HitBox" type="Area2D" parent="."]
 collision_layer = 2
 collision_mask = 0
-script = ExtResource("12_acrq1")
+script = ExtResource("34_i0s7q")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="HitBox"]
-position = Vector2(17, 6)
+position = Vector2(9.5, 4.5)
 shape = SubResource("RectangleShape2D_inhmx")
 disabled = true
 
 [node name="HurtBox" type="Area2D" parent="." node_paths=PackedStringArray("health")]
 collision_layer = 0
 collision_mask = 4
-script = ExtResource("11_l6rhh")
+script = ExtResource("35_7v7d6")
 health = NodePath("../Health")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="HurtBox"]
-position = Vector2(-0.5, 2.25)
+position = Vector2(-4, 9)
 shape = SubResource("RectangleShape2D_qhogy")
 
 [connection signal="health_depleted" from="Health" to="." method="_on_health_health_depleted"]

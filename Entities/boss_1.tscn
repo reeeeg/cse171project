@@ -560,7 +560,7 @@ position = Vector2(-30.5, 28)
 shape = SubResource("RectangleShape2D_v4iww")
 
 [node name="HitBox" type="Area2D" parent="."]
-collision_layer = 4
+collision_layer = 12
 collision_mask = 0
 script = ExtResource("1_7wv5w")
 
