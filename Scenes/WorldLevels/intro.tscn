@@ -1,11 +1,11 @@
-[gd_scene load_steps=9 format=4 uid="uid://d3n4nhlanopt3"]
+[gd_scene load_steps=9 format=4 uid="uid://iloqk62nxgxm"]
 
 [ext_resource type="Texture2D" uid="uid://wa1pwxjnyonv" path="res://backgrounds/cityStreet.jpg" id="1_036uv"]
 [ext_resource type="Texture2D" uid="uid://d4eklah6jmfkq" path="res://backgrounds/busStop.jpg" id="1_q1u02"]
 [ext_resource type="Script" path="res://Scenes/WorldLevels/intro.gd" id="1_sqfre"]
 [ext_resource type="Texture2D" uid="uid://d4jb1wragrn16" path="res://tiles/Tiles.png" id="2_hfgej"]
 [ext_resource type="PackedScene" uid="uid://cr3581g5ivd5s" path="res://Entities/player_1.tscn" id="3_af6o7"]
-[ext_resource type="PackedScene" uid="uid://c4gadhxgcjnar" path="res://Entities/slime.tscn" id="5_otj3e"]
+[ext_resource type="PackedScene" uid="uid://cdirof4xwqi1d" path="res://Entities/slime.tscn" id="5_otj3e"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_2uv3k"]
 texture = ExtResource("2_hfgej")

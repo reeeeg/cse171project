@@ -2,8 +2,8 @@
 
 [ext_resource type="Texture2D" uid="uid://dsf15sy2iiitl" path="res://gifs/industrial tileset/2 Background/Background.png" id="1_oarbv"]
 [ext_resource type="Texture2D" uid="uid://cegans3586f67" path="res://gifs/zone tileset/1 Tiles/Tileset.png" id="2_sufnu"]
-[ext_resource type="PackedScene" uid="uid://cr3581g5ivd5s" path="res://Entities/player_1.tscn" id="3_58wwj"]
 [ext_resource type="PackedScene" uid="uid://ctnr7gvw0aw6a" path="res://Entities/boss_2.tscn" id="4_gqwuu"]
+[ext_resource type="PackedScene" uid="uid://cxr6a2bo53we6" path="res://Entities/player_2.tscn" id="4_rx4tv"]
 [ext_resource type="PackedScene" uid="uid://ct7a646iqieef" path="res://Scripts/health_bar.tscn" id="5_17fad"]
 [ext_resource type="PackedScene" uid="uid://bbn6ib3w7vxny" path="res://Scripts/enemyhealthbar.tscn" id="6_v4a3r"]
 [ext_resource type="Script" path="res://Scripts/HitBox.gd" id="7_ikvtf"]
@@ -332,12 +332,10 @@ tile_map_data = PackedByteArray("AAABABwAAAAFAAEAAAACABwAAAAFAAEAAAADABwAAAAFAAE
 tile_set = SubResource("TileSet_ypfll")
 rendering_quadrant_size = 32
 
-[node name="Player1" parent="." instance=ExtResource("3_58wwj")]
-position = Vector2(117, 175)
-scale = Vector2(2, 2)
-
 [node name="boss2" parent="." instance=ExtResource("4_gqwuu")]
 position = Vector2(698, 376)
+
+[node name="Player2" parent="." instance=ExtResource("4_rx4tv")]
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 scale = Vector2(2.01, 2.01)
@@ -348,7 +346,7 @@ offset_left = 0.0
 offset_top = 0.0
 offset_right = 101.0
 offset_bottom = 40.0
-character = NodePath("../../Player1")
+character = NodePath("../../Player2")
 
 [node name="EnemyHealthBar" parent="CanvasLayer" node_paths=PackedStringArray("character") instance=ExtResource("6_v4a3r")]
 offset_left = 11.9403
