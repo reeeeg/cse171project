@@ -11,7 +11,11 @@ extends CharacterBody2D
 signal death
 signal attackedfin
 
+var dead = false
+
 func _physics_process(delta):
+	if dead:
+		return
 	move_and_slide()
 	
 	if attacked == true:
@@ -42,6 +46,7 @@ func _physics_process(delta):
 
 
 func _on_health_health_depleted() -> void:
+	dead = true
 	animation.play('death')
 	print("death signal emitted")
 	death.emit()
