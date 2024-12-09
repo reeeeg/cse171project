@@ -1,0 +1,113 @@
+[gd_scene load_steps=12 format=3 uid="uid://c4gadhxgcjnar"]
+
+[ext_resource type="Script" path="res://Entities/slime.gd" id="1_ted8b"]
+[ext_resource type="Script" path="res://Scripts/Health.gd" id="2_iomwd"]
+[ext_resource type="Texture2D" uid="uid://d1a1rq3w2fxj" path="res://gifs/Slime/Idle-Run (44x30).png" id="3_5jxb7"]
+[ext_resource type="Script" path="res://Scripts/HurtBox.gd" id="20_0lkan"]
+[ext_resource type="Script" path="res://Scripts/state_machine.gd" id="22_rjmi4"]
+[ext_resource type="Script" path="res://Scripts/EnemyStates/enemy_idle.gd" id="23_irk2f"]
+
+[sub_resource type="Animation" id="Animation_jf8e0"]
+resource_name = "idle"
+length = 1.35
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.133333, 0.266667, 0.4, 0.533333, 0.666667, 0.8, 0.933333, 1.06667, 1.2),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [1, 1, 2, 4, 5, 6, 7, 8, 9, 9]
+}
+
+[sub_resource type="Animation" id="Animation_vcudd"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../Health:immortality")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_ug2bu"]
+_data = {
+"RESET": SubResource("Animation_vcudd"),
+"idle": SubResource("Animation_jf8e0")
+}
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_i231l"]
+size = Vector2(32, 26)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vujmn"]
+size = Vector2(40, 23.75)
+
+[node name="Slime" type="CharacterBody2D"]
+script = ExtResource("1_ted8b")
+
+[node name="RayCast2D" type="RayCast2D" parent="."]
+position = Vector2(6, 0)
+target_position = Vector2(0, 24)
+
+[node name="RayCast2D2" type="RayCast2D" parent="."]
+position = Vector2(-10, 0)
+target_position = Vector2(0, 24)
+
+[node name="Health" type="Node" parent="."]
+script = ExtResource("2_iomwd")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+root_node = NodePath("../Sprite2D")
+libraries = {
+"": SubResource("AnimationLibrary_ug2bu")
+}
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-2, -8)
+texture = ExtResource("3_5jxb7")
+hframes = 10
+
+[node name="EnvironmentCollision" type="CollisionShape2D" parent="."]
+position = Vector2(-2, -5)
+shape = SubResource("RectangleShape2D_i231l")
+
+[node name="HurtBox" type="Area2D" parent="." node_paths=PackedStringArray("health")]
+collision_layer = 0
+collision_mask = 4
+script = ExtResource("20_0lkan")
+health = NodePath("../Health")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HurtBox"]
+position = Vector2(-4, -4.125)
+shape = SubResource("RectangleShape2D_vujmn")
+
+[node name="State Machine" type="Node" parent="." node_paths=PackedStringArray("initial_state")]
+script = ExtResource("22_rjmi4")
+initial_state = NodePath("EnemyIdle")
+
+[node name="EnemyIdle" type="Node" parent="State Machine" node_paths=PackedStringArray("enemy")]
+script = ExtResource("23_irk2f")
+enemy = NodePath("../..")
+
+[connection signal="health_depleted" from="Health" to="." method="_on_health_health_depleted"]

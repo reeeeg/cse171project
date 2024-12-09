@@ -13,7 +13,20 @@ extends CharacterBody2D
 var can_control : bool = true
 var double_jump : bool = false
 
+func _ready() -> void:
+	Dialogic.signal_event.connect(_on_dialogic_signal)
+
+func _on_dialogic_signal(argument:String):
+	if argument == "introNoMovement":
+		can_control = false
+	if argument == "canPlay":
+		can_control = true
+		print("Player movement now enabled")
+
 func _physics_process(delta: float) -> void:
+	if !can_control and PlayerStatus.alive:
+		update_animation()
+		can_control = false
 	if !can_control or dashing:
 		return
 		
@@ -81,6 +94,7 @@ func attack():
 	animation.play("atk1")
 
 func _on_health_health_depleted() -> void:
+	PlayerStatus.alive = false
 	can_control = false
 	velocity.x = 0
 	velocity.y = 0

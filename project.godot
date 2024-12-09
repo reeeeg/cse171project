@@ -18,6 +18,7 @@ config/icon="res://icon.svg"
 [autoload]
 
 Dialogic="*res://addons/dialogic/Core/DialogicGameHandler.gd"
+PlayerStatus="*res://player_status.gd"
 
 [dialogic]
 
@@ -30,7 +31,8 @@ directories/dch_directory={
 }
 directories/dtl_directory={
 "1_gameStart": "res://storyTimelines/1_gameStart.dtl",
-"3_busStop": "res://storyTimelines/3_busStop.dtl"
+"3_busStop": "res://storyTimelines/3_busStop.dtl",
+"introDeath": "res://Scenes/GameOver/introDeath.dtl"
 }
 layout/style_list=[]
 layout/default_style="Default"

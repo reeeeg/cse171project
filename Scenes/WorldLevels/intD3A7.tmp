@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=4 uid="uid://d3n4nhlanopt3"]
+[gd_scene load_steps=11 format=4 uid="uid://d3n4nhlanopt3"]
 
 [ext_resource type="Texture2D" uid="uid://wa1pwxjnyonv" path="res://backgrounds/cityStreet.jpg" id="1_036uv"]
 [ext_resource type="Texture2D" uid="uid://d4eklah6jmfkq" path="res://backgrounds/busStop.jpg" id="1_q1u02"]
@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://d4jb1wragrn16" path="res://tiles/Tiles.png" id="2_hfgej"]
 [ext_resource type="PackedScene" uid="uid://cr3581g5ivd5s" path="res://Entities/player_1.tscn" id="3_af6o7"]
 [ext_resource type="PackedScene" uid="uid://c4gadhxgcjnar" path="res://Entities/slime.tscn" id="5_otj3e"]
+[ext_resource type="Script" path="res://Scripts/HitBox.gd" id="6_k6x8w"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_2uv3k"]
 texture = ExtResource("2_hfgej")
@@ -122,6 +123,8 @@ physics_layer_0/collision_layer = 1
 physics_layer_0/collision_mask = 0
 sources/0 = SubResource("TileSetAtlasSource_2uv3k")
 
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_iofel"]
+
 [node name="Level 0" type="Node2D"]
 script = ExtResource("1_sqfre")
 
@@ -143,9 +146,19 @@ tile_map_data = PackedByteArray("AAD6/wMAAAAFAAQAAAD7/wMAAAAFAAQAAAD8/wMAAAAFAAQ
 tile_set = SubResource("TileSet_v00um")
 
 [node name="Slime" parent="." instance=ExtResource("5_otj3e")]
-position = Vector2(2128, -304)
+position = Vector2(2128, -384)
 scale = Vector2(2, 2)
 
 [node name="Player1" parent="." instance=ExtResource("3_af6o7")]
-position = Vector2(2288, -376)
+position = Vector2(-952, 208)
 scale = Vector2(4, 4)
+
+[node name="HitBox" type="Area2D" parent="."]
+position = Vector2(224, -616)
+collision_layer = 6
+script = ExtResource("6_k6x8w")
+damage = 999999
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HitBox"]
+position = Vector2(536, 1104)
+shape = SubResource("WorldBoundaryShape2D_iofel")

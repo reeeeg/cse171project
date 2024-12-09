@@ -10,4 +10,5 @@ The sides of the shelter were plastered with colorful posters old and new. No on
 join oscar left
 oscar: e
 afadlfalf
-[signal]
+[signal arg="new scene"]
+[end_timeline]

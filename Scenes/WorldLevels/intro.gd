@@ -6,13 +6,20 @@ func _ready() -> void:
 	# pass # Replace with function body.
 	Dialogic.signal_event.connect(_on_dialogic_signal)
 	Dialogic.start("res://storyTimelines/1_gameStart.dtl")
+	PlayerStatus.alive = true
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	pass
+	checkDead()
 
 func _on_dialogic_signal(argument:String):
-	if argument == "ready":
-		print("lets goo")
-	pass
+	if argument == "new scene":
+		get_tree().change_scene_to_file("res://Scenes/WorldLevels/level_2.tscn")
+
+func checkDead():
+	var delay = 3.0
+	if !PlayerStatus.alive:
+		Dialogic.start("res://Scenes/GameOver/introDeath.dtl")
+		await get_tree().create_timer(delay).timeout
+		get_tree().reload_current_scene()
