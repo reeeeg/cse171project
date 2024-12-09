@@ -1,5 +1,5 @@
 [signal arg="introNoMovement"]
-[sound path="city_1.mp3" volume="-3.0"]
+[sound path="res://sfx/city_1.mp3" volume="-1.5"]
 [background arg="res://backgrounds/cityFar.jpg" fade="1.0"]
 [wait time="2.5"]
 [sound path="res://sfx/running.mp3" volume="-1.0"]
