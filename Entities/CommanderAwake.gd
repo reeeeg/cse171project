@@ -5,7 +5,7 @@ class_name CommanderAwake
 @export var move_speed := 0
 
 @export var awake := false
-@onready var animation = $"../../AnimationPlayer"
+@onready var animation = $"../../CommanderAnimation"
 
 func Enter():
 	print("entered activation")
@@ -15,7 +15,9 @@ func Enter():
 
 
 func Physics_Update(delta: float):
-	print("completed")
+	
 	print(awake)
 	if awake:
+		Transitioned.emit(self, "idle")
+	else:
 		Transitioned.emit(self, "idle")

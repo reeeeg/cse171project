@@ -4,7 +4,7 @@ extends State
 
 var player : CharacterBody2D
 
-@onready var animation = $"../../AnimationPlayer"
+@onready var animation = $"../../CommanderAnimation"
 
 func Enter():
 	print("entered mele")

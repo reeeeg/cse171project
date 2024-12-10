@@ -1,7 +1,7 @@
 extends State
 class_name CommanderIdle
 
-@onready var animation = $"../../AnimationPlayer"
+@onready var animation = $"../../CommanderAnimation"
 
 @export var enemy: CharacterBody2D
 @export var move_speed := 30.0

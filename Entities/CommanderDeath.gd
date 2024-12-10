@@ -2,7 +2,7 @@ extends State
 
 @export var enemy: CharacterBody2D
 
-@onready var animation = $"../../AnimationPlayer"
+@onready var animation = $"../../CommanderAnimation"
 
 func Enter():
 	enemy.velocity.x = 0
