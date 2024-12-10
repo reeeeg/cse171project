@@ -1,6 +1,6 @@
 [gd_scene load_steps=50 format=3 uid="uid://bv5ryhms6r531"]
 
-[ext_resource type="Script" path="res://Scenes/WorldLevels/player_1.gd" id="1_bko68"]
+[ext_resource type="Script" path="res://Scenes/WorldLevels/player_3.gd" id="1_cp1pm"]
 [ext_resource type="Script" path="res://Scripts/Health.gd" id="2_ojkoc"]
 [ext_resource type="Texture2D" uid="uid://cdpftkh5ky3md" path="res://gifs/blueprot/idle/tile000.png" id="3_h6y7s"]
 [ext_resource type="Texture2D" uid="uid://kig5oy6jc8vf" path="res://gifs/blueprot/atk2/tile000.png" id="4_4pv2j"]
@@ -281,8 +281,8 @@ size = Vector2(25, 31)
 size = Vector2(27, 31.5)
 
 [node name="Player3" type="CharacterBody2D" groups=["Player"]]
-script = ExtResource("1_bko68")
-SPEED = 500.0
+script = ExtResource("1_cp1pm")
+SPEED = 400.0
 JUMP_VELOCITY = -1300.0
 
 [node name="Health" type="Node" parent="."]

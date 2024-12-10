@@ -165,30 +165,40 @@ scale = Vector2(0.419598, 0.419598)
 texture = ExtResource("7_q1y2f")
 
 [node name="soupButton" type="CheckButton" parent="."]
+layout_mode = 0
 offset_left = 968.0
 offset_top = 550.0
 offset_right = 1085.0
 offset_bottom = 614.0
-text = "Soup"
+text = "Soup
+I J K L
+Space"
 alignment = 1
 
 [node name="meepButton" type="CheckButton" parent="."]
+layout_mode = 0
 offset_left = 584.0
 offset_top = 550.0
 offset_right = 701.0
 offset_bottom = 614.0
-text = "M-33P"
+text = "M-33P
+W A S D
+LSHIFT"
 alignment = 1
 
 [node name="oscarButton" type="CheckButton" parent="."]
+layout_mode = 0
 offset_left = 192.0
 offset_top = 550.0
 offset_right = 309.0
 offset_bottom = 614.0
-text = "Oscar"
+text = "Oscar
+Arrow Keys
+RSHIFT"
 alignment = 1
 
 [node name="confirmCharactersButton" type="Button" parent="."]
+layout_mode = 0
 offset_left = 560.0
 offset_top = 632.0
 offset_right = 720.0

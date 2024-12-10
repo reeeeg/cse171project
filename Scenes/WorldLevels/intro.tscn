@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=4 uid="uid://iloqk62nxgxm"]
+[gd_scene load_steps=13 format=4 uid="uid://iloqk62nxgxm"]
 
 [ext_resource type="Texture2D" uid="uid://wa1pwxjnyonv" path="res://backgrounds/cityStreet.jpg" id="1_036uv"]
 [ext_resource type="Texture2D" uid="uid://d4eklah6jmfkq" path="res://backgrounds/busStop.jpg" id="1_q1u02"]
@@ -7,6 +7,8 @@
 [ext_resource type="PackedScene" uid="uid://cr3581g5ivd5s" path="res://Entities/player_1.tscn" id="3_af6o7"]
 [ext_resource type="PackedScene" uid="uid://c4gadhxgcjnar" path="res://Entities/slime.tscn" id="5_otj3e"]
 [ext_resource type="Script" path="res://Scripts/HitBox.gd" id="7_5tcne"]
+[ext_resource type="PackedScene" uid="uid://br3gsjhwtfgdb" path="res://Entities/player_2.tscn" id="7_470vm"]
+[ext_resource type="PackedScene" uid="uid://bv5ryhms6r531" path="res://Entities/player_3.tscn" id="8_dxfhy"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_i231k"]
 texture = ExtResource("2_hfgej")
@@ -150,8 +152,14 @@ position = Vector2(2128, -304)
 scale = Vector2(2, 2)
 
 [node name="Player1" parent="." instance=ExtResource("3_af6o7")]
+visible = false
 position = Vector2(-959, 213)
-scale = Vector2(4, 4)
+
+[node name="Player2" parent="." instance=ExtResource("7_470vm")]
+visible = false
+
+[node name="Player3" parent="." instance=ExtResource("8_dxfhy")]
+visible = false
 
 [node name="HitBox" type="Area2D" parent="."]
 collision_layer = 7
