@@ -1,13 +1,13 @@
 extends State
 
 @export var enemy: CharacterBody2D
-@export var move_speed := 600.0
+@export var move_speed := 1200.0
 
 var player : CharacterBody2D
 
 signal CommanderDash
 
-@onready var animation = $"../../AnimationPlayer"
+@onready var animation = $"../../CommanderAnimation"
 
 func Enter():
 	player = get_tree().get_first_node_in_group("Player")

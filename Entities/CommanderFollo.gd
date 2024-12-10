@@ -1,7 +1,7 @@
 extends State
 
 @export var enemy: CharacterBody2D
-@export var move_speed := 150.0
+@export var move_speed := 200.0
 
 var player : CharacterBody2D
 
@@ -19,7 +19,7 @@ func Physics_Update(delta: float):
 		player = get_tree().get_first_node_in_group("Player")
 		direction = player.global_position - enemy.global_position
 		
-		if direction.x < 0.0:
+		if direction.x > 0.0:
 			enemy.velocity.x = 0.1
 		else:
 			enemy.velocity.x = -.01
