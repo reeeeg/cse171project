@@ -52,7 +52,7 @@ func _on_soup_button_toggled(toggled_on: bool) -> void:
 	pass # Replace with function body.
 	
 func _on_confirm_characters_button_pressed() -> void:
-	if selected != 2:
+	if selected > 2:
 		Dialogic.start("res://Scenes/CharacterSelect/charSelect_OverUnder2.dtl")
 	else:
 		get_tree().change_scene_to_file("res://Scenes/WorldLevels/intro.tscn")
