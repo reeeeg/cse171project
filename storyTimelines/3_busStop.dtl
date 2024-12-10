@@ -1,23 +1,21 @@
 [signal arg="stopMovement"]
 [background arg="res://backgrounds/busStop.jpg" fade="0.0"]
 [music path="res://sfx/city_1.mp3" channel="1" fade="0.5" volume="-1.2"]
+join meep leftmost
 Meep plops unceremoniously onto the empty bench and fishes her phone out of her pocket. She had about nine minutes before the next bus.
 She slips on her earbuds and presses play.
 [music path="res://sfx/2am_chillpeach.mp3" fade="1.0" volume="-0.5"]
 Groundcars and hovers still line the streets. Ah... Meep thought of her own hoverboard, sitting in her apartment... this job would hopefully cover the funds needed for repair.
-<Empty Text Event>
-phone: What, not in the mood to jump across rooftops
+join phone rightmost
+phone: What, not in the mood to jump across rooftops?
+meep: Let me appreciate this city's public transit.
+leave --All--
 Two notifications. One from AirNews—another unsuccessful attempt at reaching the Spire. A second from his idle game—it's time to collect rewards from the latest expedition!
 One missed caller who left voicemail—"Looking for an upgrade? Low-cost neural implants, latest InterLink models a—"
 Meep deletes the voicemail and clears the second notification.
 meep: (Eh. I'll collect it later. What's this about the Spire again...?)
-<Empty Text Event>
 The sides of the shelter were plastered with colorful posters old and new. No one ever really bothered to take off old flyers, so the new ones were slapped right on top.
 It was beautiful, almost, like some art installation, a collage of the collective human experience. But she doesn't really care right now. Meep's gaze drifts from one to the next.
-<Empty Text Event>
-join oscar left
-oscar: e
-afadlfalf
 <Empty Text Event>
 [signal arg="new scene"]
 [end_timeline]

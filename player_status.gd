@@ -22,6 +22,7 @@ func _process(delta: float) -> void:
 	if !alive and !introSlimeAlive:
 		print("dead")
 		get_tree().change_scene_to_file("res://Scenes/GameOver/gameOver.tscn")
+		alive - true
 	pass
 
 #func loadCharacters():

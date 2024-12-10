@@ -4,6 +4,10 @@ var selected = 0
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	#get_tree().reload_current_scene()
+	PlayerStatus.meep = false
+	PlayerStatus.oscar = false
+	PlayerStatus.soup = false
 	# pass # Replace with function body.
 	Dialogic.signal_event.connect(_on_dialogic_signal)
 

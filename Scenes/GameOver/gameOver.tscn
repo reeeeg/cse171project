@@ -8,12 +8,12 @@
 [node name="GameOver" type="Control"]
 layout_mode = 3
 anchors_preset = 0
+script = ExtResource("2_cqa1r")
 
 [node name="GameOver" type="Sprite2D" parent="."]
 position = Vector2(592, 360)
 scale = Vector2(0.243, 0.243)
 texture = ExtResource("1_ilmip")
-script = ExtResource("2_cqa1r")
 
 [node name="restartButton" type="Button" parent="."]
 layout_mode = 0
@@ -32,4 +32,4 @@ position = Vector2(640, 432)
 scale = Vector2(0.639892, 0.639892)
 texture = ExtResource("4_1pl1x")
 
-[connection signal="pressed" from="restartButton" to="GameOver" method="_on_button_pressed"]
+[connection signal="pressed" from="restartButton" to="." method="_on_restart_button_pressed"]

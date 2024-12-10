@@ -13,10 +13,10 @@ She's got places to be, but still goes out of her way to leap over the night mar
 Her eyes lock onto something yellow as she leaps over another alley. New batch of lemon candies from her faovrite small candy store? She makes a mental note to visit later.
 [background arg="res://backgrounds/longExposureStreet.jpg" fade="0.0"]
 And despite the chaos, she's perfectly calm. She's used to it. The music blasting in her ears might also have something to do with her calmness.
-join phone right
+join phone rightmost
 [music path="res://sfx/loading_chillpeach.mp3" fade="1.5" volume="-2.0"]
 phone: Your target's on the ground, why are you on the roof?
-join meep left
+join meep leftmost
 meep: Lighten up! It's called having fun.
 meep: This way, I also don't have to worry about accidentally ramming into someone... like last time...
 [background arg="res://backgrounds/longExposureStreet.jpg" fade="1.0"]
@@ -24,13 +24,22 @@ The panel on her arm lights up; she's getting close. She sighs and looks for the
 [sound path="res://sfx/running.mp3" volume="-1.0"]
 There's no time to rest. Full speed ahead!
 phone: Don't forget your mission instructions!
-meep: I know, I know, I'd never.
+meep: You don't have to tell me twice.
 leave --All--
 [background fade="0.0"]
 phone: You have arrived at the last known location of the target. Just in case, here are your mission instructions one more time!
 [signal arg="canPlay"]
-phone: Press S and D to move left and right.\
-Press W to jump, and press twice to double jump.
-phone: Press Space to attack.\
-Your target's just up ahead!
+phone: If you're M-33P\:\
+Press S and D to move left and right.\
+Press W to jump, and press twice to double jump.\
+LSHIFT to attack.
+phone: If you're Oscar\:\
+Press the L and R arrow keys to move left and right.\
+Press UP to jump, and press twice to double jump.\
+RSHIFT to attack.
+phone: If you're Soup\:\
+Press the J and L arrow keys to move left and right.\
+Press I to jump, and press twice to double jump.\
+Space to attack.
+phone: Let's get going! Your target's just up ahead!
 [end_timeline]
