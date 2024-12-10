@@ -4,28 +4,32 @@
 [wait time="2.5"]
 [sound path="res://sfx/running.mp3" volume="-1.0"]
 A lone figure clad in pink dashes across the rooftops of Apheres.
- The world, at this moment, is a blur.
+The world, at this moment, is a blur.
 Behind the figure trails two large silhouettes that look like... hands.
 [background arg="res://backgrounds/highwayBirdsEye.jpg" fade="2.0"]
 [wait time="1.0"]
 The sounds of the city are all around. Apheres often sleeps nary a wink, and tonight is no different, as various hovers and groundcars blare. Maglevs criss-cross in the darkness like comets streaking by.
 She's got places to be, but still goes out of her way to leap over the night markets in hopes of finding new bites after she's off work.
-d
+Her eyes lock onto something yellow as she leaps over another alley. New batch of lemon candies from her faovrite small candy store? She makes a mental note to visit later.
 [background arg="res://backgrounds/longExposureStreet.jpg" fade="0.0"]
 And despite the chaos, she's perfectly calm. She's used to it. The music blasting in her ears might also have something to do with her calmness.
 join phone right
-[music path="res://sfx/loading_chillpeach.mp3" fade="0.0" volume="-2.0"]
+[music path="res://sfx/loading_chillpeach.mp3" fade="1.5" volume="-2.0"]
 phone: Your target's on the ground, why are you on the roof?
 join meep left
-meep: It's more fun this way!
-[background arg="res://backgrounds/longExposureStreet.jpg" fade="0.0"]
-[background fade="0.0"]
+meep: Lighten up! It's called having fun.
+meep: This way, I also don't have to worry about accidentally ramming into someone... like last time...
+[background arg="res://backgrounds/longExposureStreet.jpg" fade="1.0"]
+The panel on her arm lights up; she's getting close. She sighs and looks for the closest stairwells and ledges. Within seconds, she's on solid ground again.
+[sound path="res://sfx/running.mp3" volume="-1.0"]
+There's no time to rest. Full speed ahead!
 phone: Don't forget your mission instructions!
-meep: Hmm, I'd never.
-[signal arg="canPlay"]
+meep: I know, I know, I'd never.
 leave --All--
-phone: Just in case, here are your mission instructions one more time!\
-Press S and D to move left and right.\
+[background fade="0.0"]
+phone: You have arrived at the last known location of the target. Just in case, here are your mission instructions one more time!
+[signal arg="canPlay"]
+phone: Press S and D to move left and right.\
 Press W to jump, and press twice to double jump.
 phone: Press Space to attack.\
 Your target's just up ahead!

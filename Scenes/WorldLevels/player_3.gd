@@ -8,16 +8,10 @@ extends CharacterBody2D
 
 @onready var sprite = $Sprite2D
 @onready var animation = $AnimationPlayer
-#@onready var projectile = $Projectile
-#@onready var main = get_tree().get_root().get_node("Player2")
-
-var projectile = preload("res://Entities/Projectile.tscn")
+@onready var atkspace = $HitBox
 
 var can_control : bool = true
 var double_jump : bool = false
-
-@export var shoot = false
-var instance = projectile.instantiate()
 
 func _ready() -> void:
 	Dialogic.signal_event.connect(_on_dialogic_signal)
@@ -37,24 +31,17 @@ func _physics_process(delta: float) -> void:
 		can_control = false
 	if !can_control or dashing:
 		return
-	if shoot:
-		instance = projectile.instantiate()
-		instance.dir = rotation
-		instance.pos = global_position
-		instance.pos.x += 60
-		instance.rot = rotation
-		get_parent().add_child.call_deferred(instance)
-		shoot = false
+		
 	if is_on_floor():
 		double_jump = true
 		
 	if Input.is_action_pressed("left"):
 		sprite.scale.x = abs(sprite.scale.x) * -1
-
+		atkspace.scale.x = abs(atkspace.scale.x) * -1
 		
 	if Input.is_action_pressed("right"):
 		sprite.scale.x = abs(sprite.scale.x)
-
+		atkspace.scale.x = abs(atkspace.scale.x)
 	# Add the gravity.
 	if not is_on_floor():
 		velocity += get_gravity() * delta
@@ -67,14 +54,15 @@ func _physics_process(delta: float) -> void:
 	if Input.is_action_just_pressed("jump") and !is_on_floor() and double_jump:
 		velocity.y = JUMP_VELOCITY
 		double_jump = false
-	#if Input.is_action_just_pressed("dash"):
-		#velocity.x = 0
-		#velocity.y = 0
-		#animation.play("dash")
-		#if sprite.scale.x > 0:
-			#velocity.x = 2000.0
-		#else:
-			#velocity.x = -2000.0
+	
+	if Input.is_action_just_pressed("dash"):
+		velocity.x = 0
+		velocity.y = 0
+		animation.play("dash")
+		if sprite.scale.x > 0:
+			velocity.x = 2000.0
+		else:
+			velocity.x = -2000.0
 			
 
 	# Get the input direction and handle the movement/deceleration.
@@ -104,12 +92,9 @@ func update_animation():
 	
 
 func attack():
-	if attacking:
-		return
 	attacking = true
 	animation.play("atk1")
-	
-	
+
 func _on_health_health_depleted() -> void:
 	PlayerStatus.alive = false
 	can_control = false
