@@ -35,11 +35,11 @@ func _physics_process(delta: float) -> void:
 	if is_on_floor():
 		double_jump = true
 		
-	if Input.is_action_pressed("left"):
+	if Input.is_action_pressed("Sleft"):
 		sprite.scale.x = abs(sprite.scale.x) * -1
 		atkspace.scale.x = abs(atkspace.scale.x) * -1
 		
-	if Input.is_action_pressed("right"):
+	if Input.is_action_pressed("Sright"):
 		sprite.scale.x = abs(sprite.scale.x)
 		atkspace.scale.x = abs(atkspace.scale.x)
 	# Add the gravity.
@@ -47,11 +47,11 @@ func _physics_process(delta: float) -> void:
 		velocity += get_gravity() * delta
 
 	# Handle jump.
-	if Input.is_action_just_pressed("jump") and is_on_floor():
+	if Input.is_action_just_pressed("Sjump") and is_on_floor():
 		velocity.y = JUMP_VELOCITY
 		double_jump = true
 		
-	if Input.is_action_just_pressed("jump") and !is_on_floor() and double_jump:
+	if Input.is_action_just_pressed("Sjump") and !is_on_floor() and double_jump:
 		velocity.y = JUMP_VELOCITY
 		double_jump = false
 	
@@ -67,13 +67,13 @@ func _physics_process(delta: float) -> void:
 
 	# Get the input direction and handle the movement/deceleration.
 	# As good practice, you should replace UI actions with custom gameplay actions.
-	var direction := Input.get_axis("left", "right")
+	var direction := Input.get_axis("Sleft", "Sright")
 	if direction:
 		velocity.x = direction * SPEED
 	else:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
 	
-	if Input.is_action_just_pressed('active'):
+	if Input.is_action_just_pressed('Sactive'):
 		attack()
 	
 	update_animation()
