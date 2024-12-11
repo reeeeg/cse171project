@@ -40,8 +40,12 @@ meep: And seeing as to how you sought me out, you must know who I am. I'll have 
 Oscar doesn't even bat an eye.
 oscar: Considering
 Meep crosses her arms. He had a point.
+Before she can even say goodbye, Oscar disappears into the night.
+meep: ...Okay then. I guess I've got a lot to clean up over the next week. Wrapping up some comms, clearing out my fridge, uh...
+Meep taps out a to-do list on her phone, but her mind is elsewhere\: what, exactly, did she just get herself into?
+# Meeting the rest of the crew
 [background arg="res://backgrounds/black_bg.jpg" fade="1.5"]
-<Empty Text Event>
+Next week,
 [background arg="res://backgrounds/outskirts.jpg" fade="1.5"]
 # At this point, switch to Level: Boss 1
 [signal arg="new scene"]

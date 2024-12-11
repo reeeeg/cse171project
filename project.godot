@@ -35,9 +35,12 @@ directories/dtl_directory={
 "1_gameStart": "res://storyTimelines/1_gameStart.dtl",
 "2_busStop": "res://storyTimelines/2_busStop.dtl",
 "3_outskirts": "res://storyTimelines/3_outskirts.dtl",
-"afterBoss1": "res://storyTimelines/4_after.dtl",
+"4_afterBoss1": "res://storyTimelines/4_afterBoss1.dtl",
+"5_beforeBoss2": "res://storyTimelines/5_beforeBoss2.dtl",
+"6_afterBoss2": "res://storyTimelines/6_afterBoss2.dtl",
+"7_beforeBoss3": "res://storyTimelines/7_beforeBoss3.dtl",
+"8_ending": "res://storyTimelines/8_ending.dtl",
 "charSelect_OverUnder2": "res://Scenes/CharacterSelect/charSelect_OverUnder2.dtl",
-"ending": "res://ending.dtl",
 "introDeath": "res://Scenes/GameOver/introDeath.dtl"
 }
 layout/style_list=[]
