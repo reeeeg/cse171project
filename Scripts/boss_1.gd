@@ -65,5 +65,5 @@ func _on_dash_dasher() -> void:
 	dashing = true # Replace with function body.
 
 func nextLevel():
-	#use to go to next scene 2
-	pass
+	if get_tree().current_scene.name != "Level 0":
+		get_tree().change_scene_to_file("res://Scenes/WorldLevels/SecondLevel.tscn")

@@ -357,7 +357,7 @@ _data = {
 "run": SubResource("Animation_agqs5")
 }
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_0nehi"]
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_4kqrh"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_inhmx"]
 
@@ -384,7 +384,7 @@ libraries = {
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, 2)
-shape = SubResource("CapsuleShape2D_0nehi")
+shape = SubResource("CapsuleShape2D_4kqrh")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 limit_smoothed = true
