@@ -1,11 +1,16 @@
 [signal arg="stopMovement"]
+[background arg="res://backgrounds/black_bg.jpg" fade="0.5"]
+Meep quickly finishes dispatching the rest of the slimes.
+She pulls up the commission interface on her arm, marks this one as complete, then checks the time. Bus in 15 minutes, and she's 20 minutes away from her stop. Plus, she wanted lemon candies. She sighs. So much for taking it easy. Well, time to run.
 [background arg="res://backgrounds/busStop.jpg" fade="0.0"]
 [music path="res://sfx/city_1.mp3" channel="1" fade="0.5" volume="-1.2"]
 join meep leftmost
-Meep plops unceremoniously onto the empty bench and fishes her phone out of her pocket. She had about nine minutes before the next bus.
-She slips on her earbuds and presses play.
+11 minutes later, Meep plops unceremoniously onto the empty bench, a lemon candy in her mouth, and fishes her phone out of her pocket. She had about nine minutes before the next bus.
+Perfect. Time to not talk to anyone for the next hour. She slips on her earbuds and presses play.
 [music path="res://sfx/2am_chillpeach.mp3" fade="1.0" volume="-0.5"]
-Groundcars and hovers still line the streets. Ah... Meep thought of her own hoverboard, sitting in her apartment... this job would hopefully cover the funds needed for repair.
+Groundcars and hovers still line the streets. Ah... Meep thought of her own hoverboard, sitting in her apartment... this job would hopefully cover the last bit of funding needed for repair.
+Many of her fellow mercs had told her time and time again to work smarter, not harder. Join a guild! Get a support net other than herself and her friends. Take on bigger commissions for better pay. But Meep was a free spirit.
+She didn't like the thought of having to conform to all the rules that came with joining and being a member of a guild. She was perfectly fine as an independent merc, and she'd manage to make a name for herself anyway. She had enough to get by and then some, plus plenty of savings.
 join phone rightmost
 phone: What, not in the mood to jump across rooftops?
 meep: Hey! Let me appreciate this city's public transit. Be quiet.
@@ -55,3 +60,4 @@ oscar: <Empty Text Event>
 # At this point, switch to Level: Boss 1
 [signal arg="new scene"]
 [end_timeline]
+# 

@@ -17,12 +17,12 @@ join phone rightmost
 [music path="res://sfx/loading_chillpeach.mp3" fade="1.5" volume="-2.0"]
 phone: Your target's on the ground, why are you on the roof?
 join meep leftmost
-meep: Lighten up! It's called having fun.
-meep: This way, I also don't have to worry about accidentally ramming into someone... like last time...
+meep: Lighten up! It's called having fun. Besides, I chose a super easy commission on purpose. I'm way ahead of schedule. No reason I can't take a scenic route.
+meep: I also don't have to worry about accidentally ramming into someone... like last time... if I'm traversing rooftops instead of the streets.
 [background arg="res://backgrounds/longExposureStreet.jpg" fade="1.0"]
 The panel on her arm lights up; she's getting close. She sighs and looks for the closest stairwells and ledges. Within seconds, she's on solid ground again.
 [sound path="res://sfx/running.mp3" volume="-1.5"]
-There's no time to rest. Full speed ahead!
+Full speed ahead! The sooner this commission wrapped up, the sooner she could have her lemon candies! And then go home and game.
 phone: Don't forget your mission instructions!
 meep: You don't have to tell me twice.
 leave --All--

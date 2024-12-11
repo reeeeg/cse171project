@@ -45,12 +45,12 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	if dead == false:
 		checkDead()
-	if slimeDead == false:
-		checkSlimeDead()
+	checkSlimeDead()
 
 func _on_dialogic_signal(argument:String):
 	if argument == "new scene":
 		get_tree().change_scene_to_file("res://Scenes/WorldLevels/level_2.tscn")
+		#queue_free()
 
 func checkDead():
 	var delay = 3.0
@@ -62,9 +62,10 @@ func checkDead():
 		dead = false
 
 func checkSlimeDead():
-	if PlayerStatus.introSlimesDead == 4:
-		slimeDead = true
-		Dialogic.start("res://storyTimelines/3_busStop.dtl")
+	print(PlayerStatus.introSlimesDead)
+	if PlayerStatus.introSlimesDead > 1:
+		#slimeDead = true
+		Dialogic.start("res://storyTimelines/2_busStop.dtl")
 
 #func isSlimeDead() -> bool:
 	#return PlayerStatus.introSlimeAlive
