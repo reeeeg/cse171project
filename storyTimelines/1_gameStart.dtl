@@ -21,7 +21,7 @@ meep: Lighten up! It's called having fun.
 meep: This way, I also don't have to worry about accidentally ramming into someone... like last time...
 [background arg="res://backgrounds/longExposureStreet.jpg" fade="1.0"]
 The panel on her arm lights up; she's getting close. She sighs and looks for the closest stairwells and ledges. Within seconds, she's on solid ground again.
-[sound path="res://sfx/running.mp3" volume="-1.0"]
+[sound path="res://sfx/running.mp3" volume="-1.5"]
 There's no time to rest. Full speed ahead!
 phone: Don't forget your mission instructions!
 meep: You don't have to tell me twice.
@@ -30,16 +30,16 @@ leave --All--
 phone: You have arrived at the last known location of the target. Just in case, here are your mission instructions one more time!
 [signal arg="canPlay"]
 phone: If you're M-33P\:\
-Press S and D to move left and right.\
-Press W to jump, and press twice to double jump.\
-LSHIFT to attack.
-phone: If you're Oscar\:\
 Press the L and R arrow keys to move left and right.\
 Press UP to jump, and press twice to double jump.\
 RSHIFT to attack.
-phone: If you're Soup\:\
-Press the J and L arrow keys to move left and right.\
+phone: If you're Oscar\:\
+Press the J and L keys to move left and right.\
 Press I to jump, and press twice to double jump.\
 Space to attack.
+phone: If you're Soup\:\
+Press the A and D keys to move left and right.\
+Press W to jump, and press twice to double jump.\
+LSHIFT to attack.
 phone: Let's get going! Your target's just up ahead!
 [end_timeline]
