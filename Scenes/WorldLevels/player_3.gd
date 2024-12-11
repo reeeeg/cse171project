@@ -101,3 +101,5 @@ func _on_health_health_depleted() -> void:
 	velocity.x = 0
 	velocity.y = 0
 	animation.play('death')
+	if get_tree().current_scene.name != "Level 0":
+		PlayerStatus.checkDead()

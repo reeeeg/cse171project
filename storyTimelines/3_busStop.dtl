@@ -8,14 +8,30 @@ She slips on her earbuds and presses play.
 Groundcars and hovers still line the streets. Ah... Meep thought of her own hoverboard, sitting in her apartment... this job would hopefully cover the funds needed for repair.
 join phone rightmost
 phone: What, not in the mood to jump across rooftops?
-meep: Let me appreciate this city's public transit.
+meep: Hey! Let me appreciate this city's public transit. Be quiet.
 leave --All--
-Two notifications. One from AirNews—another unsuccessful attempt at reaching the Spire. A second from his idle game—it's time to collect rewards from the latest expedition!
+Other than the commission, it was a slow night for her. Two notifications. One from AirNews—another unsuccessful attempt at reaching the Spire. A second from her  idle game—it's time to collect rewards from the latest expedition!
 One missed caller who left voicemail—"Looking for an upgrade? Low-cost neural implants, latest InterLink models a—"
-Meep deletes the voicemail and clears the second notification.
-meep: (Eh. I'll collect it later. What's this about the Spire again...?)
+Meep deletes the voicemail and clears the second notification. Opening up that mobile game and spending 10 seconds collecting rewards was too much work.
+meep: (What's this about the Spire again...?)
+Apheres, like all the other cities on this forsaken planet, had been disconnected from the heavens for months now. Meep had long since lost hope
 The sides of the shelter were plastered with colorful posters old and new. No one ever really bothered to take off old flyers, so the new ones were slapped right on top.
 It was beautiful, almost, like some art installation, a collage of the collective human experience. But she doesn't really care right now. Meep's gaze drifts from one to the next.
-<Empty Text Event>
+One flyer in particular catches her eye.
+join meep leftmost
+meep: "Currently recruiting..." "exciting adventure..." "
+Her eyes widen as she reads the compensation.
+join oscar rightmost [animation="Fade In"]
+oscar: So, are you interested?
+meep: What—
+A young man in a hooded cloak just appeared out of thin air. Meep gives him a once-over. Fancy outfit. Probably a magic user, blessed by some big shot god before the planet lost its connection. Maybe she could swindle him.
+meep: Hi to you too.
+The young man doesn't respond.
+oscar: ...It doesn't matter what you call me. But you can call me Oscar.
+meep: Cool. Hi Oscar. You put up these flyers?
+He nods once. Meep smiles innocently.
+meep: And seeing as to how you sought me out, you must know who I am. I'll have you know that Apheres' top merc knows her worth.
+Oscar doesn't even bat an eye.
+oscar: Considering 
 [signal arg="new scene"]
 [end_timeline]

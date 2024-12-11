@@ -62,9 +62,9 @@ func checkDead():
 		dead = false
 
 func checkSlimeDead():
-	if !PlayerStatus.introSlimeAlive:
+	if PlayerStatus.introSlimesDead == 4:
 		slimeDead = true
 		Dialogic.start("res://storyTimelines/3_busStop.dtl")
 
-func isSlimeDead() -> bool:
-	return PlayerStatus.introSlimeAlive
+#func isSlimeDead() -> bool:
+	#return PlayerStatus.introSlimeAlive

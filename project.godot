@@ -23,7 +23,7 @@ PlayerStatus="*res://player_status.gd"
 [dialogic]
 
 directories/dch_directory={
-"mainAntagonist": "res://mainAntagonist.dch",
+"boss1": "res://boss1.dch",
 "meep": "res://meep.dch",
 "oscar": "res://oscar.dch",
 "phone": "res://characterArt/phone.dch",
@@ -33,7 +33,10 @@ directories/dch_directory={
 directories/dtl_directory={
 "1_gameStart": "res://storyTimelines/1_gameStart.dtl",
 "3_busStop": "res://storyTimelines/3_busStop.dtl",
+"afterBoss1": "res://afterBoss1.dtl",
+"beforeBoss1": "res://beforeBoss1.dtl",
 "charSelect_OverUnder2": "res://Scenes/CharacterSelect/charSelect_OverUnder2.dtl",
+"ending": "res://ending.dtl",
 "introDeath": "res://Scenes/GameOver/introDeath.dtl"
 }
 layout/style_list=[]
@@ -59,7 +62,7 @@ choices/reveal_by_input=false
 save/autosave_delay=60.0
 save/encryption_on_exports_only=true
 text/autopauses={}
-text/autoadvance_enabled=false
+text/autoadvance_enabled=true
 variables={
 "Var": 0
 }

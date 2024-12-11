@@ -148,7 +148,19 @@ tile_map_data = PackedByteArray("AAD6/wMAAAAFAAQAAAD7/wMAAAAFAAQAAAD8/wMAAAAFAAQ
 tile_set = SubResource("TileSet_v00um")
 
 [node name="Slime" parent="." instance=ExtResource("5_otj3e")]
-position = Vector2(2128, -304)
+position = Vector2(2129, -316)
+scale = Vector2(3, 3)
+
+[node name="Slime2" parent="." instance=ExtResource("5_otj3e")]
+position = Vector2(1623, 14)
+scale = Vector2(2, 2)
+
+[node name="Slime3" parent="." instance=ExtResource("5_otj3e")]
+position = Vector2(2557, 15)
+scale = Vector2(2, 2)
+
+[node name="Slime4" parent="." instance=ExtResource("5_otj3e")]
+position = Vector2(2153, 271)
 scale = Vector2(2, 2)
 
 [node name="Player1" parent="." instance=ExtResource("3_af6o7")]

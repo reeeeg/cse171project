@@ -1,0 +1,10 @@
+[background fade="0.0"]
+meep: Sooo... who's gonna contact the gods?
+oscar: I will.
+
+<Empty Text Event>
+join meep leftmost [z_index="2"]
+join oscar left [z_index="1" mirrored="true"]
+join soup center [mirrored="true"]
+[background fade="0.0"]
+oscar: This... is only the beginning.
