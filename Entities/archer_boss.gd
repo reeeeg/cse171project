@@ -16,7 +16,12 @@ var projectile = preload("res://Entities/Projectile.tscn")
 var instance
 var dead = false
 
+@export var theEnd = false
+
+
 func _physics_process(delta: float) -> void:
+	if theEnd:
+		nextLevel()
 	if dead:
 		return
 		
@@ -66,3 +71,7 @@ func _on_health_health_depleted() -> void:
 	animation.play('death')
 	print("death signal emitted")
 	archer_death.emit()
+
+func nextLevel():
+	#switch to next scene final level
+	pass

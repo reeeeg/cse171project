@@ -7,6 +7,8 @@ extends CharacterBody2D
 @onready var hurtbox = $HurtBox
 @onready var animation = $CommanderAnimation
 @export var MeleAttacked = false
+@export var theFinalEnd = false
+
 
 signal commander_death
 signal commander_mele
@@ -16,6 +18,8 @@ signal commander_mele
 var dead = false
 
 func _physics_process(delta: float) -> void:
+	if theFinalEnd:
+		Victory()
 	if dead:
 		return
 		
@@ -49,3 +53,8 @@ func _on_health_health_depleted() -> void:
 	animation.play('death')
 	print("death signal emitted")
 	commander_death.emit()
+
+
+func Victory():
+	#switch to the finish screen
+	pass
