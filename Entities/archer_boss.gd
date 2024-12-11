@@ -42,7 +42,7 @@ func _physics_process(delta: float) -> void:
 	if shotted:
 		var randomize = randi_range(5,11)
 		instance = projectile.instantiate()
-		instance.speed = 1500
+		instance.speed = 1000
 		instance.pos = global_position
 		instance.pos.y += randomize * 10
 		if facingforward:

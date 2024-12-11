@@ -22,6 +22,7 @@ func Enter():
 		enemy.facingforward = false
 		sprite.scale.x = abs(sprite.scale.x)
 	enemy.velocity.x = 0
+	animation.stop(true)
 	animation.clear_queue()
 	animation.play('atk')
 

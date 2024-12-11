@@ -1,12 +1,13 @@
-[gd_scene load_steps=11 format=4 uid="uid://bpa0lxqmpjbvr"]
+[gd_scene load_steps=12 format=4 uid="uid://bpa0lxqmpjbvr"]
 
 [ext_resource type="Texture2D" uid="uid://dsf15sy2iiitl" path="res://gifs/industrial tileset/2 Background/Background.png" id="1_heasw"]
 [ext_resource type="Texture2D" uid="uid://cegans3586f67" path="res://gifs/zone tileset/1 Tiles/Tileset.png" id="2_n5r4p"]
 [ext_resource type="PackedScene" uid="uid://r0lsbkdfw2j1" path="res://Entities/archer_boss.tscn" id="3_cxo14"]
 [ext_resource type="PackedScene" uid="uid://br3gsjhwtfgdb" path="res://Entities/player_2.tscn" id="3_loyx0"]
-[ext_resource type="PackedScene" uid="uid://ct7a646iqieef" path="res://Scripts/health_bar.tscn" id="5_8i8to"]
 [ext_resource type="PackedScene" uid="uid://bbn6ib3w7vxny" path="res://Scripts/enemyhealthbar.tscn" id="6_q3exd"]
 [ext_resource type="Script" path="res://Scripts/HitBox.gd" id="7_dnt24"]
+[ext_resource type="PackedScene" uid="uid://cr3581g5ivd5s" path="res://Entities/player_1.tscn" id="8_yudd7"]
+[ext_resource type="PackedScene" uid="uid://bv5ryhms6r531" path="res://Entities/player_3.tscn" id="9_tdvwp"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_h5yjy"]
 texture = ExtResource("2_n5r4p")
@@ -333,7 +334,7 @@ tile_map_data = PackedByteArray("AAABABwAAAAFAAEAAAACABwAAAAFAAEAAAADABwAAAAFAAE
 tile_set = SubResource("TileSet_ypfll")
 rendering_quadrant_size = 32
 
-[node name="Player2" parent="." instance=ExtResource("3_loyx0")]
+[node name="Player1" parent="." instance=ExtResource("8_yudd7")]
 position = Vector2(163, 222)
 scale = Vector2(2, 2)
 
@@ -344,13 +345,6 @@ scale = Vector2(2, 2)
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 scale = Vector2(2.01, 2.01)
 transform = Transform2D(2.01, 0, 0, 2.01, 0, 0)
-
-[node name="PlayerHealthBar" parent="CanvasLayer" node_paths=PackedStringArray("character") instance=ExtResource("5_8i8to")]
-offset_left = 0.0
-offset_top = 0.0
-offset_right = 101.0
-offset_bottom = 40.0
-character = NodePath("../../Player2")
 
 [node name="EnemyHealthBar" parent="CanvasLayer" node_paths=PackedStringArray("character") instance=ExtResource("6_q3exd")]
 offset_left = 11.9403
@@ -367,3 +361,11 @@ damage = 9999
 [node name="CollisionShape2D" type="CollisionShape2D" parent="FallBox"]
 position = Vector2(-369, 542)
 shape = SubResource("WorldBoundaryShape2D_s7qce")
+
+[node name="Player3" parent="." instance=ExtResource("9_tdvwp")]
+position = Vector2(163, 222)
+scale = Vector2(2, 2)
+
+[node name="Player2" parent="." instance=ExtResource("3_loyx0")]
+position = Vector2(163, 222)
+scale = Vector2(2, 2)

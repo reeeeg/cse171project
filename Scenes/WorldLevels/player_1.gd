@@ -12,13 +12,18 @@ extends CharacterBody2D
 
 var can_control : bool = true
 var double_jump : bool = false
+@export var deleted = false
 
 func _ready() -> void:
+	if !Globals.meep:
+		queue_free()
 	Dialogic.signal_event.connect(_on_dialogic_signal)
 
 func _on_dialogic_signal(argument:String):
 	if argument == "introNoMovement":
 		can_control = false
+	if deleted == true:
+		game_over()
 	if argument == "canPlay":
 		can_control = true
 		print("Player movement now enabled")
@@ -101,5 +106,8 @@ func _on_health_health_depleted() -> void:
 	velocity.x = 0
 	velocity.y = 0
 	animation.play('death')
+	
+
+func game_over():
 	if get_tree().current_scene.name != "Level 0":
 		get_tree().change_scene_to_file("res://Scenes/GameOver/gameOver.tscn")

@@ -5,6 +5,7 @@ extends CharacterBody2D
 @export var JUMP_VELOCITY = -400.0
 @export var attacking = false
 @export var dashing = false
+@export var deleted = false
 
 @onready var sprite = $Sprite2D
 @onready var animation = $AnimationPlayer
@@ -14,6 +15,8 @@ var can_control : bool = true
 var double_jump : bool = false
 
 func _ready() -> void:
+	if !Globals.soup:
+		queue_free()
 	Dialogic.signal_event.connect(_on_dialogic_signal)
 
 func _on_dialogic_signal(argument:String):
@@ -26,6 +29,8 @@ func _on_dialogic_signal(argument:String):
 		can_control = false
 
 func _physics_process(delta: float) -> void:
+	if deleted:
+		game_over()
 	if !can_control and PlayerStatus.alive:
 		update_animation()
 		can_control = false
@@ -94,6 +99,11 @@ func update_animation():
 func attack():
 	attacking = true
 	animation.play("atk1")
+	
+
+func game_over():
+	if get_tree().current_scene.name != "Level 0":
+		get_tree().change_scene_to_file("res://Scenes/GameOver/gameOver.tscn")
 
 func _on_health_health_depleted() -> void:
 	PlayerStatus.alive = false

@@ -19,6 +19,7 @@ func randomize_wander():
 
 func Enter():
 	print("entered idle")
+	animation.clear_queue()
 	animation.play('idle')
 	player = get_tree().get_first_node_in_group("Player")
 	move_speed = 30

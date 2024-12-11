@@ -25,30 +25,36 @@ func _on_oscar_button_toggled(toggled_on: bool) -> void:
 	if toggled_on:
 		selected += 1
 		PlayerStatus.oscar = true
+		Globals.oscar = true
 		
 	if !toggled_on:
 		selected -= 1
 		PlayerStatus.oscar = false
+		Globals.oscar = false
 	pass # Replace with function body.
 
 func _on_meep_button_toggled(toggled_on: bool) -> void:
 	if toggled_on:
 		selected += 1
 		PlayerStatus.meep = true
+		Globals.meep = true
 		
 	if !toggled_on:
 		selected -= 1
 		PlayerStatus.meep = false
+		Globals.meep = false
 	pass # Replace with function body.
 
 func _on_soup_button_toggled(toggled_on: bool) -> void:
 	if toggled_on:
 		selected += 1
 		PlayerStatus.soup = true
+		Globals.soup = true
 		
 	if !toggled_on:
 		selected -= 1
 		PlayerStatus.soup = false
+		Globals.soup = false
 	pass # Replace with function body.
 	
 func _on_confirm_characters_button_pressed() -> void:
