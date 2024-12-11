@@ -1,5 +1,8 @@
 # They've just defeated the last boss and are running through the forest to the spire
-[background arg="res://backgrounds/forest.jpg" fade="0.0"]
+[background arg="res://backgrounds/forest.jpg" fade="1.0"]
+oscar: Can you feel it? This spire's energy?
+meep: No.
+Oscar ignores her.
 [background arg="res://backgrounds/spireOutside.jpg" fade="0.0"]
 [background arg="res://backgrounds/contactingHeavens.jpg" fade="0.0"]
 # 
@@ -9,14 +12,18 @@ join oscar left [z_index="1" mirrored="true"]
 oscar: I will.
 join soup center [mirrored="true"]
 
-soup: Don't get hasty. We may have beaten the old commander, but he isn't even close to being our biggest problem. 
-meep: What do you mean "not even close?" Didn't you see his flag, he was a general or had some kind of big title.
+soup: Don't get hasty. We may have beaten the old commander, but he isn't even close to being our biggest problem.
+meep: What do you mean "not even close?" Didn't you see his flag? He was a general, or had some kind of big title.
 oscar: But that is impressive in the eyes of humans. Humans, once dead or not, are not our concern.
-soup: Kroma'Resh, the annoying little shit that started this all. And he has more elites guarding the spire.
-meep: You say that like it will be different. Human or not, we will crush them.
-oscar: Crude, but not wrong. The "elites" as you call them, are nothing more than sentient garbage, and will fall like the rest. And I won't stop cleansing this filth until I serve Resh's head atop the spire.
-soup: Well you heard the psycho, lets guh-
-meep: Just cuz you're the oldest doesn't make you the leader gramps. And in no world is oscar more psycotic than me.
-soup: (under his breath) we're almost done we are near the finish line. One more pit stop and then I'm parking my ass in a nice penthouse with a lifetime supply of cola. Just need to deal with these rabid hyenas for a little longer.
-oscar: Crude, and wrong. This... is only the beginning.
-[background fade="0.0"]
+soup: Kroma'Resh, the annoying little rat that started this all. And he has more elites guarding the spire.
+meep: You say that like it'll be any different. Human or not, we'll crush them.
+oscar: Crude, but not wrong. The "elites," as you call them, are nothing more than sentient garbage, and will fall like the rest. And I won't stop cleansing this filth until I serve Resh's head atop the Spire
+soup: Well, you heard the psycho, let's guh-
+meep: Just 'cause you're the oldest doesn't make you the leader, Gramps. And in no world is Oscar crazier than me.
+oscar: Why do you care so much about who's crazier? What matters is that we get the job done.
+Meep and Oscar continue their bickering as Soup pinches his nose bridge.
+soup: (under his breath) We're almost done, we're close to the finish line... One more pit stop, and then I'm parking myself in a nice penthouse with a lifetime supply of cola. Just need to deal with these rabid hyenas for a little longer.
+Oscar's head swivels around as soon as he hears that and he laughs.
+oscar: I wish. This... is only the beginning.
+[background arg="res://backgrounds/black_bg.jpg" fade="3.7"]
+[signal arg="gameEndingScreen"]

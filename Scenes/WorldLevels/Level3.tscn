@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://y4887lna5ug2" path="res://tiles/base_soil-dirt-grass.png" id="2_myywv"]
 [ext_resource type="PackedScene" uid="uid://7tl28rvcec5r" path="res://Entities/commander_boss.tscn" id="3_oyorb"]
 [ext_resource type="PackedScene" uid="uid://ct7a646iqieef" path="res://Scripts/health_bar.tscn" id="3_r73wt"]
-[ext_resource type="PackedScene" uid="uid://bbn6ib3w7vxny" path="res://Scripts/enemyhealthbar.tscn" id="4_wron6"]
+[ext_resource type="PackedScene" path="res://Scripts/enemyhealthbar.tscn" id="4_wron6"]
 [ext_resource type="PackedScene" uid="uid://br3gsjhwtfgdb" path="res://Entities/player_2.tscn" id="4_ysde3"]
 [ext_resource type="Script" path="res://Scripts/HitBox.gd" id="5_ygwph"]
 

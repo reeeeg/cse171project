@@ -8,56 +8,105 @@ join meep leftmost
 11 minutes later, Meep plops unceremoniously onto the empty bench, a lemon candy in her mouth, and fishes her phone out of her pocket. She had about nine minutes before the next bus.
 Perfect. Time to not talk to anyone for the next hour. She slips on her earbuds and presses play.
 [music path="res://sfx/2am_chillpeach.mp3" fade="1.0" volume="-0.5"]
-Groundcars and hovers still line the streets. Ah... Meep thought of her own hoverboard, sitting in her apartment... this job would hopefully cover the last bit of funding needed for repair.
-Many of her fellow mercs had told her time and time again to work smarter, not harder. Join a guild! Get a support net other than herself and her friends. Take on bigger commissions for better pay. But Meep was a free spirit.
-She didn't like the thought of having to conform to all the rules that came with joining and being a member of a guild. She was perfectly fine as an independent merc, and she'd manage to make a name for herself anyway. She had enough to get by and then some, plus plenty of savings.
+Groundcars and hovers still line the streets even at this hour. Meep thinks about her own hoverboard, sitting in her apartment... this job would hopefully cover the last bit of funding needed for repair, without cutting into her savings.
+Many of her fellow mercs had told her time and time again to work smarter, not harder. Join a guild! Get a support net other than herself and her few friends. Take on bigger commissions for better pay. But Meep was a free spirit.
+She didn't like the thought of having to conform to all the rules that came with joining and being a member of a guild. She was perfectly fine as an independent merc, and she'd managed to make a name for herself anyway. She had enough to get by and then some, plus plenty of savings.
 join phone rightmost
 phone: What, not in the mood to jump across rooftops?
-meep: Hey! Let me appreciate this city's public transit. Be quiet.
+meep: Not in the mood. Let me appreciate this city's public transit. Be quiet.
 leave --All--
-Other than the commission, it was a slow night for her. Two notifications. One from AirNews—another unsuccessful attempt at reaching the Spire. A second from her  idle game—it's time to collect rewards from the latest expedition!
+Other than the commission and the rooftop-hopping, it was a slow night for her. Two notifications. One from AirNews—another unsuccessful attempt at reaching the Spire. A second from her idle game—"Time to collect rewards from the latest expedition!"
 One missed caller who left voicemail—"Looking for an upgrade? Low-cost neural implants, latest InterLink models a—"
 Meep deletes the voicemail and clears the second notification. Opening up that mobile game and spending 10 seconds collecting rewards was too much work.
-meep: (What's this about the Spire again...?)
+It was the notification about the Spire that caught her eye. This would have been at least the fifth attempt in the past year, and every time, the adventuring team sustained heavy losses.
+meep: (Let's see what happened this time...)
 Apheres, like all the other cities on this forsaken planet, had been disconnected from the heavens for months now. The Cursed's invasion came out of nowhere. And as a touristy planet, Phanes was not ready.
-All of Phanes' cities were cut off one by one, and the connection had grown weaker and weaker. Perhaps their pleas for help never made it to the halls of the Heavenly Society—or perhaps the Heavenly Society simply did not listen.
-Until the path to Apheres' Spire was overrun, and the last portal to heaven was deemed inaccessible. From then on, the people of Phanes were on their own.
-The cities and the surrounding areas under their protection were more or less the last bastions of humanity on this planet.
-It really was only a matter of time before the end. This was the uncomfortable truth lingering in everyone's minds. Meep didn't really like thinking about that though. She was doing her best to live in the moment.
+All of Phanes' cities were cut off one by one, and their connection had grown weaker and weaker. Perhaps their pleas for help never made it to the halls of the Heavenly Society—or perhaps the Heavenly Society simply did not listen.
+Apheres' Spire was the last to be overrun, the path now treacherous, and thus the last portal to heaven was deemed inaccessible. From then on, the people of Phanes were on their own.
+The cities and the surrounding areas under their protection were more or less the last bastions of humanity on this planet. As soon as one stepped foot outside a city, it was a no-man's-land.
+Cursed were lurking around every corner. It really was only a matter of time before the end.
+This was the uncomfortable truth lingering in everyone's minds. Meep didn't really like thinking about that though. She was doing her best to live in the moment.
 She scrolls through the news article.
+Well-known adventurers from the guilds Arclight, Knight's Order, and Elysium had teamed up, with a plus one from Valiant. Some of their names rang a bell; these were people she occasionally encountered on comms. She braces herself for the worst as she continues reading.
+With the exception of the Telekinetic Specialist from Elysium, every single one of the adventurers had perished. They didn't even get anywhere close to the Heavenly Spire.
+They reached Helios' Spire, the Spire closest to the Heavenly Spire, before the Cursed got to them. Some of them went mad and turned on their allies, some of them withered away, so on and so forth. The Telekinetic Specialist learned how to fly on the spot out of fear, and that was how she  survived and made the trek back.
+Though they got closer than anyone that came before, this didn't come as a surprise to Meep. To her, defeating the Cursed was honestly a fool's dream. She didn't understand these expeditions at all. Why waste valuable resources on the impossible?
+She closes her phone, bored, with the music continuing to fill her world, and looks around the bus shelter.
 The sides of the shelter were plastered with colorful posters old and new. No one ever really bothered to take off old flyers, so the new ones were slapped right on top.
-It was beautiful, almost, like some art installation, a collage of the collective human experience. But she doesn't really care right now. Meep's gaze drifts from one to the next.
-One flyer in particular catches her eye.
+It was beautiful, almost, like some art installation, a collage of the collective human experience. But she doesn't really care for any deep philosophical ponderings right now. Meep's gaze drifts from one to the next.
+One flyer in particular catches her eye. It's less colorful than the rest, plain, and almost looks like something the government might put out, but there's no government seal anywhere. Parts of it have already been covered up by other flyers too.
 join meep leftmost
-meep: "Currently recruiting..." "exciting adventure..." "to the Spire"...?!
-She laughs
+meep: "Currently recruiting..." "exciting adventure..." "to the Heavenly Spire"...?!
+She laughs. What kind of suicide mission...? If the best adventurers from the best guilds couldn't even stand a chance, who was crazy enough to think a ragtag team would be the ones to do it?
 But her eyes widen as she reads the compensation.
+That... that was enough to cover five years of rent. And she did not live in the cheap part of Apheres.
 join oscar rightmost [animation="Fade In"]
 oscar: So, are you interested?
-meep: What—
-A young man in a hooded cloak just appeared out of thin air. Meep gives him a once-over. Fancy outfit. Probably a magic user, blessed by some big shot god before the planet lost its connection. Maybe she could swindle him.
-meep: Hi to you too.
-The young man doesn't respond.
+meep: Wha—
+A young man in a hooded cloak had appeared out of thin air. Meep gives him a once-over. Fancy outfit, expensive-looking pendant. Probably a magic user, blessed by some big shot god before the planet lost its connection. That compensation was no joke. Maybe she could swindle him further.
+meep: Hi to you too?
+The young man doesn't respond. Meep continues staring at him before trying again.
+meep: Um, what's your name?
 oscar: ...It doesn't matter what you call me. But you can call me Oscar.
 meep: Cool. Hi, Oscar. I'm Meep. You put up these flyers?
 He nods once. Meep smiles innocently.
-meep: And seeing as to how you sought me out, you must know who I am. I'll have you know that Apheres' top merc knows her worth.
+meep: In that case, considering how you sought me out, you must know who I am. I'll have you know that Apheres' top merc knows her worth.
 Oscar doesn't even bat an eye.
-oscar: Considering
-Meep crosses her arms. He has a point.
-Before she can even say goodbye, Oscar disappears into the night.
-meep: ...Okay then. I guess I've got a lot to clean up over the next week. Wrapping up some comms, clearing out my fridge, uh...
+oscar: It doesn't take a genius to figure out why you're here instead of zipping around on your new hoverboard that you were flaunting on your socials.
+Meep crosses her arms and scowls. He has a point. Yeah, she wanted money, both to spend and to fix her board. So what?
+meep: Okay, well, I guess you've done your research. Enough about that. Why do you need the services of Apheres' best? Who's supporting you guys? How many people are there on this team?
+Oscar hands her a fancy business card and she raises an eyebrow.
+meep: Valiant, huh? I'm not interested in joining a guild.
+oscar: I'm not asking you to join. Just asking to see if you'd like to make this happen.
+meep: Where did you guys get this kinda money?
+oscar: Don't worry about it. Are you interested? I can guarantee your safety.
+meep: Maybe, but h—
+oscar: Okay, great. Anyway, you just need to know that I'm Apheres' top strategist, and I volunteered for this commission. Don't underestimate me.
+oscar: See you at the location on the flyer next week. North of Apheres, GoMart store #2983, you won't miss it. 1700. Don't be late. You'll be meeting everyone then.
+leave oscar
+Before she can even say goodbye, Oscar disappears into the night. She hadn't really agreed, but after some pondering, she concludes it might not be good for her reputation if she pulls out now.
+meep: ...Alright. I guess I've got a lot to clean up over the next week. Wrapping up some comms, clearing out my fridge, uh...
 Meep taps out a to-do list on her phone, but her mind is elsewhere\: what, exactly, did she just get herself into?
+leave oscar
 # Meeting the rest of the crew
 [background arg="res://backgrounds/black_bg.jpg" fade="1.5"]
 One week later, 1700 local time.
 [background arg="res://backgrounds/outskirts.jpg" fade="1.5"]
-Meep disembarks her hoverboard at the edge of the city, right next to the agreed-upon and strange rendezvous point.
-<Empty Text Event>
+Meep disembarks her hoverboard at the edge of the city, right next to the agreed-upon and strange rendezvous point. Why a GoMart? She didn't understand why until she arrived.
+This part of Apheres had clearly been attacked by a horde of Cursed. And a now-abandoned GoMart was just the last thing standing.
+join meep leftmost
 meep: We're still in the city...! There are Cursed even out here?!
-soup: (snort) The government isn't telling you crap! They're intentionally hiding this stuff from you.
+She was just talking to herself, but someone pipes up. She jumps a bit.
+(snort) The government isn't telling you crap! They're intentionally hiding this stuff from you.
+A tall man steps out from the shadows, a silver mask perched on his head. He's dressed in all blue, minus a red scarf. There's a sword slung around his waist. The emblem of the Knight's Order is on his left sleeve, but it looks a bit worn.
+join soup rightmost
+soup: Tha name's Soup. Not short for anything. Former Knight, now just a guy. Nice to meetcha, Meep. Apheres' finest, huh?
+meep: That's right. Nice to meet you, Soup. Are you here for Valiant's commission?
+soup: You bet. Oscar recruited you, huh? He was practically begging me to join. I wasn't bad myself, back in the day.
+oscar: I did not beg.
+join  center
 oscar: <Empty Text Event>
+oscar: But back to the commission—yes, there are Cursed this close to the city. That's why we are organizing this commission now. We would have liked to wait a bit longer and scout out a better path, but I have already exhausted all possibilities.
+oscar: From what we at Valiant have observed, the Cursed are getting ready to invade the cities, now that they've taken over all the Spires. And to be frank, our cities are not equipped for a full-scale assault. It's now or never. We must strike when they think we're at our weakest.
+oscar: Are you ready? We will be encountering plenty of small Cursed along the way, but they're of no significance to us. I trust in our skills. What matters is knocking out their big brass. Regular Cursed aren't sentient the same way they are—they move as a hivemind, following their leader.
+oscar: If we can take out the leader, the rest will be easy to pick off. We also need to be fast, or they will crown a new leader. I will do anything to stop them.
+oscar: If you're ready, then let's head into the forest. The remains of an Apheres outpost are beyond this thicket, and that's where the first leader in this campaign has settled.
+soup: Ya talk too much, Oscar. Who cares? I'm just here to see if I've still got it!
+oscar: I know you care, you just like acting tough. Let's go.
+Oscar disappears into the forest without another word. Soup grumbles but follows behind him and waves at Meep. She is too stunned to speak. What a team. And what a pickle she'd gotten herself into.
+leave --All--
+[background arg="res://backgrounds/forest.jpg" fade="2.0"]
+The forest was oddly quiet. Meep had been on edge since they entered, but even though it had already been half an hour, not a single Cursed had appeared.
+She takes a look at Oscar's "wings," which were made of metal. She scans the forest again and puts two and two together.
+For this first leg of the campaign at least, Oscar had singlehandedly taken out every single Cursed. She sees the marks on the trees, the shards of metal left over here and there—the metal was the same color as his wings.
+Just who was he?
+She shakes her head. No use asking that right now. She had to get her head in the game. The trio continues darting through the forest.
+join meep leftmost
+join oscar right
+join soup rightmost
+As soon as the outpost comes into view, Oscar suddenly stops and raises his hand.
+oscar: Right up ahead. Brace yourselves.
 # At this point, switch to Level: Boss 1
 [signal arg="new scene"]
+[signal arg="canPlay"]
 [end_timeline]
-# 
