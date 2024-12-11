@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://wva0sm80tl3s"]
+[gd_scene load_steps=5 format=3 uid="uid://wva0sm80tl3s"]
 
 [ext_resource type="Script" path="res://Scenes/Start/start_screen.gd" id="1_3mat6"]
 [ext_resource type="Texture2D" uid="uid://b34klgytx6pay" path="res://Scenes/Start/portal.jpg" id="2_xhg5s"]
 [ext_resource type="Texture2D" uid="uid://c88yuemvn01qw" path="res://Scenes/Start/steel-aether-placeholder.png" id="3_niy7f"]
+[ext_resource type="AudioStream" uid="uid://cbm783yua3iks" path="res://sfx/bgm/pixel-dreams-259187.mp3" id="4_rfyf1"]
 
 [node name="startScreen" type="Control"]
 layout_mode = 3
@@ -38,6 +39,10 @@ text = "GAME START"
 position = Vector2(401.762, 231.393)
 scale = Vector2(0.544772, 0.544772)
 texture = ExtResource("3_niy7f")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("4_rfyf1")
+autoplay = true
 
 [connection signal="pressed" from="quitButton" to="." method="_on_quit_button_pressed"]
 [connection signal="pressed" from="startButton" to="." method="_on_start_button_pressed"]
