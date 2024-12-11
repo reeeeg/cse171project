@@ -338,6 +338,14 @@ rendering_quadrant_size = 32
 position = Vector2(163, 222)
 scale = Vector2(2, 2)
 
+[node name="Player2" parent="." instance=ExtResource("3_loyx0")]
+position = Vector2(163, 222)
+scale = Vector2(2, 2)
+
+[node name="Player3" parent="." instance=ExtResource("9_tdvwp")]
+position = Vector2(163, 222)
+scale = Vector2(2, 2)
+
 [node name="ArcherBoss" parent="." instance=ExtResource("3_cxo14")]
 position = Vector2(801, 290)
 scale = Vector2(2, 2)
@@ -361,11 +369,3 @@ damage = 9999
 [node name="CollisionShape2D" type="CollisionShape2D" parent="FallBox"]
 position = Vector2(-369, 542)
 shape = SubResource("WorldBoundaryShape2D_s7qce")
-
-[node name="Player3" parent="." instance=ExtResource("9_tdvwp")]
-position = Vector2(163, 222)
-scale = Vector2(2, 2)
-
-[node name="Player2" parent="." instance=ExtResource("3_loyx0")]
-position = Vector2(163, 222)
-scale = Vector2(2, 2)

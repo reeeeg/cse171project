@@ -31,6 +31,8 @@ func _on_dialogic_signal(argument:String):
 		can_control = false
 
 func _physics_process(delta: float) -> void:
+	if deleted:
+		game_over()
 	if !can_control and PlayerStatus.alive:
 		update_animation()
 		can_control = false

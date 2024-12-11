@@ -449,12 +449,13 @@ shape = SubResource("RectangleShape2D_qhogy")
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("43_p5pgf")
 
-[node name="PlayerHealthBar" parent="." instance=ExtResource("44_bovsl")]
+[node name="PlayerHealthBar" parent="." node_paths=PackedStringArray("character") instance=ExtResource("44_bovsl")]
 offset_left = -31.0
 offset_top = -24.0
 offset_right = 70.0
 offset_bottom = 16.0
 scale = Vector2(0.5, 0.5)
+character = NodePath("..")
 
 [node name="AudioStreamPlayer2D2" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("45_aqbkb")

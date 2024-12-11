@@ -1,4 +1,4 @@
-[gd_scene load_steps=50 format=3 uid="uid://cr3581g5ivd5s"]
+[gd_scene load_steps=51 format=3 uid="uid://cr3581g5ivd5s"]
 
 [ext_resource type="Script" path="res://Scenes/WorldLevels/player_1.gd" id="1_jvh4p"]
 [ext_resource type="Script" path="res://Scripts/Health.gd" id="2_1ntvs"]
@@ -37,6 +37,7 @@
 [ext_resource type="Texture2D" uid="uid://5rmi8m3260sa" path="res://gifs/pinkprot/death/tile007.png" id="33_rkhd1"]
 [ext_resource type="AudioStream" uid="uid://duofg2aaeiykp" path="res://sfx/atksfx/punch.wav" id="36_cuf5q"]
 [ext_resource type="PackedScene" uid="uid://ct7a646iqieef" path="res://Scripts/health_bar.tscn" id="37_oisrw"]
+[ext_resource type="AudioStream" uid="uid://cams64yemgjoi" path="res://sfx/atksfx/gameOver.wav" id="38_xkl25"]
 
 [sub_resource type="Animation" id="Animation_qdumy"]
 length = 0.001
@@ -107,6 +108,30 @@ tracks/5/path = NodePath("AudioStreamPlayer2D:playing")
 tracks/5/interp = 1
 tracks/5/loop_wrap = true
 tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath(".:deleted")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("AudioStreamPlayer2D2:playing")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
@@ -218,6 +243,42 @@ tracks/0/keys = {
 "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1),
 "update": 1,
 "values": [ExtResource("26_lab7b"), ExtResource("27_4kjrp"), ExtResource("28_fljet"), ExtResource("29_j7yig"), ExtResource("30_h4gu8"), ExtResource("31_fvs10"), ExtResource("32_wod1x"), ExtResource("33_rkhd1"), null]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Health:immortality")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".:deleted")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(2.4),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("AudioStreamPlayer2D2:playing")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0.433333),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
 }
 
 [sub_resource type="Animation" id="Animation_n5ug5"]
@@ -361,5 +422,8 @@ offset_right = 76.0
 offset_bottom = -4.0
 scale = Vector2(0.5, 0.5)
 character = NodePath("..")
+
+[node name="AudioStreamPlayer2D2" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("38_xkl25")
 
 [connection signal="health_depleted" from="Health" to="." method="_on_health_health_depleted"]
