@@ -437,7 +437,7 @@ script = ExtResource("1_fajfr")
 
 [node name="Health" type="Node" parent="."]
 script = ExtResource("2_ov136")
-max_health = 20
+max_health = 40
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("3_bpya0")
