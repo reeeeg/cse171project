@@ -1,4 +1,4 @@
-[gd_scene load_steps=54 format=3 uid="uid://br3gsjhwtfgdb"]
+[gd_scene load_steps=55 format=3 uid="uid://br3gsjhwtfgdb"]
 
 [ext_resource type="Script" path="res://Scenes/WorldLevels/player_2.gd" id="1_3a5cm"]
 [ext_resource type="Script" path="res://Scripts/Health.gd" id="2_xldyn"]
@@ -42,6 +42,7 @@
 [ext_resource type="Texture2D" uid="uid://cqqhb78meb41j" path="res://gifs/whiteprot/run/tile003.png" id="40_vffuw"]
 [ext_resource type="Texture2D" uid="uid://bdvfg37juo82t" path="res://gifs/whiteprot/run/tile004.png" id="41_yuc7o"]
 [ext_resource type="Texture2D" uid="uid://bhn5n32ff2u6o" path="res://gifs/whiteprot/run/tile005.png" id="42_x4agq"]
+[ext_resource type="AudioStream" uid="uid://c7yog3thbliy3" path="res://sfx/atksfx/arrow.wav" id="43_p5pgf"]
 
 [sub_resource type="Animation" id="Animation_qdumy"]
 length = 0.001
@@ -117,6 +118,18 @@ tracks/5/keys = {
 "update": 1,
 "values": [false]
 }
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("AudioStreamPlayer2D:playing")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
 
 [sub_resource type="Animation" id="Animation_nksev"]
 resource_name = "atk"
@@ -165,6 +178,18 @@ tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/keys = {
 "times": PackedFloat32Array(0.9),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("AudioStreamPlayer2D:playing")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0.966667),
 "transitions": PackedFloat32Array(1),
 "update": 1,
 "values": [true]
@@ -346,5 +371,8 @@ health = NodePath("../Health")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="HurtBox"]
 position = Vector2(-5, 7)
 shape = SubResource("RectangleShape2D_qhogy")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("43_p5pgf")
 
 [connection signal="health_depleted" from="Health" to="." method="_on_health_health_depleted"]

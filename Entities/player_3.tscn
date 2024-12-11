@@ -1,4 +1,4 @@
-[gd_scene load_steps=50 format=3 uid="uid://bv5ryhms6r531"]
+[gd_scene load_steps=51 format=3 uid="uid://bv5ryhms6r531"]
 
 [ext_resource type="Script" path="res://Scenes/WorldLevels/player_3.gd" id="1_cp1pm"]
 [ext_resource type="Script" path="res://Scripts/Health.gd" id="2_ojkoc"]
@@ -37,6 +37,7 @@
 [ext_resource type="Script" path="res://Scripts/HurtBox.gd" id="35_7v7d6"]
 [ext_resource type="Texture2D" uid="uid://b36gew58hw7ff" path="res://gifs/blueprot/run/tile004.png" id="35_rv50o"]
 [ext_resource type="Texture2D" uid="uid://b1uj2bnr1ldg6" path="res://gifs/blueprot/run/tile005.png" id="36_a6qq1"]
+[ext_resource type="AudioStream" uid="uid://bo7hrgj68hxbl" path="res://sfx/atksfx/slash.wav" id="38_8tjqi"]
 
 [sub_resource type="Animation" id="Animation_qdumy"]
 length = 0.001
@@ -100,6 +101,18 @@ tracks/4/keys = {
 "update": 1,
 "values": [false]
 }
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("AudioStreamPlayer2D:playing")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
 
 [sub_resource type="Animation" id="Animation_nksev"]
 resource_name = "atk"
@@ -139,6 +152,18 @@ tracks/2/keys = {
 "transitions": PackedFloat32Array(1),
 "update": 1,
 "values": [false]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("AudioStreamPlayer2D:playing")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0.366667),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
 }
 
 [sub_resource type="Animation" id="Animation_er61s"]
@@ -327,5 +352,8 @@ health = NodePath("../Health")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="HurtBox"]
 position = Vector2(-4, 9)
 shape = SubResource("RectangleShape2D_qhogy")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("38_8tjqi")
 
 [connection signal="health_depleted" from="Health" to="." method="_on_health_health_depleted"]
