@@ -1,0 +1,36 @@
+[gd_scene load_steps=5 format=3 uid="uid://o2yew0tpxhta"]
+
+[ext_resource type="Script" path="res://Scenes/GameEnding/game_ending.gd" id="1_0ay40"]
+[ext_resource type="Texture2D" uid="uid://bw3vutw1qiuf4" path="res://backgrounds/ending.jpg" id="2_qg4r3"]
+[ext_resource type="Texture2D" uid="uid://hm04mpy5l72m" path="res://Scenes/GameEnding/ending_nexttime.png" id="3_j5v8p"]
+[ext_resource type="Texture2D" uid="uid://cxaxw4nnpmawx" path="res://Scenes/GameEnding/ending_may.png" id="4_xwa41"]
+
+[node name="GameEnding" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_0ay40")
+
+[node name="Ending" type="Sprite2D" parent="."]
+position = Vector2(820.611, 364.25)
+scale = Vector2(0.297347, 0.297347)
+texture = ExtResource("2_qg4r3")
+
+[node name="EndingNexttime" type="Sprite2D" parent="."]
+position = Vector2(456, 144)
+scale = Vector2(0.847826, 0.847826)
+texture = ExtResource("3_j5v8p")
+
+[node name="EndingMay" type="Sprite2D" parent="."]
+position = Vector2(600, 320)
+scale = Vector2(0.429825, 0.429825)
+texture = ExtResource("4_xwa41")
+
+[node name="exitButton" type="Button" parent="."]
+layout_mode = 0
+offset_left = 576.0
+offset_top = 576.0
+offset_right = 704.0
+offset_bottom = 640.0
+text = "exit"
+
+[connection signal="pressed" from="exitButton" to="." method="_on_exit_button_pressed"]
