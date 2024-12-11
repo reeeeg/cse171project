@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://pdg8doy86dm"
+path="res://.godot/imported/Death and Axes.mp3-c705e6f7387861dd5b7d3a8c54f71f8b.mp3str"
+
+[deps]
+
+source_file="res://sfx/bgm/Death and Axes.mp3"
+dest_files=["res://.godot/imported/Death and Axes.mp3-c705e6f7387861dd5b7d3a8c54f71f8b.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

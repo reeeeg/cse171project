@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://y5gn7wocnt01"]
+[gd_scene load_steps=13 format=3 uid="uid://y5gn7wocnt01"]
 
 [ext_resource type="Texture2D" uid="uid://df6iacmx6gfw4" path="res://characterArt/oscar.png" id="1_1x2h5"]
 [ext_resource type="Texture2D" uid="uid://by0xr5sibins4" path="res://backgrounds/cityFar.jpg" id="1_o6ku6"]
@@ -9,6 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://thnpecyafams" path="res://backgrounds/characterSelect.png" id="6_oi2cg"]
 [ext_resource type="Texture2D" uid="uid://bssygnthujdhn" path="res://backgrounds/pickTwoCharacters.png" id="7_q1y2f"]
 [ext_resource type="Texture2D" uid="uid://cd4urwabvwsqe" path="res://Scenes/CharacterSelect/pick_characters.png" id="9_q350f"]
+[ext_resource type="AudioStream" uid="uid://brp5hwy0lqtx" path="res://sfx/bgm/retro-8bit-happy-videogame-music-246631.mp3" id="10_pxywt"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_lci85"]
 texture = ExtResource("5_8rfut")
@@ -211,6 +212,10 @@ text = "Confirm"
 position = Vector2(642.286, 203.5)
 scale = Vector2(0.535714, 0.535714)
 texture = ExtResource("9_q350f")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("10_pxywt")
+autoplay = true
 
 [connection signal="toggled" from="soupButton" to="." method="_on_soup_button_toggled"]
 [connection signal="toggled" from="meepButton" to="." method="_on_meep_button_toggled"]

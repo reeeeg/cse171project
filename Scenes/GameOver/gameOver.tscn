@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://5t2yioe602wn"]
+[gd_scene load_steps=6 format=3 uid="uid://5t2yioe602wn"]
 
 [ext_resource type="Texture2D" uid="uid://lglqwmhemum8" path="res://Scenes/GameOver/gameOver.jpg" id="1_ilmip"]
 [ext_resource type="Script" path="res://Scenes/GameOver/game_over.gd" id="2_cqa1r"]
 [ext_resource type="Texture2D" uid="uid://bifrll74pgy3l" path="res://Scenes/GameOver/gameOverText.png" id="3_i2hl4"]
 [ext_resource type="Texture2D" uid="uid://cw3ibjxrvyj7d" path="res://Scenes/GameOver/playAgainText.png" id="4_1pl1x"]
+[ext_resource type="AudioStream" uid="uid://fo4hxmlit5gc" path="res://sfx/bgm/kl-peach-game-over-ii-135684.mp3" id="5_j5x8g"]
 
 [node name="GameOver" type="Control"]
 layout_mode = 3
@@ -31,5 +32,9 @@ texture = ExtResource("3_i2hl4")
 position = Vector2(640, 432)
 scale = Vector2(0.639892, 0.639892)
 texture = ExtResource("4_1pl1x")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("5_j5x8g")
+autoplay = true
 
 [connection signal="pressed" from="restartButton" to="." method="_on_restart_button_pressed"]

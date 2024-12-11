@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=4 uid="uid://dskuh61froorw"]
+[gd_scene load_steps=16 format=4 uid="uid://dskuh61froorw"]
 
 [ext_resource type="Texture2D" uid="uid://dsf15sy2iiitl" path="res://gifs/industrial tileset/2 Background/Background.png" id="1_0m0bq"]
 [ext_resource type="Script" path="res://Scenes/WorldLevels/level_1.gd" id="1_jl658"]
@@ -10,6 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://6vtsrvk00qjc" path="res://Entities/boss_1.tscn" id="4_sns61"]
 [ext_resource type="PackedScene" path="res://Scripts/enemyhealthbar.tscn" id="6_8yju3"]
 [ext_resource type="Script" path="res://Scripts/HitBox.gd" id="6_g0m2h"]
+[ext_resource type="AudioStream" uid="uid://dx1jl5hg4otw1" path="res://sfx/bgm/Aggressor.mp3" id="11_c5t3t"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_h5yjy"]
 texture = ExtResource("2_47wdi")
@@ -456,3 +457,8 @@ damage = 9999
 [node name="CollisionShape2D" type="CollisionShape2D" parent="FallBox"]
 position = Vector2(-369, 542)
 shape = SubResource("WorldBoundaryShape2D_s7qce")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("11_c5t3t")
+autoplay = true
+stream_paused = true

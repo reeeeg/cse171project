@@ -4,7 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://dkmn2ql201tnl" path="res://Entities/player.tscn" id="2_7v6g1"]
 [ext_resource type="Texture2D" uid="uid://y4887lna5ug2" path="res://tiles/base_soil-dirt-grass.png" id="3_bqxo8"]
 [ext_resource type="PackedScene" uid="uid://cxggej47cg5nh" path="res://Entities/tempenemy.tscn" id="3_hy736"]
-[ext_resource type="PackedScene" path="res://Entities/boss_enemy_1.tscn" id="4_2umi5"]
+[ext_resource type="PackedScene" uid="uid://d35xby0d4pn6b" path="res://Entities/boss_enemy_1.tscn" id="4_2umi5"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_644md"]
 resource_name = "temp"
