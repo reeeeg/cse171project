@@ -85,8 +85,11 @@ meep: That's right. Nice to meet you, Soup. Are you here for Valiant's commissio
 soup: You bet. Oscar recruited you, huh? He was practically begging me to join. I wasn't bad myself, back in the day.
 oscar: I did not beg.
 join  center
+Oscar appears out of thin air again.
+oscar: Hello, Meep. It is nice of you to join us. This is our expedition team. I will be leading this team. To use... layman's terms, Soup is an excellent tank. I am a ranged support. We are counting on you for both melee and ranged attacks.
+meep: Three people? Are you kidding me? The
 oscar: <Empty Text Event>
-oscar: But back to the commission—yes, there are Cursed this close to the city. That's why we are organizing this commission now. We would have liked to wait a bit longer and scout out a better path, but I have already exhausted all possibilities.
+oscar: But back to your earlier question—yes, there are Cursed this close to the city. That's why we are organizing this commission now. We would have liked to wait a bit longer and scout out a better path, but I have already exhausted all possibilities.
 oscar: From what we at Valiant have observed, the Cursed are getting ready to invade the cities, now that they've taken over all the Spires. And to be frank, our cities are not equipped for a full-scale assault. It's now or never. We must strike when they think we're at our weakest.
 oscar: Are you ready? We will be encountering plenty of small Cursed along the way, but they're of no significance to us. I trust in our skills. What matters is knocking out their big brass. Regular Cursed aren't sentient the same way they are—they move as a hivemind, following their leader.
 oscar: If we can take out the leader, the rest will be easy to pick off. We also need to be fast, or they will crown a new leader. I will do anything to stop them.

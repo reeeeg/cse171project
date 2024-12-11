@@ -45,7 +45,8 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	if dead == false:
 		checkDead()
-	checkSlimeDead()
+	if slimeDead == false:
+		checkSlimeDead()
 
 func _on_dialogic_signal(argument:String):
 	if argument == "new scene":
@@ -64,7 +65,7 @@ func checkDead():
 func checkSlimeDead():
 	print(PlayerStatus.introSlimesDead)
 	if PlayerStatus.introSlimesDead > 1:
-		#slimeDead = true
+		slimeDead = true
 		Dialogic.start("res://storyTimelines/2_busStop.dtl")
 
 #func isSlimeDead() -> bool:

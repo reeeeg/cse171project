@@ -461,4 +461,3 @@ shape = SubResource("WorldBoundaryShape2D_s7qce")
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("11_c5t3t")
 autoplay = true
-stream_paused = true
