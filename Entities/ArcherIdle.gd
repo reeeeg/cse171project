@@ -1,10 +1,10 @@
 extends State
-class_name CommanderIdle
+class_name ArcherIdle
 
-@onready var animation = $"../../CommanderAnimation"
+@onready var animation = $"../../AnimationPlayer"
 
 @export var enemy: CharacterBody2D
-@export var move_speed := 30.0
+@export var move_speed := 10.0
 
 var player : CharacterBody2D
 
@@ -15,7 +15,7 @@ var randomer : int
 func randomize_wander():
 	move_direction = Vector2(randf_range(-1, 1), randf_range(-1,1)).normalized()
 	wander_time = randf_range(0.5, 1.5)
-	randomer = randi_range(0,3)
+	randomer = randi_range(0,1)
 
 func Enter():
 	print("entered idle")
@@ -27,13 +27,13 @@ func Enter():
 func Update(delta: float):
 	
 	var nowstate = get_parent().get_current_state()
+	if nowstate.State_Name != 'idle':
+		return
 	print(nowstate.State_Name)
 	if nowstate.State_Name == 'death':
 		return
 	if randomer == 1:
-		Transitioned.emit(self, 'dash')
-	elif randomer == 2:
-		Transitioned.emit(self, 'follow')
+		Transitioned.emit(self, 'atk')
 	else:
 		pass
 		
@@ -51,6 +51,6 @@ func Physics_Update(delta: float):
 			enemy.velocity.y = 5*delta
 
 
-func _on_commander_boss_commander_death() -> void:
+func _on_archer_boss_archer_death() -> void:
 	print("idle death signal")
-	Transitioned.emit(self, 'death')  # Replace with function body.
+	Transitioned.emit(self, 'death')

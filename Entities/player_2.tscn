@@ -333,7 +333,7 @@ drag_horizontal_enabled = true
 drag_vertical_enabled = true
 drag_bottom_margin = 0.25
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+[node name="env" type="CollisionShape2D" parent="."]
 position = Vector2(-5, 7)
 shape = SubResource("CapsuleShape2D_3ruae")
 

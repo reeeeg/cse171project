@@ -5,7 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://cr3581g5ivd5s" path="res://Entities/player_1.tscn" id="3_r6d10"]
 [ext_resource type="PackedScene" uid="uid://6vtsrvk00qjc" path="res://Entities/boss_1.tscn" id="4_sns61"]
 [ext_resource type="PackedScene" uid="uid://ct7a646iqieef" path="res://Scripts/health_bar.tscn" id="5_d0nov"]
-[ext_resource type="PackedScene" path="res://Scripts/enemyhealthbar.tscn" id="6_8yju3"]
+[ext_resource type="PackedScene" uid="uid://bbn6ib3w7vxny" path="res://Scripts/enemyhealthbar.tscn" id="6_8yju3"]
 [ext_resource type="Script" path="res://Scripts/HitBox.gd" id="6_g0m2h"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_h5yjy"]

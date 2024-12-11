@@ -6,13 +6,17 @@ extends CharacterBody2D
 @export var attacking = false
 @export var dashing = false
 
+@onready var arms = $arms
 @onready var sprite = $Sprite2D
 @onready var animation = $AnimationPlayer
+@onready var env = $env
+@onready var hurtbox = $HurtBox
+
 #@onready var projectile = $Projectile
 #@onready var main = get_tree().get_root().get_node("Player2")
 
 var projectile = preload("res://Entities/Projectile.tscn")
-
+var facingforward = true
 var can_control : bool = true
 var double_jump : bool = false
 
@@ -37,11 +41,21 @@ func _physics_process(delta: float) -> void:
 		can_control = false
 	if !can_control or dashing:
 		return
+	
 	if shoot:
 		instance = projectile.instantiate()
-		instance.dir = rotation
+		instance.speed = 600
 		instance.pos = global_position
-		instance.pos.x += 60
+		instance.pos = self.global_position
+		
+		if !facingforward:
+			instance.dir = rotation + PI
+			instance.pos.x -= 80
+		else:
+			instance.dir = rotation
+			instance.pos.x += 80
+		
+		
 		instance.rot = rotation
 		get_parent().add_child.call_deferred(instance)
 		shoot = false
@@ -50,10 +64,18 @@ func _physics_process(delta: float) -> void:
 		
 	if Input.is_action_pressed("Oleft"):
 		sprite.scale.x = abs(sprite.scale.x) * -1
+		arms.scale.x = abs(sprite.scale.x) * -1
+		env.scale.x = abs(sprite.scale.x) * -1
+		hurtbox.scale.x = abs(sprite.scale.x) * -1
+		facingforward = false
 
 		
 	if Input.is_action_pressed("Oright"):
 		sprite.scale.x = abs(sprite.scale.x)
+		arms.scale.x = abs(sprite.scale.x)
+		env.scale.x = abs(sprite.scale.x)
+		hurtbox.scale.x = abs(sprite.scale.x)
+		facingforward = true
 
 	# Add the gravity.
 	if not is_on_floor():

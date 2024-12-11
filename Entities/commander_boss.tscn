@@ -94,7 +94,7 @@ tracks/3/keys = {
 tracks/4/type = "value"
 tracks/4/imported = false
 tracks/4/enabled = true
-tracks/4/path = NodePath(".:commander_dash")
+tracks/4/path = NodePath(".:MeleAttacked")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/keys = {
@@ -106,7 +106,7 @@ tracks/4/keys = {
 tracks/5/type = "value"
 tracks/5/imported = false
 tracks/5/enabled = true
-tracks/5/path = NodePath(".:MeleAttacked")
+tracks/5/path = NodePath(".:dashing")
 tracks/5/interp = 1
 tracks/5/loop_wrap = true
 tracks/5/keys = {
@@ -114,6 +114,57 @@ tracks/5/keys = {
 "transitions": PackedFloat32Array(1),
 "update": 1,
 "values": [false]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("StateMachine/dash:start")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="Animation" id="Animation_usa81"]
+resource_name = "atk"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.133333, 0.266667, 0.433333, 0.566667),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 1,
+"values": [ExtResource("19_txegb"), ExtResource("20_sxnue"), ExtResource("21_0ol5q"), ExtResource("22_s53gi"), ExtResource("23_aqibx")]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("HitBox/CollisionShape2D:disabled")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.466667, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".:MeleAttacked")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(1),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
 }
 
 [sub_resource type="Animation" id="Animation_tfi20"]
@@ -152,12 +203,12 @@ tracks/2/keys = {
 "times": PackedFloat32Array(0.966667),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [true]
+"values": [false]
 }
 
-[sub_resource type="Animation" id="Animation_ugfey"]
-resource_name = "idle"
-length = 0.8
+[sub_resource type="Animation" id="Animation_pndl5"]
+resource_name = "follow"
+length = 1.7
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -165,10 +216,10 @@ tracks/0/path = NodePath("Sprite2D:texture")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1),
+"times": PackedFloat32Array(0, 0.3, 0.6, 1.56667),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
 "update": 1,
-"values": [ExtResource("6_7n65w"), ExtResource("7_i6jof"), ExtResource("8_vlh2l"), ExtResource("9_4xmky"), ExtResource("10_na805"), ExtResource("11_tn5ov"), ExtResource("12_21bev"), ExtResource("13_aj13g"), ExtResource("14_nhx0u")]
+"values": [ExtResource("19_mgvbj"), ExtResource("20_tv71m"), ExtResource("21_da5rr"), ExtResource("22_fngwy")]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -177,7 +228,43 @@ tracks/1/path = NodePath("HitBox/CollisionShape2D:disabled")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PackedFloat32Array(0),
+"times": PackedFloat32Array(0, 1.7),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".:MeleAttacked")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(1.7),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath(".:dashing")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 1.7),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("StateMachine/dash:start")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0.733333),
 "transitions": PackedFloat32Array(1),
 "update": 1,
 "values": [true]
@@ -223,8 +310,10 @@ tracks/2/keys = {
 "values": [true]
 }
 
-[sub_resource type="Animation" id="Animation_usa81"]
-resource_name = "atk"
+[sub_resource type="Animation" id="Animation_ugfey"]
+resource_name = "idle"
+length = 0.8
+loop_mode = 1
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -232,10 +321,10 @@ tracks/0/path = NodePath("Sprite2D:texture")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.133333, 0.266667, 0.433333, 0.566667),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1),
 "update": 1,
-"values": [ExtResource("19_txegb"), ExtResource("20_sxnue"), ExtResource("21_0ol5q"), ExtResource("22_s53gi"), ExtResource("23_aqibx")]
+"values": [ExtResource("6_7n65w"), ExtResource("7_i6jof"), ExtResource("8_vlh2l"), ExtResource("9_4xmky"), ExtResource("10_na805"), ExtResource("11_tn5ov"), ExtResource("12_21bev"), ExtResource("13_aj13g"), ExtResource("14_nhx0u")]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -244,71 +333,7 @@ tracks/1/path = NodePath("HitBox/CollisionShape2D:disabled")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PackedFloat32Array(0, 1),
-"transitions": PackedFloat32Array(1, 1),
-"update": 1,
-"values": [false, true]
-}
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath(".:MeleAttacked")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(1),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [true]
-}
-
-[sub_resource type="Animation" id="Animation_pndl5"]
-resource_name = "follow"
-length = 3.0
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Sprite2D:texture")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.3, 0.6, 3),
-"transitions": PackedFloat32Array(1, 1, 1, 1),
-"update": 1,
-"values": [ExtResource("19_mgvbj"), ExtResource("20_tv71m"), ExtResource("21_da5rr"), ExtResource("22_fngwy")]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("HitBox/CollisionShape2D:disabled")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0, 3),
-"transitions": PackedFloat32Array(1, 1),
-"update": 1,
-"values": [false, true]
-}
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath(".:commander_dash")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(0, 3),
-"transitions": PackedFloat32Array(1, 1),
-"update": 1,
-"values": [true, false]
-}
-tracks/3/type = "value"
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/path = NodePath(".:MeleAttacked")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/keys = {
-"times": PackedFloat32Array(3),
+"times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
 "values": [true]
@@ -324,8 +349,9 @@ _data = {
 "idle": SubResource("Animation_ugfey")
 }
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_ra0uc"]
-size = Vector2(35, 69)
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_koh6p"]
+radius = 22.0
+height = 68.0
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_b06oy"]
 size = Vector2(46, 98)
@@ -337,7 +363,7 @@ script = ExtResource("1_fajfr")
 
 [node name="Health" type="Node" parent="."]
 script = ExtResource("2_ov136")
-max_health = 50
+max_health = 20
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("3_bpya0")
@@ -355,11 +381,11 @@ libraries = {
 collision_layer = 4
 collision_mask = 0
 script = ExtResource("4_opnkt")
-damage = 10
+damage = 4
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="HitBox"]
-position = Vector2(34.5, 29.5)
-shape = SubResource("RectangleShape2D_ra0uc")
+position = Vector2(39, 32)
+shape = SubResource("CapsuleShape2D_koh6p")
 disabled = true
 
 [node name="HurtBox" type="Area2D" parent="." node_paths=PackedStringArray("health")]

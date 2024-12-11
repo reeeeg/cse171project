@@ -1,13 +1,238 @@
-[gd_scene load_steps=2 format=3 uid="uid://r0lsbkdfw2j1"]
+[gd_scene load_steps=43 format=3 uid="uid://r0lsbkdfw2j1"]
 
 [ext_resource type="Script" path="res://Scripts/Health.gd" id="1_1kkby"]
+[ext_resource type="Script" path="res://Entities/archer_boss.gd" id="1_xw4fg"]
+[ext_resource type="Texture2D" uid="uid://bol6eke2u0c7g" path="res://gifs/archer/idle/tile000.png" id="3_ni3ki"]
+[ext_resource type="Script" path="res://Scripts/HurtBox.gd" id="4_n8eaa"]
+[ext_resource type="Texture2D" uid="uid://culksase2yvru" path="res://gifs/archer/shot/tile000.png" id="4_tuwnh"]
+[ext_resource type="Texture2D" uid="uid://cstt4xrvxgn7q" path="res://gifs/archer/shot/tile001.png" id="5_8o1ml"]
+[ext_resource type="Texture2D" uid="uid://bgtltjhu4dhkb" path="res://gifs/archer/shot/tile002.png" id="6_45qp8"]
+[ext_resource type="Texture2D" uid="uid://cco7a663jrixe" path="res://gifs/archer/shot/tile003.png" id="7_xdwiw"]
+[ext_resource type="Texture2D" uid="uid://cg61ajluiuotq" path="res://gifs/archer/shot/tile004.png" id="8_6lth7"]
+[ext_resource type="Texture2D" uid="uid://wg8h2fvppfi3" path="res://gifs/archer/shot/tile005.png" id="9_4ftit"]
+[ext_resource type="Texture2D" uid="uid://bktj6c4pciy0" path="res://gifs/archer/shot/tile006.png" id="10_6qt6g"]
+[ext_resource type="Texture2D" uid="uid://b4uoabkns7ri8" path="res://gifs/archer/shot/tile007.png" id="11_ah6y8"]
+[ext_resource type="Texture2D" uid="uid://dd50gjkc6tm4t" path="res://gifs/archer/shot/tile008.png" id="12_521yg"]
+[ext_resource type="Texture2D" uid="uid://bo62e2f14tva5" path="res://gifs/archer/shot/tile009.png" id="13_scvjq"]
+[ext_resource type="Texture2D" uid="uid://dul5tvx5shiru" path="res://gifs/archer/shot/tile010.png" id="14_ikfqv"]
+[ext_resource type="Texture2D" uid="uid://0ixcj6t3u3c6" path="res://gifs/archer/shot/tile011.png" id="15_57hq5"]
+[ext_resource type="Texture2D" uid="uid://qd1dgecx2bub" path="res://gifs/archer/shot/tile012.png" id="16_ghtah"]
+[ext_resource type="Texture2D" uid="uid://dc62lin8y5fow" path="res://gifs/archer/shot/tile013.png" id="17_vqj0l"]
+[ext_resource type="Texture2D" uid="uid://dms3wrsomm3c4" path="res://gifs/archer/death/tile000.png" id="18_aqhpw"]
+[ext_resource type="Script" path="res://Entities/ArcherIdle.gd" id="19_g5yrk"]
+[ext_resource type="Texture2D" uid="uid://bgrese10qia60" path="res://gifs/archer/death/tile001.png" id="19_vtpep"]
+[ext_resource type="Texture2D" uid="uid://c6yoiw63ei1p3" path="res://gifs/archer/death/tile002.png" id="20_onciw"]
+[ext_resource type="Texture2D" uid="uid://147tkj5r8r8d" path="res://gifs/archer/death/tile003.png" id="21_r14xs"]
+[ext_resource type="Texture2D" uid="uid://c3wp0tlwjhkd0" path="res://gifs/archer/death/tile004.png" id="22_ao73b"]
+[ext_resource type="Texture2D" uid="uid://cgrdx04nu5ala" path="res://gifs/archer/walk/tile000.png" id="23_kbqk7"]
+[ext_resource type="Texture2D" uid="uid://cyhghehovjiqu" path="res://gifs/archer/walk/tile001.png" id="24_xh280"]
+[ext_resource type="Script" path="res://Entities/ArcherAtk.gd" id="25_5y36y"]
+[ext_resource type="Texture2D" uid="uid://bnftllqmadpwc" path="res://gifs/archer/walk/tile002.png" id="25_rlb08"]
+[ext_resource type="Script" path="res://Scripts/EnemyStates/enemy_death.gd" id="26_pnxa4"]
+[ext_resource type="Texture2D" uid="uid://doq4dajgf77bq" path="res://gifs/archer/walk/tile003.png" id="26_vivlb"]
+[ext_resource type="Texture2D" uid="uid://2tl4pi764rsg" path="res://gifs/archer/walk/tile004.png" id="27_50v3q"]
+[ext_resource type="Texture2D" uid="uid://b132i74kpwpjv" path="res://gifs/archer/walk/tile005.png" id="28_uta4h"]
+[ext_resource type="Texture2D" uid="uid://dysfrntuer4bt" path="res://gifs/archer/walk/tile006.png" id="29_sg4bi"]
+[ext_resource type="Texture2D" uid="uid://c76tb0qea3wpy" path="res://gifs/archer/walk/tile007.png" id="30_3o8h4"]
+[ext_resource type="Script" path="res://Scripts/state_machine.gd" id="32_qforw"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_pshx6"]
+radius = 16.0
+height = 78.0
+
+[sub_resource type="Animation" id="Animation_1ak6k"]
+resource_name = "atk"
+length = 1.6
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1, 1.1, 1.2, 1.3),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [ExtResource("4_tuwnh"), ExtResource("5_8o1ml"), ExtResource("6_45qp8"), ExtResource("7_xdwiw"), ExtResource("8_6lth7"), ExtResource("9_4ftit"), ExtResource("10_6qt6g"), ExtResource("11_ah6y8"), ExtResource("12_521yg"), ExtResource("13_scvjq"), ExtResource("14_ikfqv"), ExtResource("15_57hq5"), ExtResource("16_ghtah"), ExtResource("17_vqj0l")]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:shotted")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(1.1),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".:shooting")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 1.6),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+
+[sub_resource type="Animation" id="Animation_owgrg"]
+resource_name = "death"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.6, 0.9),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 1,
+"values": [ExtResource("18_aqhpw"), ExtResource("19_vtpep"), ExtResource("20_onciw"), ExtResource("21_r14xs"), ExtResource("22_ao73b")]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Health:immortality")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="Animation" id="Animation_83ust"]
+resource_name = "idle"
+length = 0.94
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.133333, 0.266667, 0.4, 0.533333, 0.666667, 0.8, 0.933333),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [ExtResource("23_kbqk7"), ExtResource("24_xh280"), ExtResource("25_rlb08"), ExtResource("26_vivlb"), ExtResource("27_50v3q"), ExtResource("28_uta4h"), ExtResource("29_sg4bi"), ExtResource("30_3o8h4")]
+}
+
+[sub_resource type="Animation" id="Animation_tqjkl"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("3_ni3ki")]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:shotted")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".:shooting")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Health:immortality")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_06jim"]
+_data = {
+"RESET": SubResource("Animation_tqjkl"),
+"atk": SubResource("Animation_1ak6k"),
+"death": SubResource("Animation_owgrg"),
+"idle": SubResource("Animation_83ust")
+}
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7l7ku"]
+size = Vector2(69, 96)
 
 [node name="ArcherBoss" type="CharacterBody2D"]
+collision_layer = 16
+collision_mask = 16
+script = ExtResource("1_xw4fg")
 
 [node name="Health" type="Node" parent="."]
 script = ExtResource("1_1kkby")
 max_health = 20
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("3_ni3ki")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 26)
+shape = SubResource("CapsuleShape2D_pshx6")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_06jim")
+}
+
+[node name="HurtBox" type="Area2D" parent="." node_paths=PackedStringArray("health")]
+collision_layer = 0
+collision_mask = 10
+script = ExtResource("4_n8eaa")
+health = NodePath("../Health")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HurtBox"]
+position = Vector2(-0.5, 23)
+shape = SubResource("RectangleShape2D_7l7ku")
+
+[node name="StateMachine" type="Node" parent="." node_paths=PackedStringArray("initial_state")]
+script = ExtResource("32_qforw")
+initial_state = NodePath("idle")
+
+[node name="idle" type="Node" parent="StateMachine" node_paths=PackedStringArray("enemy")]
+script = ExtResource("19_g5yrk")
+enemy = NodePath("../..")
+
+[node name="atk" type="Node" parent="StateMachine" node_paths=PackedStringArray("enemy")]
+script = ExtResource("25_5y36y")
+enemy = NodePath("../..")
+
+[node name="death" type="Node" parent="StateMachine" node_paths=PackedStringArray("enemy")]
+script = ExtResource("26_pnxa4")
+enemy = NodePath("../..")
+
+[connection signal="archer_death" from="." to="StateMachine/idle" method="_on_archer_boss_archer_death"]
+[connection signal="archer_death" from="." to="StateMachine/atk" method="_on_archer_boss_archer_death"]
+[connection signal="archer_mele" from="." to="StateMachine/atk" method="_on_archer_boss_archer_mele"]
+[connection signal="health_depleted" from="Health" to="." method="_on_health_health_depleted"]

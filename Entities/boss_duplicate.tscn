@@ -1,41 +1,41 @@
-[gd_scene load_steps=48 format=3 uid="uid://6vtsrvk00qjc"]
+[gd_scene load_steps=48 format=3 uid="uid://bvp1cpnpjoxot"]
 
-[ext_resource type="Script" path="res://Scripts/HitBox.gd" id="1_7wv5w"]
-[ext_resource type="Script" path="res://Scripts/boss_1.gd" id="1_xqoif"]
-[ext_resource type="Script" path="res://Scripts/Health.gd" id="2_gj6no"]
-[ext_resource type="Texture2D" uid="uid://b8tqv3ckeo54e" path="res://gifs/samurai/death/tile005.png" id="3_waviu"]
-[ext_resource type="Texture2D" uid="uid://b6v5cfab7tgwj" path="res://gifs/samurai/death/tile004.png" id="4_wotoo"]
-[ext_resource type="Texture2D" uid="uid://rrlvfl6msvrx" path="res://gifs/samurai/death/tile003.png" id="5_j1ld0"]
-[ext_resource type="Texture2D" uid="uid://cxinfrqa820w4" path="res://gifs/samurai/death/tile002.png" id="6_di2q1"]
-[ext_resource type="Texture2D" uid="uid://blubhojuigq1x" path="res://gifs/samurai/death/tile001.png" id="7_exiry"]
-[ext_resource type="Texture2D" uid="uid://cuqh0q6kdag61" path="res://gifs/samurai/death/tile000.png" id="8_btmcl"]
-[ext_resource type="Texture2D" uid="uid://dy6q6ecwgq0fs" path="res://gifs/samurai/idle/tile000.png" id="9_4tkss"]
-[ext_resource type="Texture2D" uid="uid://bvxwa0ue3d3vt" path="res://gifs/samurai/atk2/tile000.png" id="10_4vvqe"]
-[ext_resource type="Texture2D" uid="uid://0i1jw4bu8wbf" path="res://gifs/samurai/walk/tile000.png" id="11_fjp26"]
-[ext_resource type="Texture2D" uid="uid://bug87g2dgi1jv" path="res://gifs/samurai/atk2/tile001.png" id="11_p3fke"]
-[ext_resource type="Texture2D" uid="uid://0s35ma5pd0qy" path="res://gifs/samurai/walk/tile001.png" id="12_ot886"]
-[ext_resource type="Script" path="res://Scripts/HurtBox.gd" id="12_q5qjd"]
-[ext_resource type="Texture2D" uid="uid://bxovampad6k4e" path="res://gifs/samurai/atk2/tile002.png" id="12_rs4eb"]
-[ext_resource type="Texture2D" uid="uid://dlk7q3p71y32t" path="res://gifs/samurai/walk/tile002.png" id="13_7jpdp"]
-[ext_resource type="Script" path="res://Scripts/state_machine.gd" id="13_po6km"]
-[ext_resource type="Texture2D" uid="uid://ddwe5choh8yty" path="res://gifs/samurai/atk2/tile003.png" id="13_pytg8"]
-[ext_resource type="Texture2D" uid="uid://dq5q0qb8dy3xe" path="res://gifs/samurai/atk2/tile004.png" id="14_7vrm6"]
-[ext_resource type="Texture2D" uid="uid://ctdkau7njjf3c" path="res://gifs/samurai/walk/tile003.png" id="14_iqtjk"]
-[ext_resource type="Script" path="res://Scripts/EnemyStates/enemy_idle.gd" id="14_ykrvo"]
-[ext_resource type="Texture2D" uid="uid://dfxymcgpk105n" path="res://gifs/samurai/walk/tile004.png" id="15_13vso"]
-[ext_resource type="Texture2D" uid="uid://3iemr0ft33m1" path="res://gifs/samurai/walk/tile005.png" id="16_2hgm2"]
-[ext_resource type="Texture2D" uid="uid://caepn8r4w3vka" path="res://gifs/samurai/walk/tile006.png" id="17_tni7n"]
-[ext_resource type="Texture2D" uid="uid://bvw4ji1rtli5f" path="res://gifs/samurai/walk/tile007.png" id="18_qmo8k"]
-[ext_resource type="Texture2D" uid="uid://dhhiy6tpr5pms" path="res://gifs/samurai/walk/tile008.png" id="19_wwe5m"]
-[ext_resource type="Script" path="res://Scripts/EnemyStates/enemy_activation.gd" id="23_v2nfa"]
-[ext_resource type="Texture2D" uid="uid://dlh2gkupseon4" path="res://gifs/samurai/atk3/tile000.png" id="24_ntmra"]
-[ext_resource type="Texture2D" uid="uid://cnmpxdhulxhvm" path="res://gifs/samurai/atk3/tile001.png" id="25_v0wf5"]
-[ext_resource type="Texture2D" uid="uid://bus6r8410a5uj" path="res://gifs/samurai/atk3/tile002.png" id="26_y4khh"]
-[ext_resource type="Texture2D" uid="uid://cxx45cq25x8hy" path="res://gifs/samurai/atk3/tile003.png" id="27_rilhg"]
-[ext_resource type="Script" path="res://Scripts/EnemyStates/enemy_mele.gd" id="30_fi4g3"]
-[ext_resource type="Script" path="res://Scripts/EnemyStates/enemy_follow.gd" id="31_7to0s"]
-[ext_resource type="Script" path="res://Scripts/EnemyStates/enemy_death.gd" id="33_fuao0"]
-[ext_resource type="Script" path="res://Scripts/EnemyStates/enemy_dash.gd" id="35_jtw58"]
+[ext_resource type="Script" path="res://Scripts/boss_1.gd" id="1_8km8v"]
+[ext_resource type="Script" path="res://Scripts/Health.gd" id="2_6ahsf"]
+[ext_resource type="Texture2D" uid="uid://dy6q6ecwgq0fs" path="res://gifs/samurai/idle/tile000.png" id="3_c7nap"]
+[ext_resource type="Texture2D" uid="uid://b8tqv3ckeo54e" path="res://gifs/samurai/death/tile005.png" id="4_d784w"]
+[ext_resource type="Texture2D" uid="uid://b6v5cfab7tgwj" path="res://gifs/samurai/death/tile004.png" id="5_uuiw4"]
+[ext_resource type="Texture2D" uid="uid://rrlvfl6msvrx" path="res://gifs/samurai/death/tile003.png" id="6_3jd6t"]
+[ext_resource type="Texture2D" uid="uid://cxinfrqa820w4" path="res://gifs/samurai/death/tile002.png" id="7_yult4"]
+[ext_resource type="Texture2D" uid="uid://blubhojuigq1x" path="res://gifs/samurai/death/tile001.png" id="8_ajwvl"]
+[ext_resource type="Texture2D" uid="uid://cuqh0q6kdag61" path="res://gifs/samurai/death/tile000.png" id="9_otbrc"]
+[ext_resource type="Texture2D" uid="uid://bvxwa0ue3d3vt" path="res://gifs/samurai/atk2/tile000.png" id="10_mj0t7"]
+[ext_resource type="Texture2D" uid="uid://bug87g2dgi1jv" path="res://gifs/samurai/atk2/tile001.png" id="11_lj21j"]
+[ext_resource type="Texture2D" uid="uid://bxovampad6k4e" path="res://gifs/samurai/atk2/tile002.png" id="12_6jx5y"]
+[ext_resource type="Texture2D" uid="uid://ddwe5choh8yty" path="res://gifs/samurai/atk2/tile003.png" id="13_owdtl"]
+[ext_resource type="Texture2D" uid="uid://dq5q0qb8dy3xe" path="res://gifs/samurai/atk2/tile004.png" id="14_jjh37"]
+[ext_resource type="Texture2D" uid="uid://dlh2gkupseon4" path="res://gifs/samurai/atk3/tile000.png" id="15_xh1c6"]
+[ext_resource type="Texture2D" uid="uid://cnmpxdhulxhvm" path="res://gifs/samurai/atk3/tile001.png" id="16_eis06"]
+[ext_resource type="Texture2D" uid="uid://bus6r8410a5uj" path="res://gifs/samurai/atk3/tile002.png" id="17_cigt6"]
+[ext_resource type="Texture2D" uid="uid://cxx45cq25x8hy" path="res://gifs/samurai/atk3/tile003.png" id="18_bitlk"]
+[ext_resource type="Texture2D" uid="uid://0i1jw4bu8wbf" path="res://gifs/samurai/walk/tile000.png" id="19_4vo3e"]
+[ext_resource type="Texture2D" uid="uid://0s35ma5pd0qy" path="res://gifs/samurai/walk/tile001.png" id="20_rhstd"]
+[ext_resource type="Texture2D" uid="uid://dlk7q3p71y32t" path="res://gifs/samurai/walk/tile002.png" id="21_e14mc"]
+[ext_resource type="Texture2D" uid="uid://ctdkau7njjf3c" path="res://gifs/samurai/walk/tile003.png" id="22_rw7o6"]
+[ext_resource type="Texture2D" uid="uid://dfxymcgpk105n" path="res://gifs/samurai/walk/tile004.png" id="23_4rwvf"]
+[ext_resource type="Texture2D" uid="uid://3iemr0ft33m1" path="res://gifs/samurai/walk/tile005.png" id="24_w4swb"]
+[ext_resource type="Texture2D" uid="uid://caepn8r4w3vka" path="res://gifs/samurai/walk/tile006.png" id="25_bnw6p"]
+[ext_resource type="Texture2D" uid="uid://bvw4ji1rtli5f" path="res://gifs/samurai/walk/tile007.png" id="26_1ijy7"]
+[ext_resource type="Texture2D" uid="uid://dhhiy6tpr5pms" path="res://gifs/samurai/walk/tile008.png" id="27_4g3jv"]
+[ext_resource type="Script" path="res://Scripts/HurtBox.gd" id="28_wlw15"]
+[ext_resource type="Script" path="res://Scripts/HitBox.gd" id="29_m7i4c"]
+[ext_resource type="Script" path="res://Scripts/state_machine.gd" id="30_24783"]
+[ext_resource type="Script" path="res://Scripts/EnemyStates/enemy_activation.gd" id="31_pxu8l"]
+[ext_resource type="Script" path="res://Scripts/EnemyStates/enemy_idle.gd" id="32_jcw8a"]
+[ext_resource type="Script" path="res://Scripts/state.gd" id="33_cphv6"]
+[ext_resource type="Script" path="res://Scripts/EnemyStates/enemy_mele.gd" id="34_bujwd"]
+[ext_resource type="Script" path="res://Scripts/EnemyStates/enemy_dash.gd" id="35_jtoxs"]
+[ext_resource type="Script" path="res://Scripts/EnemyStates/enemy_follow.gd" id="36_4cm0g"]
 
 [sub_resource type="Animation" id="Animation_flty1"]
 resource_name = "Activate"
@@ -50,7 +50,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0, 1, 1.43333, 2.03333, 2.53333, 3),
 "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
 "update": 1,
-"values": [ExtResource("3_waviu"), ExtResource("4_wotoo"), ExtResource("5_j1ld0"), ExtResource("6_di2q1"), ExtResource("7_exiry"), ExtResource("8_btmcl")]
+"values": [ExtResource("4_d784w"), ExtResource("5_uuiw4"), ExtResource("6_3jd6t"), ExtResource("7_yult4"), ExtResource("8_ajwvl"), ExtResource("9_otbrc")]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -116,7 +116,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [ExtResource("9_4tkss")]
+"values": [ExtResource("3_c7nap")]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -315,7 +315,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0, 0.2, 0.4, 0.6, 0.8),
 "transitions": PackedFloat32Array(1, 1, 1, 1, 1),
 "update": 1,
-"values": [ExtResource("10_4vvqe"), ExtResource("11_p3fke"), ExtResource("12_rs4eb"), ExtResource("13_pytg8"), ExtResource("14_7vrm6")]
+"values": [ExtResource("10_mj0t7"), ExtResource("11_lj21j"), ExtResource("12_6jx5y"), ExtResource("13_owdtl"), ExtResource("14_jjh37")]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -428,7 +428,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0, 0.133333, 0.266667, 2),
 "transitions": PackedFloat32Array(1, 1, 1, 1),
 "update": 1,
-"values": [ExtResource("24_ntmra"), ExtResource("25_v0wf5"), ExtResource("26_y4khh"), ExtResource("27_rilhg")]
+"values": [ExtResource("15_xh1c6"), ExtResource("16_eis06"), ExtResource("17_cigt6"), ExtResource("18_bitlk")]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -504,7 +504,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0, 0.2, 0.4, 0.6, 0.8, 2),
 "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
 "update": 1,
-"values": [ExtResource("8_btmcl"), ExtResource("7_exiry"), ExtResource("6_di2q1"), ExtResource("5_j1ld0"), ExtResource("4_wotoo"), ExtResource("3_waviu")]
+"values": [ExtResource("9_otbrc"), ExtResource("8_ajwvl"), ExtResource("7_yult4"), ExtResource("6_3jd6t"), ExtResource("5_uuiw4"), ExtResource("4_d784w")]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -569,7 +569,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0, 0.2, 0.4, 0.6, 0.8, 1, 1.2, 1.4, 1.6),
 "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1),
 "update": 1,
-"values": [ExtResource("11_fjp26"), ExtResource("12_ot886"), ExtResource("13_7jpdp"), ExtResource("14_iqtjk"), ExtResource("15_13vso"), ExtResource("16_2hgm2"), ExtResource("17_tni7n"), ExtResource("18_qmo8k"), ExtResource("19_wwe5m")]
+"values": [ExtResource("19_4vo3e"), ExtResource("20_rhstd"), ExtResource("21_e14mc"), ExtResource("22_rw7o6"), ExtResource("23_4rwvf"), ExtResource("24_w4swb"), ExtResource("25_bnw6p"), ExtResource("26_1ijy7"), ExtResource("27_4g3jv")]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -625,18 +625,18 @@ height = 66.0
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_v4iww"]
 size = Vector2(61, 76)
 
-[node name="Boss1" type="CharacterBody2D" groups=["Enemies"]]
+[node name="BossD" type="CharacterBody2D" groups=["Enemies"]]
 collision_layer = 16
 collision_mask = 16
-script = ExtResource("1_xqoif")
+script = ExtResource("1_8km8v")
 
 [node name="Health" type="Node" parent="."]
-script = ExtResource("2_gj6no")
+script = ExtResource("2_6ahsf")
 max_health = 30
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(0.825, 0)
-texture = ExtResource("9_4tkss")
+texture = ExtResource("3_c7nap")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
@@ -650,7 +650,7 @@ shape = SubResource("CapsuleShape2D_0jqy3")
 [node name="HurtBox" type="Area2D" parent="." node_paths=PackedStringArray("health")]
 collision_layer = 0
 collision_mask = 2
-script = ExtResource("12_q5qjd")
+script = ExtResource("28_wlw15")
 health = NodePath("../Health")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="HurtBox"]
@@ -660,37 +660,37 @@ shape = SubResource("RectangleShape2D_v4iww")
 [node name="HitBox" type="Area2D" parent="."]
 collision_layer = 12
 collision_mask = 0
-script = ExtResource("1_7wv5w")
+script = ExtResource("29_m7i4c")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="HitBox"]
 position = Vector2(35, 32)
 shape = SubResource("RectangleShape2D_sfiji")
 
 [node name="State Machine" type="Node" parent="." node_paths=PackedStringArray("initial_state")]
-script = ExtResource("13_po6km")
-initial_state = NodePath("EnemyActivation")
+script = ExtResource("30_24783")
+initial_state = NodePath("EnemyIdle")
 
 [node name="EnemyActivation" type="Node" parent="State Machine" node_paths=PackedStringArray("enemy")]
-script = ExtResource("23_v2nfa")
+script = ExtResource("31_pxu8l")
 enemy = NodePath("../..")
 
 [node name="EnemyIdle" type="Node" parent="State Machine" node_paths=PackedStringArray("enemy")]
-script = ExtResource("14_ykrvo")
+script = ExtResource("32_jcw8a")
 enemy = NodePath("../..")
 
 [node name="death" type="Node" parent="State Machine"]
-script = ExtResource("33_fuao0")
+script = ExtResource("33_cphv6")
 
 [node name="mele" type="Node" parent="State Machine" node_paths=PackedStringArray("enemy")]
-script = ExtResource("30_fi4g3")
+script = ExtResource("34_bujwd")
 enemy = NodePath("../..")
 
 [node name="dash" type="Node" parent="State Machine" node_paths=PackedStringArray("enemy")]
-script = ExtResource("35_jtw58")
+script = ExtResource("35_jtoxs")
 enemy = NodePath("../..")
 
 [node name="follow" type="Node" parent="State Machine" node_paths=PackedStringArray("enemy")]
-script = ExtResource("31_7to0s")
+script = ExtResource("36_4cm0g")
 enemy = NodePath("../..")
 
 [connection signal="attackedfin" from="." to="State Machine/mele" method="_on_boss_1_attackedfin"]
