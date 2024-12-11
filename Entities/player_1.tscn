@@ -396,6 +396,7 @@ drag_bottom_margin = 0.25
 collision_layer = 2
 collision_mask = 0
 script = ExtResource("12_acrq1")
+damage = 999
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="HitBox"]
 position = Vector2(17, 6)

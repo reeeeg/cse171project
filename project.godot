@@ -35,7 +35,7 @@ directories/dtl_directory={
 "1_gameStart": "res://storyTimelines/1_gameStart.dtl",
 "2_busStop": "res://storyTimelines/2_busStop.dtl",
 "3_outskirts": "res://storyTimelines/3_outskirts.dtl",
-"afterBoss1": "res://storyTimelines/4_after.dtl",
+"4_after": "res://storyTimelines/4_after.dtl",
 "charSelect_OverUnder2": "res://Scenes/CharacterSelect/charSelect_OverUnder2.dtl",
 "ending": "res://ending.dtl",
 "introDeath": "res://Scenes/GameOver/introDeath.dtl"

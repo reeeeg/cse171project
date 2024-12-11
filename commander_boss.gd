@@ -56,5 +56,4 @@ func _on_health_health_depleted() -> void:
 
 
 func Victory():
-	#switch to the finish screen
-	pass
+	get_tree().change_scene_to_file("res://Scenes/GameEnding/gameEnding.tscn")

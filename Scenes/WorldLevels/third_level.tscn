@@ -108,12 +108,14 @@ position = Vector2(883, 355)
 scale = Vector2(2, 2)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
+scale = Vector2(1.5, 1.5)
+transform = Transform2D(1.5, 0, 0, 1.5, 0, 0)
 
 [node name="EnemyHealthBar" parent="CanvasLayer" node_paths=PackedStringArray("character") instance=ExtResource("7_56scy")]
-offset_left = 296.0
-offset_top = 570.0
-offset_right = 977.0
-offset_bottom = 651.0
+offset_left = 156.0
+offset_top = -15.3333
+offset_right = 837.0
+offset_bottom = 65.6667
 character = NodePath("../../CommanderBoss")
 
 [node name="HitBox" type="Area2D" parent="."]
