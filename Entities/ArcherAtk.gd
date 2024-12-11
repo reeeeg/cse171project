@@ -11,20 +11,22 @@ func Enter():
 	print("entered atk")
 	player = get_tree().get_first_node_in_group("Player")
 	var direction = player.global_position - enemy.global_position
-	direction = player.global_position - enemy.global_position
-	
+	print("first")
 	if direction.x < 0.0:
 		enemy.velocity.x = 0.1
 		enemy.facingforward = true
-		sprite.scale.x = abs(sprite.scale.x) * -1
+		sprite.scale.x = abs(sprite.scale.x)
+		print("second")
 	else:
 		enemy.velocity.x = -.01
 		enemy.facingforward = false
-		sprite.scale.x = abs(sprite.scale.x)
+		sprite.scale.x = abs(sprite.scale.x) * -1
+		print("third")
 	enemy.velocity.x = 0
-	animation.stop(true)
+	
 	animation.clear_queue()
 	animation.play('atk')
+	print("played atk animation")
 
 
 
@@ -33,8 +35,8 @@ func _on_archer_boss_archer_mele() -> void:
 	print(nowstate.State_Name)
 	if nowstate.State_Name == 'death':
 		return
-	#if nowstate.State_Name == 'atk':
-	Transitioned.emit(self, 'idle')
+	else:
+		Transitioned.emit(self, 'idle')
 	
 
 

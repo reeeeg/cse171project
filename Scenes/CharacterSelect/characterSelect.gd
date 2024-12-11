@@ -8,6 +8,9 @@ func _ready() -> void:
 	PlayerStatus.meep = false
 	PlayerStatus.oscar = false
 	PlayerStatus.soup = false
+	Globals.meep = false
+	Globals.oscar = false
+	Globals.soup = false
 	# pass # Replace with function body.
 	Dialogic.signal_event.connect(_on_dialogic_signal)
 

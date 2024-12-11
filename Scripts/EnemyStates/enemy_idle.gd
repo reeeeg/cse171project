@@ -56,8 +56,3 @@ func Physics_Update(delta: float):
 func _on_boss_1_death() -> void:
 	print("idle death signal")
 	Transitioned.emit(self, 'death') # Replace with function body.
-
-
-func _on_boss_2_death() -> void:
-	print("idle death signal")
-	Transitioned.emit(self, 'death') # Replace with function body.

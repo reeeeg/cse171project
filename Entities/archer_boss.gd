@@ -41,8 +41,9 @@ func _physics_process(delta: float) -> void:
 			hurtbox.scale.x = abs(hurtbox.scale.x) * -1
 			
 	
-	if velocity.length() > 0 and !dashing:
-		animation.play('idle')
+	#if velocity.length() > 0 and !dashing:
+		#animation.play('idle')
+		#print("played idle animation from if statement")
 	print(shotted)
 	if shotted:
 		var randomize = randi_range(5,11)
@@ -63,7 +64,7 @@ func _physics_process(delta: float) -> void:
 		shotted = false
 	
 		print("attackfinished")
-
+		
 		archer_mele.emit()
 
 func _on_health_health_depleted() -> void:

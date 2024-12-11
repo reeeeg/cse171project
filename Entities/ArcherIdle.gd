@@ -19,20 +19,19 @@ func randomize_wander():
 
 func Enter():
 	print("entered idle")
-	animation.clear_queue()
 	animation.play('idle')
 	player = get_tree().get_first_node_in_group("Player")
 	move_speed = 30
 	randomize_wander()
 
 func Update(delta: float):
-	
 	var nowstate = get_parent().get_current_state()
+	if nowstate.State_Name == 'death':
+		return
 	if nowstate.State_Name != 'idle':
 		return
 	print(nowstate.State_Name)
-	if nowstate.State_Name == 'death':
-		return
+	
 	if randomer == 1:
 		Transitioned.emit(self, 'atk')
 	else:
