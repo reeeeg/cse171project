@@ -15,17 +15,18 @@ One missed caller who left voicemail—"Looking for an upgrade? Low-cost neural 
 Meep deletes the voicemail and clears the second notification. Opening up that mobile game and spending 10 seconds collecting rewards was too much work.
 meep: (What's this about the Spire again...?)
 Apheres, like all the other cities on this forsaken planet, had been disconnected from the heavens for months now. The Cursed's invasion came out of nowhere. And as a touristy planet, Phanes was not ready.
-All of Phanes' cities were cut off one by one, and the connection had grown weaker and weaker. Perhaps their pleas never made it to the halls of the Heavenly Society—or perhaps the Heavenly Society simply did not listen.
+All of Phanes' cities were cut off one by one, and the connection had grown weaker and weaker. Perhaps their pleas for help never made it to the halls of the Heavenly Society—or perhaps the Heavenly Society simply did not listen.
 Until the path to Apheres' Spire was overrun, and the last portal to heaven was deemed inaccessible. From then on, the people of Phanes were on their own.
 The cities and the surrounding areas under their protection were more or less the last bastions of humanity on this planet.
 It really was only a matter of time before the end. This was the uncomfortable truth lingering in everyone's minds. Meep didn't really like thinking about that though. She was doing her best to live in the moment.
-She scrolls through the news article 
+She scrolls through the news article.
 The sides of the shelter were plastered with colorful posters old and new. No one ever really bothered to take off old flyers, so the new ones were slapped right on top.
 It was beautiful, almost, like some art installation, a collage of the collective human experience. But she doesn't really care right now. Meep's gaze drifts from one to the next.
 One flyer in particular catches her eye.
 join meep leftmost
-meep: "Currently recruiting..." "exciting adventure..." "
-Her eyes widen as she reads the compensation.
+meep: "Currently recruiting..." "exciting adventure..." "to the Spire"...?!
+She laughs
+But her eyes widen as she reads the compensation.
 join oscar rightmost [animation="Fade In"]
 oscar: So, are you interested?
 meep: What—
@@ -38,5 +39,10 @@ He nods once. Meep smiles innocently.
 meep: And seeing as to how you sought me out, you must know who I am. I'll have you know that Apheres' top merc knows her worth.
 Oscar doesn't even bat an eye.
 oscar: Considering
+Meep crosses her arms. He had a point.
+[background arg="res://backgrounds/black_bg.jpg" fade="1.5"]
+<Empty Text Event>
+[background arg="res://backgrounds/outskirts.jpg" fade="1.5"]
+# At this point, switch to Level: Boss 1
 [signal arg="new scene"]
 [end_timeline]

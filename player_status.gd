@@ -26,7 +26,7 @@ func _process(delta: float) -> void:
 	# 	print("dead")
 	# 	get_tree().change_scene_to_file("res://Scenes/GameOver/gameOver.tscn")
 	# 	alive = true
-	# pass
+	pass
 
 #func loadCharacters():
 	#if PlayerStatus.meep:
