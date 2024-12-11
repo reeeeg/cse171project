@@ -5,7 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://br3gsjhwtfgdb" path="res://Entities/player_2.tscn" id="3_lys0a"]
 [ext_resource type="PackedScene" uid="uid://bv5ryhms6r531" path="res://Entities/player_3.tscn" id="4_hoiau"]
 [ext_resource type="PackedScene" uid="uid://r0lsbkdfw2j1" path="res://Entities/archer_boss.tscn" id="5_rg0jd"]
-[ext_resource type="PackedScene" path="res://Scripts/enemyhealthbar.tscn" id="6_qmia2"]
+[ext_resource type="PackedScene" uid="uid://bbn6ib3w7vxny" path="res://Scripts/enemyhealthbar.tscn" id="6_qmia2"]
 [ext_resource type="Texture2D" uid="uid://d4jb1wragrn16" path="res://tiles/Tiles.png" id="7_25p80"]
 [ext_resource type="Script" path="res://Scripts/HitBox.gd" id="8_s4ght"]
 [ext_resource type="AudioStream" uid="uid://1r7ijx87k1ht" path="res://sfx/bgm/Obliteration.mp3" id="9_vk8po"]

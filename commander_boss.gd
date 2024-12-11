@@ -56,4 +56,5 @@ func _on_health_health_depleted() -> void:
 
 
 func Victory():
+	Dialogic.start("res://storyTimelines/8_ending.dtl")
 	get_tree().change_scene_to_file("res://Scenes/GameEnding/gameEnding.tscn")
