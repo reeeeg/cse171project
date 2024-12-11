@@ -1,4 +1,4 @@
-[gd_scene load_steps=48 format=3 uid="uid://6vtsrvk00qjc"]
+[gd_scene load_steps=51 format=3 uid="uid://6vtsrvk00qjc"]
 
 [ext_resource type="Script" path="res://Scripts/HitBox.gd" id="1_7wv5w"]
 [ext_resource type="Script" path="res://Scripts/boss_1.gd" id="1_xqoif"]
@@ -29,13 +29,16 @@
 [ext_resource type="Texture2D" uid="uid://dhhiy6tpr5pms" path="res://gifs/samurai/walk/tile008.png" id="19_wwe5m"]
 [ext_resource type="Script" path="res://Scripts/EnemyStates/enemy_activation.gd" id="23_v2nfa"]
 [ext_resource type="Texture2D" uid="uid://dlh2gkupseon4" path="res://gifs/samurai/atk3/tile000.png" id="24_ntmra"]
-[ext_resource type="Script" path="res://Scripts/state.gd" id="25_m2vkt"]
 [ext_resource type="Texture2D" uid="uid://cnmpxdhulxhvm" path="res://gifs/samurai/atk3/tile001.png" id="25_v0wf5"]
 [ext_resource type="Texture2D" uid="uid://bus6r8410a5uj" path="res://gifs/samurai/atk3/tile002.png" id="26_y4khh"]
 [ext_resource type="Texture2D" uid="uid://cxx45cq25x8hy" path="res://gifs/samurai/atk3/tile003.png" id="27_rilhg"]
 [ext_resource type="Script" path="res://Scripts/EnemyStates/enemy_mele.gd" id="30_fi4g3"]
 [ext_resource type="Script" path="res://Scripts/EnemyStates/enemy_follow.gd" id="31_7to0s"]
+[ext_resource type="Script" path="res://Scripts/EnemyStates/enemy_death.gd" id="33_fuao0"]
 [ext_resource type="Script" path="res://Scripts/EnemyStates/enemy_dash.gd" id="35_jtw58"]
+[ext_resource type="AudioStream" uid="uid://c8pdy72dsc2a7" path="res://sfx/atksfx/enemy slash.wav" id="37_n3ky0"]
+[ext_resource type="AudioStream" uid="uid://bdvp36mgen4hw" path="res://sfx/atksfx/asian sound.wav" id="38_x52cx"]
+[ext_resource type="AudioStream" uid="uid://jx6gybcg2vxd" path="res://sfx/atksfx/startup.wav" id="39_vc0do"]
 
 [sub_resource type="Animation" id="Animation_flty1"]
 resource_name = "Activate"
@@ -99,6 +102,18 @@ tracks/4/keys = {
 "transitions": PackedFloat32Array(1, 1),
 "update": 1,
 "values": [false, true]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("AudioStreamPlayer2D3:playing")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0.0333333),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
 }
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_sfiji"]
@@ -298,6 +313,54 @@ tracks/15/keys = {
 "update": 1,
 "values": [false]
 }
+tracks/16/type = "value"
+tracks/16/imported = false
+tracks/16/enabled = true
+tracks/16/path = NodePath("AudioStreamPlayer2D:playing")
+tracks/16/interp = 1
+tracks/16/loop_wrap = true
+tracks/16/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/17/type = "value"
+tracks/17/imported = false
+tracks/17/enabled = true
+tracks/17/path = NodePath("AudioStreamPlayer2D2:playing")
+tracks/17/interp = 1
+tracks/17/loop_wrap = true
+tracks/17/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/18/type = "value"
+tracks/18/imported = false
+tracks/18/enabled = true
+tracks/18/path = NodePath(".:theEnd1")
+tracks/18/interp = 1
+tracks/18/loop_wrap = true
+tracks/18/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/19/type = "value"
+tracks/19/imported = false
+tracks/19/enabled = true
+tracks/19/path = NodePath("AudioStreamPlayer2D3:playing")
+tracks/19/interp = 1
+tracks/19/loop_wrap = true
+tracks/19/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_52eqx"]
 
@@ -413,6 +476,18 @@ tracks/8/keys = {
 "update": 1,
 "values": [false, true]
 }
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("AudioStreamPlayer2D:playing")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0.333333),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
 
 [sub_resource type="Animation" id="Animation_n420b"]
 resource_name = "dash"
@@ -490,6 +565,42 @@ tracks/5/keys = {
 "update": 1,
 "values": [true, false]
 }
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("AudioStreamPlayer2D2:playing")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0.1),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("HitBox/CollisionShape2D:position")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(42.72, 27.755)]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("HitBox/CollisionShape2D:rotation")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
 
 [sub_resource type="Animation" id="Animation_mv7gc"]
 resource_name = "death"
@@ -553,6 +664,30 @@ tracks/4/keys = {
 "transitions": PackedFloat32Array(1),
 "update": 0,
 "values": [1.5708]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath(".:theEnd1")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(2),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("AudioStreamPlayer2D3:playing")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0.0333334),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
 }
 
 [sub_resource type="Animation" id="Animation_70xfp"]
@@ -678,8 +813,9 @@ enemy = NodePath("../..")
 script = ExtResource("14_ykrvo")
 enemy = NodePath("../..")
 
-[node name="death" type="Node" parent="State Machine"]
-script = ExtResource("25_m2vkt")
+[node name="death" type="Node" parent="State Machine" node_paths=PackedStringArray("enemy")]
+script = ExtResource("33_fuao0")
+enemy = NodePath("../..")
 
 [node name="mele" type="Node" parent="State Machine" node_paths=PackedStringArray("enemy")]
 script = ExtResource("30_fi4g3")
@@ -692,6 +828,18 @@ enemy = NodePath("../..")
 [node name="follow" type="Node" parent="State Machine" node_paths=PackedStringArray("enemy")]
 script = ExtResource("31_7to0s")
 enemy = NodePath("../..")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("37_n3ky0")
+
+[node name="AudioStreamPlayer2D2" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("38_x52cx")
+
+[node name="AudioStreamPlayer2D3" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("39_vc0do")
+
+[node name="AudioStreamPlayer2D4" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("39_vc0do")
 
 [connection signal="attackedfin" from="." to="State Machine/mele" method="_on_boss_1_attackedfin"]
 [connection signal="death" from="." to="State Machine/EnemyIdle" method="_on_boss_1_death"]

@@ -8,4 +8,4 @@ func Enter():
 	enemy.velocity.x = 0
 	enemy.velocity.y = 0
 	animation.play('death')
-	enemy.queue_free()
+	#enemy.queue_free()

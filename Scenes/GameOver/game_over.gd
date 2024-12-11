@@ -14,6 +14,6 @@ func _process(delta: float) -> void:
 func _on_restart_button_pressed() -> void:
 	#var home = preload("res://Scenes/CharacterSelect/characterSelect.tscn")
 	#get_tree().root.add_child(home)
-	get_tree().change_scene_to_file("res://Scenes/Start/startScreen.tscn")
+	get_tree().change_scene_to_file("res://Scenes/CharacterSelect/characterSelect.tscn")
 	#get_tree().reload_current_scene()
 	pass # Replace with function body.

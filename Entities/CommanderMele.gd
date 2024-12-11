@@ -23,4 +23,5 @@ func _on_commander_boss_commander_mele() -> void:
 	print(nowstate.State_Name)
 	if nowstate.State_Name == 'death':
 		return
-	Transitioned.emit(self, 'idle')
+	if nowstate.State_Name == 'mele':
+		Transitioned.emit(self, 'idle')

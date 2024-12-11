@@ -23,7 +23,6 @@ func Update(delta: float):
 
 
 func Physics_Update(delta: float):
-	print("completed")
 	print(completed)
 	if completed == true:
 		Transitioned.emit(self, "enemyidle")

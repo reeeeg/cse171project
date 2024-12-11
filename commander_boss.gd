@@ -7,15 +7,19 @@ extends CharacterBody2D
 @onready var hurtbox = $HurtBox
 @onready var animation = $CommanderAnimation
 @export var MeleAttacked = false
+@export var theFinalEnd = false
+
 
 signal commander_death
 signal commander_mele
 
-@export var commander_dash = false
+@export var dashing = false
 
 var dead = false
 
 func _physics_process(delta: float) -> void:
+	if theFinalEnd:
+		Victory()
 	if dead:
 		return
 		
@@ -36,7 +40,7 @@ func _physics_process(delta: float) -> void:
 			hitbox.scale.x = abs(hitbox.scale.x) * -1
 			hurtbox.scale.x = abs(hurtbox.scale.x) * -1
 	
-	if velocity.length() > 0 and !commander_dash:
+	if velocity.length() > 0 and !dashing:
 		animation.play('idle')
 		
 	if MeleAttacked == true:
@@ -49,3 +53,8 @@ func _on_health_health_depleted() -> void:
 	animation.play('death')
 	print("death signal emitted")
 	commander_death.emit()
+
+
+func Victory():
+	#switch to the finish screen
+	pass

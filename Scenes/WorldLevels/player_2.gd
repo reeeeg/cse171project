@@ -5,14 +5,19 @@ extends CharacterBody2D
 @export var JUMP_VELOCITY = -400.0
 @export var attacking = false
 @export var dashing = false
+@export var deleted = false
 
+@onready var arms = $arms
 @onready var sprite = $Sprite2D
 @onready var animation = $AnimationPlayer
+@onready var env = $env
+@onready var hurtbox = $HurtBox
+
 #@onready var projectile = $Projectile
 #@onready var main = get_tree().get_root().get_node("Player2")
 
 var projectile = preload("res://Entities/Projectile.tscn")
-
+var facingforward = true
 var can_control : bool = true
 var double_jump : bool = false
 
@@ -20,6 +25,8 @@ var double_jump : bool = false
 var instance = projectile.instantiate()
 
 func _ready() -> void:
+	if !Globals.oscar:
+		queue_free()
 	Dialogic.signal_event.connect(_on_dialogic_signal)
 
 func _on_dialogic_signal(argument:String):
@@ -32,16 +39,28 @@ func _on_dialogic_signal(argument:String):
 		can_control = false
 
 func _physics_process(delta: float) -> void:
+	if deleted:
+		game_over()
 	if !can_control and PlayerStatus.alive:
 		update_animation()
 		can_control = false
 	if !can_control or dashing:
 		return
+	
 	if shoot:
 		instance = projectile.instantiate()
-		instance.dir = rotation
+		instance.speed = 600
 		instance.pos = global_position
-		instance.pos.x += 60
+		instance.pos = self.global_position
+		
+		if !facingforward:
+			instance.dir = rotation + PI
+			instance.pos.x -= 80
+		else:
+			instance.dir = rotation
+			instance.pos.x += 80
+		
+		
 		instance.rot = rotation
 		get_parent().add_child.call_deferred(instance)
 		shoot = false
@@ -50,10 +69,18 @@ func _physics_process(delta: float) -> void:
 		
 	if Input.is_action_pressed("Oleft"):
 		sprite.scale.x = abs(sprite.scale.x) * -1
+		arms.scale.x = abs(sprite.scale.x) * -1
+		env.scale.x = abs(sprite.scale.x) * -1
+		hurtbox.scale.x = abs(sprite.scale.x) * -1
+		facingforward = false
 
 		
 	if Input.is_action_pressed("Oright"):
 		sprite.scale.x = abs(sprite.scale.x)
+		arms.scale.x = abs(sprite.scale.x)
+		env.scale.x = abs(sprite.scale.x)
+		hurtbox.scale.x = abs(sprite.scale.x)
+		facingforward = true
 
 	# Add the gravity.
 	if not is_on_floor():
@@ -109,6 +136,10 @@ func attack():
 	attacking = true
 	animation.play("atk1")
 	
+	
+func game_over():
+	if get_tree().current_scene.name != "Level 0":
+		get_tree().change_scene_to_file("res://Scenes/GameOver/gameOver.tscn")
 	
 func _on_health_health_depleted() -> void:
 	PlayerStatus.alive = false

@@ -7,6 +7,7 @@ extends CharacterBody2D
 @onready var hurtbox = $HurtBox
 @export var attacked = false
 @onready var animation = $AnimationPlayer
+@export var theEnd1 = false
 
 signal death
 signal attackedfin
@@ -16,6 +17,8 @@ signal attackedfin
 var dead = false
 
 func _physics_process(delta):
+	if theEnd1:
+		nextLevel()
 	if dead:
 		return
 	move_and_slide()
@@ -60,3 +63,7 @@ func _on_health_health_depleted() -> void:
 func _on_dash_dasher() -> void:
 	print("dashing finished")
 	dashing = true # Replace with function body.
+
+func nextLevel():
+	if get_tree().current_scene.name != "Level 0":
+		get_tree().change_scene_to_file("res://Scenes/WorldLevels/SecondLevel.tscn")

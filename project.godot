@@ -19,6 +19,7 @@ config/icon="res://icon.svg"
 
 Dialogic="*res://addons/dialogic/Core/DialogicGameHandler.gd"
 PlayerStatus="*res://player_status.gd"
+Globals="*res://globals.gd"
 
 [dialogic]
 

@@ -11,9 +11,12 @@ extends CharacterBody2D
 @onready var atkspace = $HitBox
 
 var can_control : bool = true
-var double_jump : bool = false
+var double_jump : bool = true
+@export var deleted = false
 
 func _ready() -> void:
+	if !Globals.meep:
+		queue_free()
 	Dialogic.signal_event.connect(_on_dialogic_signal)
 
 func _on_dialogic_signal(argument:String):
@@ -26,6 +29,8 @@ func _on_dialogic_signal(argument:String):
 		can_control = false
 
 func _physics_process(delta: float) -> void:
+	if deleted:
+		game_over()
 	if !can_control and PlayerStatus.alive:
 		update_animation()
 		can_control = false
@@ -50,11 +55,12 @@ func _physics_process(delta: float) -> void:
 	if Input.is_action_just_pressed("Sjump") and is_on_floor():
 		velocity.y = JUMP_VELOCITY
 		double_jump = true
+		print("SJump")
 		
 	if Input.is_action_just_pressed("Sjump") and !is_on_floor() and double_jump:
 		velocity.y = JUMP_VELOCITY
 		double_jump = false
-	
+	print(double_jump)
 	if Input.is_action_just_pressed("dash"):
 		velocity.x = 0
 		velocity.y = 0
@@ -101,6 +107,9 @@ func _on_health_health_depleted() -> void:
 	velocity.x = 0
 	velocity.y = 0
 	animation.play('death')
+	
+
+func game_over():
 	if get_tree().current_scene.name != "Level 0":
 		PlayerStatus.checkDead()
 		#get_tree().change_scene_to_file("res://Scenes/GameOver/gameOver.tscn")
