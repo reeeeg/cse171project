@@ -18,6 +18,8 @@ var dead = false
 
 @export var theEnd = false
 
+func _ready() -> void:
+	Dialogic.signal_event.connect(_on_dialogic_signal)
 
 func _physics_process(delta: float) -> void:
 	if theEnd:
@@ -67,6 +69,11 @@ func _physics_process(delta: float) -> void:
 		
 		archer_mele.emit()
 
+func _on_dialogic_signal(argument:String):
+	if argument == "afterFirstBoss":
+		get_tree().change_scene_to_file("res://Scenes/WorldLevels/third_level.tscn")
+		#queue_free()
+
 func _on_health_health_depleted() -> void:
 	dead = true
 	animation.play('death')
@@ -74,4 +81,4 @@ func _on_health_health_depleted() -> void:
 	archer_death.emit()
 
 func nextLevel():
-	get_tree().change_scene_to_file("res://Scenes/WorldLevels/third_level.tscn")
+	Dialogic.start("res://storyTimelines/4_afterBoss1.dtl")

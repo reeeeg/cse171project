@@ -1,12 +1,14 @@
 # That wasn't so bad, was it? Oscar asks. He smiles for the first time.
 # Looks like her giant mechanical hands aren't just for show, Soup comments.
 # placeholder
-oscar: (with a condescending grin) Inanimate, just as it should be.
-soup: (haggardly)Heewwww, *cough cough - just ... just gimme a minute. Ugh *cough cough - just .. need ...  a bit of cola.
+oscar: Inanimate, just as it should be.
+soup: Heewwww, *cough* *cough* - just ... just gimme a minute. Ugh *cough* *cough* - just .. need ...  a bit of cola.
 oscar: Water would be better for your constitution. It looks like your experience might get bottlenecked by your phyiscal prowess.
 meep: He is saying you're too old gramps. Too old and too slow. You need a new set of legs, lungs, heart, bra-
-soup: NOW LISTEN HERE Yu- *cough cough (raspy) little brat. Ehem. I am 35, and am in nowhere near having grandchildren. Second, I don't want any part of your cybernetic dismemberment. I just needed to catch my breath.
+soup: NOW LISTEN HERE Yu- *cough cough (raspy) little brat. Ahem. I am 35, and am in nowhere near having grandchildren. Second, I don't want any part of your cybernetic dismemberment. I just needed to catch my breath.
 meep: Sounds like you caught several. Then again the near misses with that sword guy did make you sweat buckets. I bet they can smell you from the spire.
-oscar: Since we are on the topic of the spire, we still have much more ground to cover. The 3rd rate samurai was mostly likely abadoned here. It could have been communicating with our adversaries, but it seemed to old and dilapidated to have served any useful purpose. We will continue our expedition towards the iron valley. 
+oscar: Since we are on the topic of the spire, we still have much more ground to cover. The 3rd rate samurai was mostly likely abandoned here. It could have been communicating with our adversaries, but it seemed to old and dilapidated to have served any useful purpose. We will continue our expedition towards the Iron Valley.
 meep: High-quality state-of-the-art gastro sensors imbedded with a database of wonderful foods to natural chemical aromas, and all I can recieve is Elderly BO.
 soup: (flushed) I... will clean up.
+[signal arg="afterFirstBoss"]
+[end_timeline]

@@ -1,15 +1,15 @@
 [gd_scene load_steps=11 format=4 uid="uid://ds2d4xyo667j8"]
 
-[ext_resource type="Texture2D" uid="uid://dq18q326ogcgm" path="res://gifs/steampunk background/background 1/origbig.png" id="1_q85di"]
-[ext_resource type="Texture2D" uid="uid://y4887lna5ug2" path="res://tiles/base_soil-dirt-grass.png" id="2_myywv"]
-[ext_resource type="PackedScene" uid="uid://7tl28rvcec5r" path="res://Entities/commander_boss.tscn" id="3_oyorb"]
-[ext_resource type="PackedScene" uid="uid://ct7a646iqieef" path="res://Scripts/health_bar.tscn" id="3_r73wt"]
-[ext_resource type="PackedScene" path="res://Scripts/enemyhealthbar.tscn" id="4_wron6"]
-[ext_resource type="PackedScene" uid="uid://br3gsjhwtfgdb" path="res://Entities/player_2.tscn" id="4_ysde3"]
-[ext_resource type="Script" path="res://Scripts/HitBox.gd" id="5_ygwph"]
+[ext_resource type="Texture2D" uid="uid://dq18q326ogcgm" path="res://gifs/steampunk background/background 1/origbig.png" id="1_20y4e"]
+[ext_resource type="Texture2D" uid="uid://y4887lna5ug2" path="res://tiles/base_soil-dirt-grass.png" id="2_cgje0"]
+[ext_resource type="PackedScene" uid="uid://br3gsjhwtfgdb" path="res://Entities/player_2.tscn" id="3_hiqg2"]
+[ext_resource type="PackedScene" uid="uid://7tl28rvcec5r" path="res://Entities/commander_boss.tscn" id="4_pon5d"]
+[ext_resource type="PackedScene" uid="uid://ct7a646iqieef" path="res://Scripts/health_bar.tscn" id="5_83lua"]
+[ext_resource type="PackedScene" path="res://Scripts/enemyhealthbar.tscn" id="6_tdrn1"]
+[ext_resource type="Script" path="res://Scripts/HitBox.gd" id="7_sa1ws"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_0evmf"]
-texture = ExtResource("2_myywv")
+texture = ExtResource("2_cgje0")
 texture_region_size = Vector2i(128, 128)
 2:0/0 = 0
 3:0/0 = 0
@@ -2087,30 +2087,30 @@ sources/1 = SubResource("TileSetAtlasSource_0evmf")
 
 [node name="background" type="Sprite2D" parent="."]
 position = Vector2(839, 413)
-texture = ExtResource("1_q85di")
+texture = ExtResource("1_20y4e")
 
 [node name="TileMapLayer" type="TileMapLayer" parent="."]
 tile_map_data = PackedByteArray("AAD//wUAAQAAAAMAAAAAAAUAAQAAAAMAAAABAAUAAQAAAAMAAAACAAUAAQAAAAMAAAADAAUAAQAAAAMAAAAEAAUAAQAAAAMAAAAFAAUAAQAAAAMAAAAGAAUAAQAAAAMAAAAHAAUAAQAAAAMAAAAIAAUAAQAAAAMAAAAJAAUAAQAAAAMAAAAKAAUAAQAAAAMAAAALAAUAAQAAAAMAAAD//wYAAQAEAAIAAAAAAAYAAQAEAAIAAAABAAYAAQAEAAIAAAACAAYAAQAEAAIAAAADAAYAAQAEAAIAAAAEAAYAAQAEAAIAAAAFAAYAAQAEAAIAAAAGAAYAAQAEAAIAAAAHAAYAAQAEAAIAAAAIAAYAAQAEAAIAAAAJAAYAAQAEAAIAAAAKAAYAAQAEAAIAAAAKAAcAAQAEAAIAAAALAAcAAQAEAAIAAAALAAYAAQAEAAIAAAAJAAcAAQAEAAIAAAAIAAcAAQAEAAIAAAAHAAcAAQAEAAIAAAAGAAcAAQAEAAIAAAAFAAcAAQAEAAIAAAAEAAcAAQAEAAIAAAADAAcAAQAEAAIAAAACAAcAAQAEAAIAAAABAAcAAQAEAAIAAAAAAAcAAQAEAAIAAAD//wcAAQAEAAIAAAD//wgAAQAEAAIAAAAAAAgAAQAEAAIAAAABAAgAAQAEAAIAAAACAAgAAQAEAAIAAAADAAgAAQAEAAIAAAAEAAgAAQAEAAIAAAAFAAgAAQAEAAIAAAAGAAgAAQAEAAIAAAAHAAgAAQAEAAIAAAAIAAgAAQAEAAIAAAAJAAgAAQAEAAIAAAAKAAgAAQAEAAIAAAALAAgAAQAEAAIAAAAMAAUAAQAAAAMAAAANAAUAAQAAAAMAAAAOAAUAAQAAAAMAAAAPAAUAAQAAAAMAAAAQAAUAAQAAAAMAAAARAAUAAQAAAAMAAAD+/wUAAQAAAAMAAAD9/wUAAQAAAAMAAAD8/wUAAQAAAAMAAAD7/wUAAQAAAAMAAAD6/wUAAQAAAAMAAAD5/wUAAQAAAAMAAAD4/wUAAQAAAAMAAAD3/wUAAQAAAAMAAAA=")
 tile_set = SubResource("TileSet_3uagj")
 
-[node name="Player2" parent="." instance=ExtResource("4_ysde3")]
+[node name="Player2" parent="." instance=ExtResource("3_hiqg2")]
 position = Vector2(539, 340)
 scale = Vector2(2, 2)
 
-[node name="CommanderBoss" parent="." instance=ExtResource("3_oyorb")]
+[node name="CommanderBoss" parent="." instance=ExtResource("4_pon5d")]
 position = Vector2(989, 487)
 scale = Vector2(2, 2)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
-[node name="PlayerHealthBar" parent="CanvasLayer" node_paths=PackedStringArray("character") instance=ExtResource("3_r73wt")]
+[node name="PlayerHealthBar" parent="CanvasLayer" node_paths=PackedStringArray("character") instance=ExtResource("5_83lua")]
 offset_left = 0.0
 offset_top = 0.0
 offset_right = 101.0
 offset_bottom = 40.0
 character = NodePath("../../Player2")
 
-[node name="EnemyHealthBar" parent="CanvasLayer" node_paths=PackedStringArray("character") instance=ExtResource("4_wron6")]
+[node name="EnemyHealthBar" parent="CanvasLayer" node_paths=PackedStringArray("character") instance=ExtResource("6_tdrn1")]
 offset_left = 73.0
 offset_top = 561.0
 offset_right = 754.0
@@ -2120,7 +2120,7 @@ character = NodePath("../../CommanderBoss")
 [node name="HitBox" type="Area2D" parent="."]
 collision_layer = 6
 collision_mask = 0
-script = ExtResource("5_ygwph")
+script = ExtResource("7_sa1ws")
 damage = 9999
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="HitBox"]

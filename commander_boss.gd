@@ -17,6 +17,9 @@ signal commander_mele
 
 var dead = false
 
+func _ready() -> void:
+	Dialogic.signal_event.connect(_on_dialogic_signal)
+
 func _physics_process(delta: float) -> void:
 	if theFinalEnd:
 		Victory()
@@ -47,6 +50,11 @@ func _physics_process(delta: float) -> void:
 		print("attackfinished")
 		MeleAttacked = false
 		commander_mele.emit()
+		
+func _on_dialogic_signal(argument:String):
+	if argument == "gameEndingScreen":
+		get_tree().change_scene_to_file("res://Scenes/GameEnding/gameEnding.tscn")
+		#queue_free()
 
 func _on_health_health_depleted() -> void:
 	dead = true
@@ -56,4 +64,4 @@ func _on_health_health_depleted() -> void:
 
 
 func Victory():
-	get_tree().change_scene_to_file("res://Scenes/GameEnding/gameEnding.tscn")
+	Dialogic.start("res://storyTimelines/8_ending.dtl")
