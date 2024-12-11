@@ -17,6 +17,7 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
+	pass
 	#print(get_tree().current_scene.name)
 	#if alive and get_tree().current_scene.name != "Level 0":
 	##if alive:

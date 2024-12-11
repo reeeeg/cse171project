@@ -74,5 +74,4 @@ func _on_health_health_depleted() -> void:
 	archer_death.emit()
 
 func nextLevel():
-	#switch to next scene final level
-	pass
+	get_tree().change_scene_to_file("res://Scenes/WorldLevels/third_level.tscn")
