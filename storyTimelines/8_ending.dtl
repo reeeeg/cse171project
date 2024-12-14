@@ -4,6 +4,13 @@ oscar: Can you feel it? This spire's energy?
 meep: No.
 Oscar ignores her.
 [background arg="res://backgrounds/spireOutside.jpg" fade="1.5"]
+Apheres' Spire is nearly in ruins, nothing like the pictures. It had only been a year since the invasion...
+As the three approach, Oscar in particular looks distraught.
+join oscar rightmost
+oscar: This was where I received my blessing... Ithium, I will restore your honor.
+join soup right
+soup: Aw, shucks, lad. I'm sure you will. I can feel the Spire's power now, too. Let's get goin'.
+leave --All--
 [background arg="res://backgrounds/contactingHeavens.jpg" fade="1.5"]
 # 
 join meep leftmost [z_index="2"]

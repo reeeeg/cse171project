@@ -2,6 +2,7 @@
 # after 2nd boss
 [signal arg="stopMovement"]
 join oscar rightmost
+[background arg="res://backgrounds/forest.jpg" fade="0.0"]
 oscar: Inanimate, just as it should be.
 join soup right
 soup: Heewwww, *cough* *cough* Just... just gimme a minute. Ugh, *cough* *cough* Just... need...  a bit of cola.
@@ -13,7 +14,8 @@ meep: Sounds like you caught several. Then again, the near misses with that swor
 oscar: Since we are on the topic of the Spire, we still have a lot of ground to cover. The 3rd-rate samurai was mostly likely abandoned here. The Cursed are not usually known for being sympathetic even toward their own kind.
 oscar: It could have been communicating with the other Cursed, but it seemed too old and dilapidated to have served any useful purpose. We will continue our expedition and head to the Iron Valley.
 meep: High-quality, state-of-the-art gastro-sensors embedded with a database for experiencing everything from exotic foods to natural chemical aromas, and all I'm getting is elderly BO.
-soup: (flushed) I... will clean up.
+soup: Soup flushes a deep red and looks away.
+soup: I... will clean up.
 oscar: Come on. Our last target is ahead. We're so close to the Spire, and then Erudite will be right beyond it.
 leave --All--
 [signal arg="canPlay"]
