@@ -16,6 +16,9 @@ signal attackedfin
 
 var dead = false
 
+func _ready() -> void:
+	Dialogic.signal_event.connect(_on_dialogic_signal)
+
 func _physics_process(delta):
 	if theEnd1:
 		nextLevel()
@@ -64,6 +67,15 @@ func _on_dash_dasher() -> void:
 	print("dashing finished")
 	dashing = true # Replace with function body.
 
+func _on_dialogic_signal(argument:String):
+	if argument == "afterFirstBoss":
+		#Dialogic.start("res://storyTimelines/4_afterBoss1.dtl")
+		get_tree().change_scene_to_file("res://Scenes/WorldLevels/third_level.tscn")
+		#queue_free()
+	pass
+
 func nextLevel():
-	if get_tree().current_scene.name != "Level 0":
-		get_tree().change_scene_to_file("res://Scenes/WorldLevels/SecondLevel.tscn")
+	Dialogic.start("res://storyTimelines/4_afterBoss1.dtl")
+	#pass
+	#if get_tree().current_scene.name != "Level 0":
+		#get_tree().change_scene_to_file("res://Scenes/WorldLevels/SecondLevel.tscn")

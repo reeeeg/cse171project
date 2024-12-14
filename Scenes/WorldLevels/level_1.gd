@@ -7,7 +7,7 @@ func _ready() -> void:
 	# pass # Replace with function body.
 	Dialogic.signal_event.connect(_on_dialogic_signal)
 	
-	Dialogic.start("res://storyTimelines/3_outskirts.dtl")
+	#Dialogic.start("res://storyTimelines/3_outskirts.dtl")
 	
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
