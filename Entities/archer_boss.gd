@@ -19,7 +19,7 @@ var dead = false
 @export var theEnd = false
 
 func _ready() -> void:
-	#Dialogic.signal_event.connect(_on_dialogic_signal)
+	Dialogic.signal_event.connect(_on_dialogic_signal)
 
 func _physics_process(delta: float) -> void:
 	if theEnd:
@@ -70,12 +70,12 @@ func _physics_process(delta: float) -> void:
 		
 		archer_mele.emit()
 
-#func _on_dialogic_signal(argument:String):
-	#if argument == "afterFirstBoss":
-		##Dialogic.start("res://storyTimelines/4_afterBoss1.dtl")
-		#get_tree().change_scene_to_file("res://Scenes/WorldLevels/third_level.tscn")
-		##queue_free()
-	#pass
+func _on_dialogic_signal(argument:String):
+	if argument == "afterArcherBoss":
+		#Dialogic.start("res://storyTimelines/4_afterBoss1.dtl")
+		get_tree().change_scene_to_file("res://Scenes/WorldLevels/third_level.tscn")
+		#queue_free()
+	pass
 
 func _on_health_health_depleted() -> void:
 	dead = true
@@ -85,7 +85,6 @@ func _on_health_health_depleted() -> void:
 
 func nextLevel():
 	#Dialogic.start("res://storyTimelines/4_afterBoss1.dtl")
+	Dialogic.start("res://storyTimelines/3_outskirts.dtl")
+	#get_tree().change_scene_to_file("res://Scenes/WorldLevels/third_level.tscn")
 	#Dialogic.start("res://storyTimelines/4_afterBoss1.dtl")
-	get_tree().change_scene_to_file("res://Scenes/WorldLevels/third_level.tscn")
-	#Dialogic.start("res://storyTimelines/4_afterBoss1.dtl")
-	pass

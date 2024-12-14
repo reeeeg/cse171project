@@ -21,6 +21,7 @@ func _ready() -> void:
 
 func _physics_process(delta):
 	if theEnd1:
+		theEnd1 = false
 		nextLevel()
 	if dead:
 		return
@@ -70,11 +71,11 @@ func _on_dash_dasher() -> void:
 func _on_dialogic_signal(argument:String):
 	if argument == "afterFirstBoss":
 		#Dialogic.start("res://storyTimelines/4_afterBoss1.dtl")
-		get_tree().change_scene_to_file("res://Scenes/WorldLevels/third_level.tscn")
+		get_tree().change_scene_to_file("res://Scenes/WorldLevels/SecondLevel.tscn")
 		#queue_free()
 	pass
 
-func nextLevel():
+func nextLevel(): 
 	Dialogic.start("res://storyTimelines/4_afterBoss1.dtl")
 	#pass
 	#if get_tree().current_scene.name != "Level 0":

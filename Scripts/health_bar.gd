@@ -13,3 +13,5 @@ func _ready() -> void:
 	
 func _update_bar(_diff: int) -> void:
 	value = health.get_health()
+	if value == 0:
+		self.hide()
