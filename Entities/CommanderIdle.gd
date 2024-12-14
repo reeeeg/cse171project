@@ -14,7 +14,8 @@ var randomer : int
 
 func randomize_wander():
 	move_direction = Vector2(randf_range(-1, 1), randf_range(-1,1)).normalized()
-	wander_time = randf_range(0.5, 1.5)
+	#wander_time = randf_range(0.5, 1.5)
+	wander_time = 0.3
 	randomer = randi_range(0,3)
 
 func Enter():
