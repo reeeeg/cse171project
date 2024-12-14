@@ -3,8 +3,8 @@
 oscar: Can you feel it? This spire's energy?
 meep: No.
 Oscar ignores her.
-[background arg="res://backgrounds/spireOutside.jpg" fade="0.0"]
-[background arg="res://backgrounds/contactingHeavens.jpg" fade="0.0"]
+[background arg="res://backgrounds/spireOutside.jpg" fade="1.5"]
+[background arg="res://backgrounds/contactingHeavens.jpg" fade="1.5"]
 # 
 join meep leftmost [z_index="2"]
 meep: Sooo... who's gonna contact the gods?

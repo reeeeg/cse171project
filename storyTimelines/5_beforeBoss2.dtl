@@ -1,3 +1,4 @@
+# DEFUNCT and see scene 4 for where this text went
 # Meep is asking more questions about the commission as they trek toward the next boss.
 # Who the heck are the members of this ragtag team?
 # Soup laughs at her. Who goes into this stuff without all the details? Young ones these days, am I right?
@@ -23,3 +24,7 @@
 # They could then get more support, gain traction, momentum, restock on supplies, etc.
 # Oscar says to have more faith in him. Soup says he's going to get flattened. Little guy needs to eat more.
 # Oscar claims he could make it to the Spire himself, but Soup here talked him into putting together a team.
+[signal arg="stopMovement"]
+[background fade="0.0"]
+[end_timeline]
+[signal arg="canPlay"]

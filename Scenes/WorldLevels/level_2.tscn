@@ -8,7 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://br3gsjhwtfgdb" path="res://Entities/player_2.tscn" id="4_8yxr5"]
 [ext_resource type="PackedScene" uid="uid://bv5ryhms6r531" path="res://Entities/player_3.tscn" id="4_ptr8c"]
 [ext_resource type="PackedScene" uid="uid://6vtsrvk00qjc" path="res://Entities/boss_1.tscn" id="4_sns61"]
-[ext_resource type="PackedScene" uid="uid://bbn6ib3w7vxny" path="res://Scripts/enemyhealthbar.tscn" id="6_8yju3"]
+[ext_resource type="PackedScene" path="res://Scripts/enemyhealthbar.tscn" id="6_8yju3"]
 [ext_resource type="Script" path="res://Scripts/HitBox.gd" id="6_g0m2h"]
 [ext_resource type="AudioStream" uid="uid://dx1jl5hg4otw1" path="res://sfx/bgm/Aggressor.mp3" id="11_c5t3t"]
 

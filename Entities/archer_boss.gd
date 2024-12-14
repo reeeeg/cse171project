@@ -82,3 +82,4 @@ func _on_health_health_depleted() -> void:
 
 func nextLevel():
 	Dialogic.start("res://storyTimelines/4_afterBoss1.dtl")
+	#get_tree().change_scene_to_file("res://Scenes/WorldLevels/third_level.tscn")

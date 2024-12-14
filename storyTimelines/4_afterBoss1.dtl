@@ -1,14 +1,81 @@
 # That wasn't so bad, was it? Oscar asks. He smiles for the first time.
 # Looks like her giant mechanical hands aren't just for show, Soup comments.
 # placeholder
+[signal arg="stopMovement"]
+join oscar rightmost
 oscar: Inanimate, just as it should be.
-soup: Heewwww, *cough* *cough* - just ... just gimme a minute. Ugh *cough* *cough* - just .. need ...  a bit of cola.
-oscar: Water would be better for your constitution. It looks like your experience might get bottlenecked by your phyiscal prowess.
-meep: He is saying you're too old gramps. Too old and too slow. You need a new set of legs, lungs, heart, bra-
-soup: NOW LISTEN HERE Yu- *cough cough (raspy) little brat. Ahem. I am 35, and am in nowhere near having grandchildren. Second, I don't want any part of your cybernetic dismemberment. I just needed to catch my breath.
-meep: Sounds like you caught several. Then again the near misses with that sword guy did make you sweat buckets. I bet they can smell you from the spire.
-oscar: Since we are on the topic of the spire, we still have much more ground to cover. The 3rd rate samurai was mostly likely abandoned here. It could have been communicating with our adversaries, but it seemed to old and dilapidated to have served any useful purpose. We will continue our expedition towards the Iron Valley.
-meep: High-quality state-of-the-art gastro sensors imbedded with a database of wonderful foods to natural chemical aromas, and all I can recieve is Elderly BO.
+join soup right
+soup: Heewwww, *cough* *cough* Just... just gimme a minute. Ugh, *cough* *cough* Just... need...  a bit of cola.
+oscar: Water would be better for your constitution. It looks like your experience is being bottlenecked by your physical prowess.
+join meep leftmost
+meep: He is saying you're too old, Gramps. Too old and too slow. You need a new set of legs, lungs, heart, br-
+soup: Now, listen here, y- *cough* *cough* -little brat. *clears throat* I am 35, and am nowhere close to having grandchildren. Second, I don't want any part of your cybernetic thingamajigs. I just needed to catch my breath.
+meep: Sounds like you caught several. Then again, the near misses with that sword guy did make you sweat buckets. I bet they can smell you from the Spire...
+oscar: Since we are on the topic of the Spire, we still have a lot of ground to cover. The 3rd-rate samurai was mostly likely abandoned here. The Cursed are not usually known for being sympathetic even toward their own kind.
+oscar: It could have been communicating with the other Cursed, but it seemed too old and dilapidated to have served any useful purpose. We will continue our expedition and head to the Iron Valley.
+meep: High-quality, state-of-the-art gastro-sensors embedded with a database for experiencing everything from exotic foods to natural chemical aromas, and all I'm getting is elderly BO.
 soup: (flushed) I... will clean up.
+leave --All--
+# Meep is asking more questions about the commission as they trek toward the next boss.
+# Who the heck are the members of this ragtag team?
+# Soup laughs at her. Who goes into this stuff without all the details? Young ones these days, am I right?
+# Meep makes a jab at his knighthood?
+# Oscar reveals his identity as someone who is blessed, specifically he had received the blessing of +
+# metal manipulation from his patron goddess, Ithium. He is technically a government employee 
+# but he's on break right now; that's his excuse for doing this escapade. Meep stares at him.
+# Oscar stares back. What? He'd accumulated lots of PTO.
+# Oscar continues: as she knows, this commission falls under Valiant. It's not really funded by anyone,
+# actually. 
+# Meep's heard of the adventuring guild Valiant before. In the months since the Cursed invaded,
+# many people had taken to living out their roleplaying or self-insert dreams, but quickly discovered
+# that real world fights, surprise, had real world consequences. Still, there were people set on driving out
+# the Cursed and reclaiming Phanes. Every city had its own guilds that popped up, and these guilds
+# would often work with the government. Valiant was one such guild in Apheres; however, it was probably
+# the newest guild out of all of them. A lot of guilds also made fun of Valiant for being full of dreamers.
+# Despite that, Meep knew that Valiant had somehow managed to snag some of the most powerful
+# blessed in Apheres, and so Meep could only put her faith into her two very interesting partners.
+# Maybe dreamers were exactly what this world needed to pull off something so crazy.
+# Soup continues: this team isn't meant to get them all the way to the spire. Just to the next portal and
+# the next city, Erudite. The strategy team over at Valiant had charted this course for them, at this exact
+# time of the month, after extensively studying the Cursed's habits, the weather patterns, and more.
+# They could then get more support, gain traction, momentum, restock on supplies, etc.
+# Oscar says to have more faith in him. Soup says he's going to get flattened. Little guy needs to eat more.
+# Oscar claims he could make it to the Spire himself, but Soup here talked him into putting together a team.
+[signal arg="stopMovement"]
+[background arg="res://backgrounds/forest.jpg" fade="3.0"]
+The trio continue to makes their way to the next target that Oscar outlined. An Archer, Oscar had said, if they were using traditional RPG terms. This one had given past expeditions the most strife, and the fact that the Cursed positioned them closer to Apheres...
+That was a sign to Valiant that the end times were approaching.
+join meep leftmost
+join soup leftmost
+join oscar left
+meep: Okay, I'm still kind of lost, to be honest. Can you guys, like, tell me even a little more about yourselves?
+soup: Hah, what kinda person joins in missions like these without all the details? Got a death wish or somethin'? Young ones these days, am I right?
+Meep stares at him, unblinking, before focusing on the insignia on his left arm's sleeve.
+meep: From the insignia on your arm, it looks like you were once a member of the Knight's Order or whatever they're called. If I'm not mistaken, they have a reputation for having extremely impulsive members. I wonder what that says about you?
+Soup scowls and stops talking.
+oscar: Yes. I am blessed, specifically by Ithium. I practice metal manipulation.
+oscar: I... am also a government employee. I work in Apheres' Security Department. However, I am using my paid time off to complete this commission.
+Meep stares at him. Oscar stares right back.
+meep: So that's why the recruitment poster looked like that.
+oscar: What?
+meep: Nothing. Keep going.
+oscar: Okay. As you know, this commission falls under Valiant. It's not really funded by anyone, it's just something Valiant put together, and it's going to be like a relay with other guilds.
+Valiant. There was that name again.
+In the months since the Cursed invaded, many people had taken to living out their roleplaying or self-insert dreams, but quickly discovered that real world fights, surprise, had real world consequences.
+Still, there were people set on driving out the Cursed and reclaiming Phanes. Every city had its own guilds that popped up, and these guilds would often work with the government. Valiant was one such guild in Apheres.
+However, it was probably the newest guild out of all of them, and thus the smallest. Yet it was also the most exclusive. A lot of guilds also made fun of Valiant for being full of dreamers.
+Despite that, Meep knew that Valiant had somehow managed to snag some of the most powerful blessed in Apheres, and so Meep could only put her faith into her two very interesting partners.
+Maybe dreamers were exactly what this world needed to pull off something so crazy.
+soup: As lil owl boy here is implying, this team isn't meant to get us all the way to the Heavenly Spire. We're just tryna get to the closest Spire and not die. That'd be Apheres' Spire, followed by the next city, Erudite.
+soup:  The strategy team over at Valiant charted this course for us, at this exact, time of the month, after extensively studying the Cursed's habits, the weather patterns, and more. Pretty impressive, eh?
+soup: Once we're over at Erudite, we can get more support, gain traction, momentum, restock on supplies, y'know. No one's ever done an on-foot expedition to other cities before.
+oscar: Have a little more faith in me as well.
+soup: Yer gonna get flattened, owl boy. Eat some more food.
+oscar: Shh... we're almost to the next checkpoint. The Cursed are right there.
+[signal arg="canPlay"]
+# time of the month, after extensively studying the Cursed's habits, the weather patterns, and more.
+# They could then get more support, gain traction, momentum, restock on supplies, etc.
+# Oscar says to have more faith in him. Soup says he's going to get flattened. Little guy needs to eat more.
+# Oscar claims he could make it to the Spire himself, but Soup here talked him into putting together a team.
 [signal arg="afterFirstBoss"]
 [end_timeline]
